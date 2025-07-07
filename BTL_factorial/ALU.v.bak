@@ -1,0 +1,21 @@
+module ALU (
+    input [3:0] a_alu_i, b_alu_i,
+    input [2:0] Sel_alu,
+    output reg [3:0] alu_o
+);
+
+always @(*) begin
+    case (Sel_alu)
+        3'b000: alu_o = a_alu_i * b_alu_i; // Multiplication
+        3'b001: alu_o = a_alu_i & b_alu_i; // AND
+        3'b010: alu_o = a_alu_i ^ b_alu_i; // XOR
+        3'b011: alu_o = a_alu_i | b_alu_i; // OR
+        3'b100: alu_o = a_alu_i - 1;       // A giảm 1
+        3'b101: alu_o = a_alu_i + b_alu_i; // ADD
+        3'b110: alu_o = a_alu_i - b_alu_i; // SUBTRACT
+        3'b111: alu_o = a_alu_i + 1;       // A tăng 1
+        default: alu_o = 4'b0000;          // Default case
+    endcase
+end
+
+endmodule

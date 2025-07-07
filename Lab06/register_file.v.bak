@@ -1,0 +1,24 @@
+module register_file (
+    input wire CLK,
+    input wire [1:0] WA1, WA2, // Write Address
+    input wire [15:0] WD1, WD2, // Write Data
+    input wire WE1, WE2, // Write Enable
+    input wire [1:0] RAA, RAB, // Read Address
+    output reg [15:0] RDA, RDB, // Read Data
+    input wire REA, REB // Read Enable
+);
+
+    // 4 thanh ghi 16-bit
+    reg [15:0] registers [3:0];
+
+    always @(posedge CLK) begin
+        // Đọc dữ liệu
+        if (REA) RDA <= registers[RAA];
+        if (REB) RDB <= registers[RAB];
+
+        // Ghi dữ liệu
+        if (WE1) registers[WA1] <= WD1;
+        if (WE2) registers[WA2] <= WD2;
+    end
+
+endmodule

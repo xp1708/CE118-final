@@ -1,0 +1,9 @@
+
+State Machine - |control_unit|c_state
+Name c_state.state5 c_state.state4 c_state.state3 c_state.state2 c_state.state1 c_state.state0 
+c_state.state0 0 0 0 0 0 0 
+c_state.state1 0 0 0 0 1 1 
+c_state.state2 0 0 0 1 0 1 
+c_state.state3 0 0 1 0 0 1 
+c_state.state4 0 1 0 0 0 1 
+c_state.state5 1 0 0 0 0 1 

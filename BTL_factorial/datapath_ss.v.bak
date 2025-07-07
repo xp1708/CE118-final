@@ -1,0 +1,66 @@
+module datapath_ss (
+    input wire clk,                    // Clock signal
+    input wire we1,                    // Write enable for register 1
+    input wire we2,                    // Write enable for register 2
+	 input wire [0:0] wa;               // Write address for RegisterFile S0
+	 input wire [0:1] wa;               // Write address for RegisterFile S1
+	 
+    input wire [15:0] data_in,         // Input data for registers
+	 input wire rea1;                    // Read enable A for RegisterFile
+    input wire rea2;                    // Read enable B for RegisterFile
+    input wire [15:0] raa1,            // Output from read address 1
+    input wire [15:0] raa2,            // Output from read address 2
+    input wire [1:0] sel_mux1,         // Selector for mux 1
+    input wire [1:0] sel_mux2,         // Selector for mux 2
+    output wire [15:0] out1,           // Output from mux 1
+    output wire [15:0] out2            // Output from mux 2
+);
+
+    // Instantiate registers
+    reg [15:0] reg1;
+    reg [15:0] reg2;
+
+    // Default inputs for muxes
+    wire [15:0] const_neg1 = 16'b1111111111111111; // -1 (two's complement)
+    wire [15:0] const_1 = 16'b0000000000000001;    // 1
+    wire [15:0] const_0 = 16'b0000000000000000;    // 0
+
+    // Outputs of the multiplier and adder
+    wire [15:0] mult_result;
+    wire [15:0] add_result;
+
+    // Multiplication and addition
+    assign mult_result = raa1 * raa2;
+    assign add_result = raa2 + const_neg1;
+
+    // Mux 1 logic
+    always @(*) begin
+        case (sel_mux1)
+            2'b00: out1 = const_0;       // 00 -> constant 0
+            2'b01: out1 = mult_result;   // 01 -> output of the multiplier
+            2'b10: out1 = const_1;       // 10 -> constant 1
+            default: out1 = 16'b0;
+        endcase
+    end
+
+		// Mux 2 logic
+		always @(*) begin
+			 case (sel_mux2)
+				  2'b00: out2 = data_in;       // 00 -> nạp data_in
+				  2'b01: out2 = add_result;    // 01 -> output của bộ cộng
+				  default: out2 = 16'b0;       // Mặc định đầu ra là 0
+			 endcase
+		end
+
+
+    // Register write logic
+    always @(posedge clk) begin
+        if (we1) begin
+            reg1 <= data_in;
+        end
+        if (we2) begin
+            reg2 <= data_in;
+        end
+    end
+
+endmodule

@@ -1,0 +1,17 @@
+module One_Counter (CLK1, CLK2, Start, DataIn, Out, Done);
+	input CLK1, CLK2, Start;
+	input [3:0] DataIn;
+	output [3:0] Out;
+	output Done;
+	wire IE, OE, WE, REA, REB;
+	wire [3:0] WA;
+	wire [3:0] RAA;
+	wire [3:0] RAB;
+	wire [3:0] S_ALU1;
+	wire [1:0] S_shift;
+	wire Datapath;
+	
+	Control_Unit CU(.CLK(CLK1), .Start(Start), .IE(IE), .WA(WA), .WE(WE), .RAA(RAA), .REA(REA), .RAB(RAB), .REB(REB), .OE(OE), .S_ALU1(S_ALU1), .S_shift(S_shift), .Done(Done), .Datapath(Datapath));
+	Data_Path DP(.CLK(CLK2), .DataIn(DataIn), .IE(IE), .WA(WA), .WE(WE), .RAA(RAA), .REA(REA), .RAB(RAB), .REB(REB), .OE(OE), .S_ALU1(S_ALU1), .S_shift(S_shift), .Out(Out), .Datapath(Datapath));
+	
+endmodule

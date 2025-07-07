@@ -1,0 +1,65 @@
+`timescale 1ns/1ps
+
+module Control_Unit_tb;
+
+  // Khai báo các tín hiệu để kết nối với `Control_Unit`
+  reg CLK, Start, Datapath;
+  wire IE, OE, WE, REA, REB, Done;
+  wire [3:0] WA, RAA, RAB, S_ALU1;
+  wire [1:0] S_shift;
+
+  // Khởi tạo module `Control_Unit`
+  Control_Unit uut (
+    .CLK(CLK),
+    .Start(Start),
+    .IE(IE),
+    .WA(WA),
+    .WE(WE),
+    .RAA(RAA),
+    .REA(REA),
+    .RAB(RAB),
+    .REB(REB),
+    .OE(OE),
+    .S_ALU1(S_ALU1),
+    .S_shift(S_shift),
+    .Done(Done),
+    .Datapath(Datapath)
+  );
+
+  // Tạo xung nhịp cho `CLK`
+  initial begin
+    CLK = 0;
+    forever #5 CLK = ~CLK; // Chu kỳ xung nhịp 10ns
+  end
+
+  // Test sequence
+  initial begin
+    // Khởi tạo các tín hiệu đầu vào
+    Start = 0;
+    Datapath = 0;
+
+    // Đợi một chu kỳ xung nhịp
+    #10;
+    
+    // Kích hoạt `Start` để bắt đầu FSM
+    Start = 1;
+    #10 Start = 0; // Reset Start để chỉ kích hoạt 1 lần
+
+    // Kiểm tra quá trình chuyển trạng thái
+    #50 Datapath = 1; // Datapath chuyển thành 1 tại một thời điểm
+    #20 Datapath = 0; // Đặt lại Datapath sau vài chu kỳ
+    
+    // Chờ cho đến khi tín hiệu Done được kích hoạt
+    wait(Done == 1);
+
+    // Dừng mô phỏng
+    #10 $stop;
+  end
+
+  // Theo dõi các tín hiệu để kiểm tra kết quả
+  initial begin
+    $monitor("Time=%0t | State=%b | IE=%b, WE=%b, OE=%b, REA=%b, REB=%b, WA=%b, RAA=%b, RAB=%b, S_ALU1=%b, S_shift=%b, Done=%b",
+             $time, uut.c_state, IE, WE, OE, REA, REB, WA, RAA, RAB, S_ALU1, S_shift, Done);
+  end
+
+endmodule

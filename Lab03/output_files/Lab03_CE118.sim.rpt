@@ -1,0 +1,444 @@
+Simulator report for Lab03_CE118
+Fri Oct 18 23:41:16 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 250 nodes    ;
+; Simulation Coverage         ;      88.40 % ;
+; Total Number of Transitions ; 3391         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                         ;
++--------------------------------------------------------------------------------------------+-------------------------------+---------------+
+; Option                                                                                     ; Setting                       ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                    ; Timing        ;
+; Start time                                                                                 ; 0 ns                          ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                           ;               ;
+; Vector input source                                                                        ; C:/CE118/Lab03/Waveform15.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                            ; On            ;
+; Check outputs                                                                              ; Off                           ; Off           ;
+; Report simulation coverage                                                                 ; On                            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                            ; On            ;
+; Display missing 1-value coverage report                                                    ; On                            ; On            ;
+; Display missing 0-value coverage report                                                    ; On                            ; On            ;
+; Detect setup and hold time violations                                                      ; Off                           ; Off           ;
+; Detect glitches                                                                            ; Off                           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                           ; Off           ;
+; Generate Signal Activity File                                                              ; Off                           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                           ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                          ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      88.40 % ;
+; Total nodes checked                                 ; 250          ;
+; Total output ports checked                          ; 250          ;
+; Total output ports with complete 1/0-value coverage ; 221          ;
+; Total output ports with no 1/0-value coverage       ; 29           ;
+; Total output ports with no 1-value coverage         ; 29           ;
+; Total output ports with no 0-value coverage         ; 29           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                    ;
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                            ; Output Port Name                                                                     ; Output Port Type ;
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+
+; |ALU4bit_symbol|LEDG7                                                                ; |ALU4bit_symbol|LEDG7                                                                ; pin_out          ;
+; |ALU4bit_symbol|SW15                                                                 ; |ALU4bit_symbol|SW15                                                                 ; out              ;
+; |ALU4bit_symbol|SW16                                                                 ; |ALU4bit_symbol|SW16                                                                 ; out              ;
+; |ALU4bit_symbol|SW17                                                                 ; |ALU4bit_symbol|SW17                                                                 ; out              ;
+; |ALU4bit_symbol|SW3                                                                  ; |ALU4bit_symbol|SW3                                                                  ; out              ;
+; |ALU4bit_symbol|SW2                                                                  ; |ALU4bit_symbol|SW2                                                                  ; out              ;
+; |ALU4bit_symbol|SW1                                                                  ; |ALU4bit_symbol|SW1                                                                  ; out              ;
+; |ALU4bit_symbol|SW0                                                                  ; |ALU4bit_symbol|SW0                                                                  ; out              ;
+; |ALU4bit_symbol|SW8                                                                  ; |ALU4bit_symbol|SW8                                                                  ; out              ;
+; |ALU4bit_symbol|SW7                                                                  ; |ALU4bit_symbol|SW7                                                                  ; out              ;
+; |ALU4bit_symbol|SW6                                                                  ; |ALU4bit_symbol|SW6                                                                  ; out              ;
+; |ALU4bit_symbol|SW5                                                                  ; |ALU4bit_symbol|SW5                                                                  ; out              ;
+; |ALU4bit_symbol|LEDG3                                                                ; |ALU4bit_symbol|LEDG3                                                                ; pin_out          ;
+; |ALU4bit_symbol|SW14                                                                 ; |ALU4bit_symbol|SW14                                                                 ; out              ;
+; |ALU4bit_symbol|LEDG2                                                                ; |ALU4bit_symbol|LEDG2                                                                ; pin_out          ;
+; |ALU4bit_symbol|LEDG1                                                                ; |ALU4bit_symbol|LEDG1                                                                ; pin_out          ;
+; |ALU4bit_symbol|LEDG0                                                                ; |ALU4bit_symbol|LEDG0                                                                ; pin_out          ;
+; |ALU4bit_symbol|LEDG5                                                                ; |ALU4bit_symbol|LEDG5                                                                ; pin_out          ;
+; |ALU4bit_symbol|LEDG4                                                                ; |ALU4bit_symbol|LEDG4                                                                ; pin_out          ;
+; |ALU4bit_symbol|Comparation4bit:inst3|inst7                                          ; |ALU4bit_symbol|Comparation4bit:inst3|inst7                                          ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|inst8                                          ; |ALU4bit_symbol|Comparation4bit:inst3|inst8                                          ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst5|inst                          ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst5|inst                          ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst5|inst4                         ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst5|inst4                         ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst5|inst3                         ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst5|inst3                         ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst4|inst1                         ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst4|inst1                         ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst4|inst                          ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst4|inst                          ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst4|inst4                         ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst4|inst4                         ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst4|inst3                         ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst4|inst3                         ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst4|inst2                         ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst4|inst2                         ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst3|inst1                         ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst3|inst1                         ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst3|inst                          ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst3|inst                          ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst3|inst4                         ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst3|inst4                         ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst3|inst3                         ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst3|inst3                         ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst3|inst2                         ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst3|inst2                         ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst|inst1                          ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst|inst1                          ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst|inst                           ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst|inst                           ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst|inst4                          ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst|inst4                          ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst|inst3                          ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst|inst3                          ; out0             ;
+; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst|inst2                          ; |ALU4bit_symbol|Comparation4bit:inst3|Full_adder:inst|inst2                          ; out0             ;
+; |ALU4bit_symbol|MUX41:inst10|MUX21:inst1|inst                                        ; |ALU4bit_symbol|MUX41:inst10|MUX21:inst1|inst                                        ; out0             ;
+; |ALU4bit_symbol|MUX41:inst10|MUX21:inst|inst5                                        ; |ALU4bit_symbol|MUX41:inst10|MUX21:inst|inst5                                        ; out0             ;
+; |ALU4bit_symbol|MUX41:inst10|MUX21:inst|inst3                                        ; |ALU4bit_symbol|MUX41:inst10|MUX21:inst|inst3                                        ; out0             ;
+; |ALU4bit_symbol|MUX41:inst10|MUX21:inst|inst                                         ; |ALU4bit_symbol|MUX41:inst10|MUX21:inst|inst                                         ; out0             ;
+; |ALU4bit_symbol|MUX41:inst10|MUX21:inst2|inst5                                       ; |ALU4bit_symbol|MUX41:inst10|MUX21:inst2|inst5                                       ; out0             ;
+; |ALU4bit_symbol|MUX41:inst10|MUX21:inst2|inst3                                       ; |ALU4bit_symbol|MUX41:inst10|MUX21:inst2|inst3                                       ; out0             ;
+; |ALU4bit_symbol|MUX41:inst10|MUX21:inst2|inst                                        ; |ALU4bit_symbol|MUX41:inst10|MUX21:inst2|inst                                        ; out0             ;
+; |ALU4bit_symbol|MUX21:inst5|inst3                                                    ; |ALU4bit_symbol|MUX21:inst5|inst3                                                    ; out0             ;
+; |ALU4bit_symbol|MUX21:inst6|inst3                                                    ; |ALU4bit_symbol|MUX21:inst6|inst3                                                    ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst|inst5          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst|inst5          ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst|inst3          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst|inst3          ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst2|inst5         ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst2|inst5         ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst2|inst          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst2|inst          ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst|inst5          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst|inst5          ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst|inst3          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst|inst3          ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst2|inst5         ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst2|inst5         ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst2|inst          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst2|inst          ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst|inst5          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst|inst5          ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst|inst3          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst|inst3          ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst2|inst5         ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst2|inst5         ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst2|inst          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst2|inst          ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst|inst5          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst|inst5          ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst|inst3          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst|inst3          ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst2|inst5         ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst2|inst5         ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst2|inst          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst2|inst          ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst3|inst5                                       ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst3|inst5                                       ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst3|inst                                        ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst3|inst                                        ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst2|inst5                                       ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst2|inst5                                       ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst2|inst                                        ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst2|inst                                        ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst1|inst5                                       ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst1|inst5                                       ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst1|inst                                        ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst1|inst                                        ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst|inst5                                        ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst|inst5                                        ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst|inst                                         ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst|inst                                         ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|inst                                                    ; |ALU4bit_symbol|ALU4bit:inst|inst                                                    ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|inst16                                                  ; |ALU4bit_symbol|ALU4bit:inst|inst16                                                  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|inst15                                                  ; |ALU4bit_symbol|ALU4bit:inst|inst15                                                  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|MUX21:inst26|inst5                                      ; |ALU4bit_symbol|ALU4bit:inst|MUX21:inst26|inst5                                      ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|MUX21:inst26|inst3                                      ; |ALU4bit_symbol|ALU4bit:inst|MUX21:inst26|inst3                                      ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|MUX21:inst26|inst                                       ; |ALU4bit_symbol|ALU4bit:inst|MUX21:inst26|inst                                       ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|inst14                                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|inst14                                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|inst16                                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|inst16                                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|inst17                                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|inst17                                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst1|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst1|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst1|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst1|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst|inst5  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst|inst5  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst|inst3  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst|inst3  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst|inst   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst2|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst2|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst2|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst2|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst3|MUX21:inst2|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst1|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst1|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst1|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst1|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst|inst5  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst|inst5  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst|inst3  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst|inst3  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst|inst   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst2|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst2|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst2|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst2|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX41:inst2|MUX21:inst2|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX21:inst|inst5              ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX21:inst|inst5              ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX21:inst|inst3              ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX21:inst|inst3              ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX21:inst|inst               ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|mux81:inst|MUX21:inst|inst               ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|Full_Suber:inst7|inst                    ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|Full_Suber:inst7|inst                    ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|Full_Suber:inst7|inst4                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|Full_Suber:inst7|inst4                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|Full_Suber:inst7|inst3                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|Full_Suber:inst7|inst3                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|Full_adder:inst1|inst                    ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|Full_adder:inst1|inst                    ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|Full_adder:inst1|inst3                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst25|Full_adder:inst1|inst3                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|inst14                                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|inst14                                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|inst16                                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|inst16                                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|inst17                                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|inst17                                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst1|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst1|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst1|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst1|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst|inst5  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst|inst5  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst|inst3  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst|inst3  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst|inst   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst2|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst2|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst2|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst2|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst3|MUX21:inst2|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst1|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst1|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst1|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst1|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst|inst5  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst|inst5  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst|inst3  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst|inst3  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst|inst   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst2|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst2|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst2|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst2|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX41:inst2|MUX21:inst2|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX21:inst|inst5              ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX21:inst|inst5              ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX21:inst|inst3              ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX21:inst|inst3              ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX21:inst|inst               ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|mux81:inst|MUX21:inst|inst               ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst6|inst1                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst6|inst1                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst6|inst2                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst6|inst2                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst7|inst1                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst7|inst1                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst7|inst                    ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst7|inst                    ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst7|inst4                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst7|inst4                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst7|inst3                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst7|inst3                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst7|inst2                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst7|inst2                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst1|inst1                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst1|inst1                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst1|inst                    ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst1|inst                    ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst1|inst4                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst1|inst4                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst1|inst3                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst1|inst3                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst1|inst2                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_adder:inst1|inst2                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst5|inst1                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst5|inst1                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst5|inst4                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst5|inst4                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst5|inst2                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst18|Full_Suber:inst5|inst2                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|inst14                                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|inst14                                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|inst16                                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|inst16                                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|inst17                                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|inst17                                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst1|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst1|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst1|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst1|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst|inst5  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst|inst5  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst|inst3  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst|inst3  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst|inst   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst2|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst2|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst2|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst2|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst3|MUX21:inst2|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst1|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst1|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst1|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst1|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst|inst5  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst|inst5  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst|inst3  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst|inst3  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst|inst   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst2|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst2|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst2|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst2|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX41:inst2|MUX21:inst2|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX21:inst|inst5              ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX21:inst|inst5              ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX21:inst|inst3              ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX21:inst|inst3              ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX21:inst|inst               ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|mux81:inst|MUX21:inst|inst               ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst6|inst1                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst6|inst1                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst6|inst2                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst6|inst2                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst7|inst1                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst7|inst1                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst7|inst                    ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst7|inst                    ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst7|inst4                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst7|inst4                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst7|inst3                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst7|inst3                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst7|inst2                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst7|inst2                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst1|inst1                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst1|inst1                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst1|inst                    ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst1|inst                    ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst1|inst4                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst1|inst4                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst1|inst3                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst1|inst3                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst1|inst2                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_adder:inst1|inst2                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst5|inst1                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst5|inst1                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst5|inst4                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst5|inst4                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst5|inst2                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst19|Full_Suber:inst5|inst2                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|inst14                                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|inst14                                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|inst16                                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|inst16                                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|inst17                                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|inst17                                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst1|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst1|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst1|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst1|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst|inst5  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst|inst5  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst|inst3  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst|inst3  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst|inst   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst2|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst2|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst2|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst2|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst3|MUX21:inst2|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst1|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst1|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst1|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst1|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst|inst5  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst|inst5  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst|inst3  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst|inst3  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst|inst   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst2|inst5 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst2|inst5 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst2|inst3 ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst2|inst  ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX41:inst2|MUX21:inst2|inst  ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX21:inst|inst5              ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX21:inst|inst5              ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX21:inst|inst3              ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX21:inst|inst3              ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX21:inst|inst               ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|mux81:inst|MUX21:inst|inst               ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_adder:inst6|inst1                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_adder:inst6|inst1                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_Suber:inst7|inst1                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_Suber:inst7|inst1                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_Suber:inst7|inst                    ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_Suber:inst7|inst                    ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_Suber:inst7|inst4                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_Suber:inst7|inst4                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_Suber:inst7|inst3                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_Suber:inst7|inst3                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_Suber:inst7|inst2                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_Suber:inst7|inst2                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_adder:inst1|inst1                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_adder:inst1|inst1                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_adder:inst1|inst                    ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_adder:inst1|inst                    ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_adder:inst1|inst4                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_adder:inst1|inst4                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_adder:inst1|inst3                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_adder:inst1|inst3                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_adder:inst1|inst2                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_adder:inst1|inst2                   ; out0             ;
+; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_Suber:inst5|inst1                   ; |ALU4bit_symbol|ALU4bit:inst|ALU1bit:inst24|Full_Suber:inst5|inst1                   ; out0             ;
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                       ;
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+
+; Node Name                                                                    ; Output Port Name                                                             ; Output Port Type ;
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+
+; |ALU4bit_symbol|SW13                                                         ; |ALU4bit_symbol|SW13                                                         ; out              ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst                          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst                          ; regout           ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst1                         ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst1                         ; regout           ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst2                         ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst2                         ; regout           ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst3                         ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst3                         ; regout           ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst1|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst|inst   ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst2|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst1|inst5 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst1|inst5 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst1|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst1|inst  ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst|inst   ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst2|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst1|inst5 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst1|inst5 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst1|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst1|inst  ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst|inst   ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst2|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst1|inst  ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst|inst   ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst2|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst3|inst                              ; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst3|inst                              ; out0             ;
+; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst2|inst                              ; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst2|inst                              ; out0             ;
+; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst1|inst                              ; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst1|inst                              ; out0             ;
+; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst|inst                               ; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst|inst                               ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst3|inst3                               ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst3|inst3                               ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst2|inst3                               ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst2|inst3                               ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst1|inst3                               ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst1|inst3                               ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst|inst3                                ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst|inst3                                ; out0             ;
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                       ;
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+
+; Node Name                                                                    ; Output Port Name                                                             ; Output Port Type ;
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+
+; |ALU4bit_symbol|SW13                                                         ; |ALU4bit_symbol|SW13                                                         ; out              ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst                          ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst                          ; regout           ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst1                         ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst1                         ; regout           ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst2                         ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst2                         ; regout           ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst3                         ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|inst3                         ; regout           ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst1|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst|inst   ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst2|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst7|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst1|inst5 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst1|inst5 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst1|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst1|inst  ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst|inst   ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst2|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst6|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst1|inst5 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst1|inst5 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst1|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst1|inst3 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst1|inst  ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst|inst   ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst2|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst5|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst1|inst  ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst1|inst  ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst|inst   ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst|inst   ; out0             ;
+; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst2|inst3 ; |ALU4bit_symbol|BoShilf:inst1|Res_4choice:inst|MUX41:inst4|MUX21:inst2|inst3 ; out0             ;
+; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst3|inst                              ; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst3|inst                              ; out0             ;
+; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst2|inst                              ; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst2|inst                              ; out0             ;
+; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst1|inst                              ; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst1|inst                              ; out0             ;
+; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst|inst                               ; |ALU4bit_symbol|MUX4_IN:inst25|MUX21:inst|inst                               ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst3|inst3                               ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst3|inst3                               ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst2|inst3                               ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst2|inst3                               ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst1|inst3                               ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst1|inst3                               ; out0             ;
+; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst|inst3                                ; |ALU4bit_symbol|MUX4IN:inst2|MUX21:inst|inst3                                ; out0             ;
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Oct 18 23:41:16 2024
+Info: Command: quartus_sim --simulation_results_format=VWF Lab03_CE118 -c Lab03_CE118
+Info (324025): Using vector source file "C:/CE118/Lab03/Waveform15.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "CLK" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Y" in design.
+Warning (328012): Can't find signal in vector source file for input pin "|ALU4bit_symbol|SW13"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      88.40 %
+Info (328052): Number of transitions in simulation is 3391
+Info (324045): Vector file Lab03_CE118.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4444 megabytes
+    Info: Processing ended: Fri Oct 18 23:41:16 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

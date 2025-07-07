@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'c_state.state5'
+Slack : -3.219
+TNS   : -3.219
+
+Type  : Slow Model Setup 'c_state.state1'
+Slack : -1.361
+TNS   : -4.929
+
+Type  : Slow Model Setup 'clk'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Slow Model Hold 'c_state.state1'
+Slack : -1.954
+TNS   : -9.182
+
+Type  : Slow Model Hold 'clk'
+Slack : -1.446
+TNS   : -2.734
+
+Type  : Slow Model Hold 'c_state.state5'
+Slack : 2.675
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -7.380
+
+Type  : Slow Model Minimum Pulse Width 'c_state.state1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'c_state.state5'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'c_state.state5'
+Slack : -1.338
+TNS   : -1.338
+
+Type  : Fast Model Setup 'c_state.state1'
+Slack : -0.224
+TNS   : -0.394
+
+Type  : Fast Model Setup 'clk'
+Slack : 0.613
+TNS   : 0.000
+
+Type  : Fast Model Hold 'c_state.state1'
+Slack : -1.170
+TNS   : -5.577
+
+Type  : Fast Model Hold 'clk'
+Slack : -0.856
+TNS   : -2.119
+
+Type  : Fast Model Hold 'c_state.state5'
+Slack : 1.445
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -7.380
+
+Type  : Fast Model Minimum Pulse Width 'c_state.state1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'c_state.state5'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="InputA[0]" source="Pin Planner" >
+		</pin>
+		<pin name="InputA[1]" source="Pin Planner" >
+		</pin>
+		<pin name="InputA[2]" source="Pin Planner" >
+		</pin>
+		<pin name="InputA[3]" source="Pin Planner" >
+		</pin>
+		<pin name="InputB[3]" source="Pin Planner" >
+		</pin>
+		<pin name="InputB[2]" source="Pin Planner" >
+		</pin>
+		<pin name="InputB[1]" source="Pin Planner" >
+		</pin>
+		<pin name="InputB[0]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[0]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[1]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[2]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[3]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[4]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[5]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[6]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[7]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[8]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[9]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[10]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[11]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[12]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[13]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[14]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[15]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[16]" source="Pin Planner" >
+		</pin>
+		<pin name="SW[17]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[0]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[1]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[2]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[3]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[4]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[5]" source="Pin Planner" >
+		</pin>
+		<pin name="LEDG[7]" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

@@ -1,0 +1,8 @@
+module Multiplexer_4bit(a, b, CLK, out); begin
+	input wire [3:0]a;
+	input wire [3:0]b;
+	input wire CLK;
+	output reg [7:0]out;
+endmodule
+	
+	

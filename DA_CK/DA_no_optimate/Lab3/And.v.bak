@@ -1,0 +1,3 @@
+module And(a,b,And);
+	assign And = a&b;
+endmodule

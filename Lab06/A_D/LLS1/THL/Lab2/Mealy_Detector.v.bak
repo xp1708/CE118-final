@@ -1,0 +1,32 @@
+module Mealy_Detector(X, Z, CLK, Cstate, Nstate);
+	input wire X;
+	input wire CLK;
+	output wire Z;
+	output reg [2:0]Cstate;
+	output reg [2:0]Nstate;
+	
+	parameter START = 3'b000;//0
+	parameter GET0 = 3'b001; //1
+	parameter GET01 = 3'b011;//3
+	parameter GET1 = 3'b010; //2
+	parameter GET10 = 3'b110;//6
+	
+	always@(posedge CLK) begin
+		Cstate <= Nstate;
+	end
+	always@(Cstate, X) begin
+		case(Cstate)
+			START: Nstate = (X == 1)? GET1:GET0;// 0  =1 -> 2, =0 -> 1
+			GET0: Nstate = (X == 1)? GET01:GET0;// 1  =1 -> 3, =0 -> 1
+			GET01:Nstate = (X == 1)? GET1:GET10;// 3  =1 -> 2, =0 -> 6
+			GET1: Nstate = (X == 1)? GET1:GET10;// 2  =1 -> 2, =0 -> 6
+			GET10:Nstate = (X == 1)? GET01:GET0;// 6  =1 -> 3, =0 -> 1
+			default: begin
+			Nstate = START; end
+		endcase
+
+	end
+	assign Z = (Cstate == GET10 | Cstate == GET01) ? 1'b1 : 1'b0; 
+	
+	
+endmodule

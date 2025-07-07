@@ -1,0 +1,30 @@
+module detector (input  X, output Z, input clk, output n_state, output c_state);
+    wire X;
+    wire Z;
+    wire clk;
+    reg [1:0]n_state;
+    reg [1:0]c_state;
+    reg A; 
+
+    parameter case0 = 2'b00;
+    parameter case1 = 2'b01;
+    parameter case2 = 2'b10;
+
+    always @(posedge clk) begin
+        c_state <= n_state;
+    end
+
+    always @(posedge clk) begin
+        case(c_state) begin
+            case0: begin n_state = case1;
+                A <= X; end
+            case1: begin n_state = (X==A) ? case1:case2;
+                A <= X; end
+            case2: begin n_state = (X==A) ? case1:case2;
+                A <= X; end
+            default: n_state = case0;
+            
+        endcase 
+    end
+
+endmodule

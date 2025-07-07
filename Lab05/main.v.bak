@@ -1,0 +1,60 @@
+module main #(parameter DATA_WIDTH = 8) (
+    input wire CLK,
+    input wire [DATA_WIDTH-1:0] Inport,
+    output wire [DATA_WIDTH-1:0] Outport
+);
+
+    // Signals
+    wire [DATA_WIDTH-1:0] mux_out;
+    wire [DATA_WIDTH-1:0] alu_a, alu_b;
+    wire [DATA_WIDTH-1:0] alu_out;
+    wire [DATA_WIDTH-1:0] shift_out;
+    wire [2:0] write_address;
+
+    // Instantiate modules
+    mux #(.WIDTH(DATA_WIDTH)) mux_inst (
+        .a(shift_out),
+        .b(Inport),
+        .IE(write_address[0]),
+        .mux_out(mux_out)
+    );
+
+    RegisterFile #(.DATA_WIDTH(DATA_WIDTH)) reg_file_inst (
+        .CLK(CLK),
+        .WA(write_address[2:0]),
+        .WD(mux_out),
+        .WE(write_address[0]),
+        .RAA(write_address[2:0]),
+        .RDA(alu_a),
+        .REA(1'b1),
+        .RAB(write_address[2:0]),
+        .RDB(alu_b),
+        .REB(1'b1)
+    );
+
+    alu #(.DATA_WIDTH(DATA_WIDTH)) alu_inst (
+        .alu_op({write_address[1], write_address[0]}),
+        .a(alu_a),
+        .b(alu_b),
+        .out_alu(alu_out)
+    );
+
+    shifter #(.DATA_WIDTH(DATA_WIDTH)) shifter_inst (
+        .data_in(alu_out),
+        .shift_en(write_address[0]),
+        .shift_out(shift_out)
+    );
+
+    // Map Outport to mux_out
+    assign Outport = mux_out;
+
+    // Control logic for write_address
+    always @(*) begin
+        if (write_address[0] == 0) begin
+            write_address = 3'b001; // Shift mode
+        end else begin
+            write_address = 3'b010; // ALU mode
+        end
+    end
+
+endmodule

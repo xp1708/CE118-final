@@ -1,0 +1,150 @@
+module control_unit (
+    input wire clk,              // Clock signal
+    input wire rst,              // Reset signal
+    input wire start,            // Signal to start factorial calculation
+    input wire compare,          // Input from datapath comparator
+    output reg IE,               // Control MUX selection
+    output reg we,               // Write enable for RegisterFile
+    output reg [1:0] wa,         // Write address for RegisterFile
+    output reg rea,              // Read enable A for RegisterFile
+    output reg reb,              // Read enable B for RegisterFile
+    output reg [1:0] raa,        // Read address A for RegisterFile
+    output reg [1:0] rab,        // Read address B for RegisterFile
+    output reg [2:0] Sel_alu,    // ALU operation select
+    output reg done              // Signal indicating calculation is complete
+);
+ 
+    // State definitions
+	 parameter state0 = 3'b000;   // IDLE
+	 parameter state1 = 3'b001;	// Load_1
+	 parameter state2 = 3'b010;	// Load_Inport
+	 parameter state3 = 3'b011;	// a = a * b
+	 parameter state4 = 3'b100;	// b = b - 1
+	 parameter DONE   = 3'b101;	// End calculator
+	 
+    // Register addresses
+    localparam COUNTER_REG = 2'b00;
+    localparam RESULT_REG  = 2'b01;
+
+    // ALU operations
+    localparam ALU_MULT    = 3'b000;
+    localparam ALU_DEC     = 3'b111;
+
+    // State registers
+    reg [2:0] current_state, next_state;
+
+    // Combined state transition and output logic
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            current_state <= state0;
+            IE <= 0;
+            we <= 0;
+            wa <= 2'b00;
+            rea <= 0;
+            reb <= 0;
+            raa <= 2'b00;
+            rab <= 2'b00;
+            Sel_alu <= 3'b000;
+            done <= 0;
+        end
+        else begin
+            case (current_state)
+                state0: begin
+                    // State transition
+                    current_state <= start ? state1 : state0;
+                    // Output assignments
+                    IE <= 0;
+                    we <= 0;
+                    wa <= 2'b00;
+                    rea <= 0;
+                    reb <= 0;
+                    raa <= 2'b00;
+                    rab <= 2'b00;
+                    Sel_alu <= 3'b000;
+                    done <= 0;
+                end
+					
+                state1: begin
+                    // State transition
+                    current_state <= state2;
+                    // Output assignments
+                    IE <= 1;                // Select external input
+                    we <= 1;                // Enable writing
+                    wa <= COUNTER_REG;      // Write to counter register
+                    rea <= 0;
+                    reb <= 0;
+                    raa <= 2'b00;
+                    rab <= 2'b00;
+                    Sel_alu <= 3'b000;
+                    done <= 0;
+                end
+					 
+					 state2: begin
+                    // State transition
+                    current_state <= state3;
+                    // Output assignments
+                    IE <= 1;                // Select external input
+                    we <= 1;                // Enable writing
+                    wa <= RESULT_REG;      // Write to result register
+                    rea <= 0;
+                    reb <= 0;
+                    raa <= 2'b00;
+                    rab <= 2'b00;
+                    Sel_alu <= 3'b000;
+                    done <= 0;
+                end
+
+                state3: begin
+                    // State transition
+                    current_state <= state4;
+                    // Output assignments
+                    IE <= 0;                // Select ALU output
+                    we <= 1;
+                    wa <= COUNTER_REG;       // Store multiplication result
+                    rea <= 1;
+                    reb <= 1;
+                    raa <= COUNTER_REG;     // Read counter
+                    rab <= RESULT_REG;      // Read current result
+                    Sel_alu <= ALU_MULT;    // Select multiplication
+                    done <= 0;
+                end
+
+                state4: begin
+                    // State transition
+                    current_state <= compare ? DONE : state3;
+                    // Output assignments
+                    IE <= 0;                // Select ALU output
+                    we <= 1;
+                    wa <= RESULT_REG;      // Update counter
+                    rea <= 1;
+                    reb <= 0;
+                    raa <= RESULT_REG;
+                    rab <= 2'b00;
+                    Sel_alu <= ALU_DEC;     // Select decrement
+                    done <= 0;
+                end
+
+                DONE: begin
+                    // State transition
+                    current_state = state0;
+                    // Output assignments
+                    IE <= 0;
+                    we <= 0;
+                    wa <= 2'b00;
+                    rea <= 1;
+                    reb <= 0;
+                    raa <= 2'b00;
+                    rab <= 2'b00;
+                    Sel_alu <= 3'b000;
+                    done <= 1;              // Signal completion
+                end
+
+                default: begin
+                    // State transition
+                    current_state <= state0;
+                end
+            endcase
+        end
+    end
+
+endmodule

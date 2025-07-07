@@ -1,0 +1,29 @@
+C:/Users/Admin/Desktop/LLS/THL/Lab1/counterTB.v {1 {vlog -work work {C:\Users\Admin\Desktop\LLS\THL\Lab1\counterTB.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Counter_tb
+
+Top level modules:
+	Counter_tb
+
+} {} {}} C:/Users/Admin/Desktop/LLS/THL/Lab1/T_ff.v {1 {vlog -work work C:/Users/Admin/Desktop/LLS/THL/Lab1/T_ff.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module T_ff
+
+Top level modules:
+	T_ff
+
+} {} {}} C:/Users/Admin/Desktop/LLS/THL/Lab1/Mux2to1.v {1 {vlog -work work C:/Users/Admin/Desktop/LLS/THL/Lab1/Mux2to1.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Mux2to1
+
+Top level modules:
+	Mux2to1
+
+} {} {}} C:/Users/Admin/Desktop/LLS/THL/Lab1/counter.v {1 {vlog -work work {C:\Users\Admin\Desktop\LLS\THL\Lab1\counter.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}}

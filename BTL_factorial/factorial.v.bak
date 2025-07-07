@@ -1,0 +1,48 @@
+module factorial (
+   input wire clk,           // Clock signal
+   input wire rst,           // Reset signal  
+   input wire start,         // Start calculation signal
+   input wire [7:0] Data_i,  // Input data
+   output wire [7:0] Out,    // Output result
+   output wire done          // Done signal
+);
+
+   // Internal control signals
+   wire IE, we, rea, reb, compare;
+   wire [1:0] wa, raa, rab;
+   wire [2:0] Sel_alu;
+
+   // Instantiate datapath (top_module)
+   top_module datapath (
+       .clk(clk),
+       .Data_i(Data_i),
+       .IE(IE),
+       .we(we),
+       .wa(wa),
+       .rea(rea), 
+       .reb(reb),
+       .raa(raa),
+       .rab(rab),
+       .Sel_alu(Sel_alu),
+       .Out(Out),
+       .compare(compare)
+   );
+
+   // Instantiate control unit
+   control_unit controller (
+       .clk(clk),
+       .rst(rst),
+       .start(start),
+       .compare(compare),
+       .IE(IE),
+       .we(we),
+       .wa(wa),
+       .rea(rea),
+       .reb(reb), 
+       .raa(raa),
+       .rab(rab),
+       .Sel_alu(Sel_alu),
+       .done(done)
+   );
+
+endmodule

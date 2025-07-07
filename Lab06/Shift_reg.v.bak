@@ -1,0 +1,16 @@
+module Shift_Register (
+    input wire [15:0] data_in,    // Dữ liệu đầu vào
+    input wire shift_ctrl,        // Tín hiệu điều khiển
+    input wire clk,               // Tín hiệu clock
+    output reg [15:0] data_out    // Dữ liệu đầu ra
+);
+
+    always @(posedge clk) begin
+        case (shift_ctrl)
+            1'b0: data_out <= data_in;       // Giữ giá trị đầu vào
+            1'b1: data_out <= data_in >> 1;  // Dịch phải dữ liệu đầu vào
+            default: data_out <= 16'b0;      // Giá trị mặc định
+        endcase
+    end
+
+endmodule

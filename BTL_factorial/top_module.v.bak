@@ -1,0 +1,56 @@
+module top_module (
+    input wire clk,                    // Clock signal
+    input wire [7:0] Data_i	,          // Input port for MUX
+    input wire IE,                     // Input enable for MUX
+    input wire we,                     // Write enable for RegisterFile
+    input wire [1:0] wa,              // Write address for RegisterFile
+    input wire rea,                    // Read enable A for RegisterFile
+    input wire reb,                    // Read enable B for RegisterFile
+    input wire [1:0] raa,             // Read address A for RegisterFile
+    input wire [1:0] rab,             // Read address B for RegisterFile
+    input wire [2:0] Sel_alu,         // Select operation for ALU
+	 output wire [7:0] Out				  // Output of datapath
+);
+
+    // Internal wires
+    wire [7:0] rda;                   // Output A from RegisterFile
+    wire [7:0] rdb;                   // Output B from RegisterFile
+    wire [7:0] alu_o;                 // Output from ALU
+	 wire [7:0] mux_out; 				  // Output from mux
+	 wire [7:0] data_in;
+	 
+
+    // Instantiate ALU
+    ALU alu_inst (
+        .a_alu_i(rda[3:0]),           // Connect to lower 4 bits of rda
+        .b_alu_i(rdb[3:0]),           // Connect to lower 4 bits of rdb
+        .Sel_alu(Sel_alu),
+        .alu_o(alu_o[3:0])            // Connect to lower 4 bits of alu_o
+    );
+    
+    // Extend ALU output to 8 bits by zero padding
+    assign alu_o[7:4] = 4'b0000;
+
+    // Instantiate MUX
+    Mux21 mux_inst (
+        .I0(alu_o),                   // When IE = 0, select ALU output
+        .I1(Inport),                  // When IE = 1, select external input
+        .IE(IE),
+        .mux_o(mux_o)
+    );
+
+    // Instantiate RegisterFile
+    RegisterFile reg_inst (
+        .clk(clk),
+        .data_in(mux_o),              // Input from MUX output
+        .we(we),
+        .wa(wa),
+        .rea(rea),
+        .reb(reb),
+        .raa(raa),
+        .rab(rab),
+        .rda(rda),
+        .rdb(rdb)
+    );
+
+endmodule

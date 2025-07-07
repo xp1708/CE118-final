@@ -1,0 +1,1061 @@
+TimeQuest Timing Analyzer report for Lab03_CE118
+Fri Oct 18 13:23:01 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'SW13'
+ 12. Slow Model Hold: 'SW13'
+ 13. Slow Model Minimum Pulse Width: 'SW13'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'SW13'
+ 26. Fast Model Hold: 'SW13'
+ 27. Fast Model Minimum Pulse Width: 'SW13'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Lab03_CE118                                                       ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                           ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets  ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+; SW13       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SW13 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 968.05 MHz ; 450.05 MHz      ; SW13       ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; SW13  ; -0.033 ; -0.062        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; SW13  ; 0.530 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; SW13  ; -1.222 ; -5.222                ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'SW13'                                                                                                                                   ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.033 ; BoShilf:inst1|Res_4choice:inst|inst2 ; BoShilf:inst1|Res_4choice:inst|inst1 ; SW13         ; SW13        ; 1.000        ; 0.000      ; 1.069      ;
+; -0.029 ; BoShilf:inst1|Res_4choice:inst|inst3 ; BoShilf:inst1|Res_4choice:inst|inst2 ; SW13         ; SW13        ; 1.000        ; 0.000      ; 1.065      ;
+; 0.234  ; BoShilf:inst1|Res_4choice:inst|inst1 ; BoShilf:inst1|Res_4choice:inst|inst2 ; SW13         ; SW13        ; 1.000        ; 0.000      ; 0.802      ;
+; 0.238  ; BoShilf:inst1|Res_4choice:inst|inst1 ; BoShilf:inst1|Res_4choice:inst|inst  ; SW13         ; SW13        ; 1.000        ; 0.000      ; 0.798      ;
+; 0.239  ; BoShilf:inst1|Res_4choice:inst|inst2 ; BoShilf:inst1|Res_4choice:inst|inst3 ; SW13         ; SW13        ; 1.000        ; 0.000      ; 0.797      ;
+; 0.240  ; BoShilf:inst1|Res_4choice:inst|inst  ; BoShilf:inst1|Res_4choice:inst|inst1 ; SW13         ; SW13        ; 1.000        ; 0.000      ; 0.796      ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'SW13'                                                                                                                                   ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.530 ; BoShilf:inst1|Res_4choice:inst|inst  ; BoShilf:inst1|Res_4choice:inst|inst1 ; SW13         ; SW13        ; 0.000        ; 0.000      ; 0.796      ;
+; 0.531 ; BoShilf:inst1|Res_4choice:inst|inst2 ; BoShilf:inst1|Res_4choice:inst|inst3 ; SW13         ; SW13        ; 0.000        ; 0.000      ; 0.797      ;
+; 0.532 ; BoShilf:inst1|Res_4choice:inst|inst1 ; BoShilf:inst1|Res_4choice:inst|inst  ; SW13         ; SW13        ; 0.000        ; 0.000      ; 0.798      ;
+; 0.536 ; BoShilf:inst1|Res_4choice:inst|inst1 ; BoShilf:inst1|Res_4choice:inst|inst2 ; SW13         ; SW13        ; 0.000        ; 0.000      ; 0.802      ;
+; 0.799 ; BoShilf:inst1|Res_4choice:inst|inst3 ; BoShilf:inst1|Res_4choice:inst|inst2 ; SW13         ; SW13        ; 0.000        ; 0.000      ; 1.065      ;
+; 0.803 ; BoShilf:inst1|Res_4choice:inst|inst2 ; BoShilf:inst1|Res_4choice:inst|inst1 ; SW13         ; SW13        ; 0.000        ; 0.000      ; 1.069      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'SW13'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; SW13  ; Rise       ; SW13                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst2 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst2 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst3 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst3 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW13  ; Rise       ; SW13|combout                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW13  ; Rise       ; SW13|combout                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW13  ; Rise       ; inst1|inst|inst1|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW13  ; Rise       ; inst1|inst|inst1|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW13  ; Rise       ; inst1|inst|inst2|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW13  ; Rise       ; inst1|inst|inst2|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW13  ; Rise       ; inst1|inst|inst3|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW13  ; Rise       ; inst1|inst|inst3|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW13  ; Rise       ; inst1|inst|inst|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW13  ; Rise       ; inst1|inst|inst|clk                  ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW0       ; SW13       ; 1.903 ; 1.903 ; Rise       ; SW13            ;
+; SW1       ; SW13       ; 2.353 ; 2.353 ; Rise       ; SW13            ;
+; SW2       ; SW13       ; 2.208 ; 2.208 ; Rise       ; SW13            ;
+; SW3       ; SW13       ; 1.191 ; 1.191 ; Rise       ; SW13            ;
+; SW15      ; SW13       ; 5.042 ; 5.042 ; Rise       ; SW13            ;
+; SW16      ; SW13       ; 4.944 ; 4.944 ; Rise       ; SW13            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW0       ; SW13       ; -1.673 ; -1.673 ; Rise       ; SW13            ;
+; SW1       ; SW13       ; -2.123 ; -2.123 ; Rise       ; SW13            ;
+; SW2       ; SW13       ; -1.978 ; -1.978 ; Rise       ; SW13            ;
+; SW3       ; SW13       ; -0.961 ; -0.961 ; Rise       ; SW13            ;
+; SW15      ; SW13       ; -3.810 ; -3.810 ; Rise       ; SW13            ;
+; SW16      ; SW13       ; -3.963 ; -3.963 ; Rise       ; SW13            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LEDG0     ; SW13       ; 9.438  ; 9.438  ; Rise       ; SW13            ;
+; LEDG1     ; SW13       ; 10.047 ; 10.047 ; Rise       ; SW13            ;
+; LEDG2     ; SW13       ; 9.114  ; 9.114  ; Rise       ; SW13            ;
+; LEDG3     ; SW13       ; 11.973 ; 11.973 ; Rise       ; SW13            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LEDG0     ; SW13       ; 9.438  ; 9.438  ; Rise       ; SW13            ;
+; LEDG1     ; SW13       ; 10.047 ; 10.047 ; Rise       ; SW13            ;
+; LEDG2     ; SW13       ; 9.114  ; 9.114  ; Rise       ; SW13            ;
+; LEDG3     ; SW13       ; 11.973 ; 11.973 ; Rise       ; SW13            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; SW0        ; LEDG0       ; 10.934 ; 10.934 ; 10.934 ; 10.934 ;
+; SW0        ; LEDG1       ; 12.176 ; 12.176 ; 12.176 ; 12.176 ;
+; SW0        ; LEDG2       ; 13.809 ; 13.809 ; 13.809 ; 13.809 ;
+; SW0        ; LEDG3       ; 14.299 ; 14.299 ; 14.299 ; 14.299 ;
+; SW0        ; LEDG4       ; 12.886 ; 12.886 ; 12.886 ; 12.886 ;
+; SW0        ; LEDG5       ; 12.392 ; 12.392 ; 12.392 ; 12.392 ;
+; SW0        ; LEDG7       ; 14.410 ; 14.410 ; 14.410 ; 14.410 ;
+; SW1        ; LEDG1       ; 12.283 ; 12.283 ; 12.283 ; 12.283 ;
+; SW1        ; LEDG2       ; 13.917 ; 13.917 ; 13.917 ; 13.917 ;
+; SW1        ; LEDG3       ; 14.407 ; 14.407 ; 14.407 ; 14.407 ;
+; SW1        ; LEDG4       ; 12.994 ; 12.994 ; 12.994 ; 12.994 ;
+; SW1        ; LEDG5       ; 12.500 ; 12.500 ; 12.500 ; 12.500 ;
+; SW1        ; LEDG7       ; 14.518 ; 14.518 ; 14.518 ; 14.518 ;
+; SW2        ; LEDG2       ; 12.406 ; 12.406 ; 12.406 ; 12.406 ;
+; SW2        ; LEDG3       ; 13.175 ; 13.175 ; 13.175 ; 13.175 ;
+; SW2        ; LEDG4       ; 11.482 ; 11.482 ; 11.482 ; 11.482 ;
+; SW2        ; LEDG5       ; 10.988 ; 10.988 ; 10.988 ; 10.988 ;
+; SW2        ; LEDG7       ; 13.007 ; 13.007 ; 13.007 ; 13.007 ;
+; SW3        ; LEDG3       ; 13.254 ; 13.254 ; 13.254 ; 13.254 ;
+; SW3        ; LEDG4       ; 11.405 ; 11.405 ; 11.405 ; 11.405 ;
+; SW3        ; LEDG5       ; 9.877  ; 9.877  ; 9.877  ; 9.877  ;
+; SW3        ; LEDG7       ; 12.628 ; 12.628 ; 12.628 ; 12.628 ;
+; SW5        ; LEDG0       ; 10.235 ; 10.235 ; 10.235 ; 10.235 ;
+; SW5        ; LEDG1       ; 11.030 ; 11.030 ; 11.030 ; 11.030 ;
+; SW5        ; LEDG2       ; 12.661 ; 12.661 ; 12.661 ; 12.661 ;
+; SW5        ; LEDG3       ; 13.153 ; 13.153 ; 13.153 ; 13.153 ;
+; SW5        ; LEDG4       ; 11.738 ; 11.738 ; 11.738 ; 11.738 ;
+; SW5        ; LEDG5       ; 11.244 ; 11.244 ; 11.244 ; 11.244 ;
+; SW5        ; LEDG7       ; 13.262 ; 13.262 ; 13.262 ; 13.262 ;
+; SW6        ; LEDG1       ; 11.006 ; 11.006 ; 11.006 ; 11.006 ;
+; SW6        ; LEDG2       ; 12.640 ; 12.640 ; 12.640 ; 12.640 ;
+; SW6        ; LEDG3       ; 13.131 ; 13.131 ; 13.131 ; 13.131 ;
+; SW6        ; LEDG4       ; 11.717 ; 11.717 ; 11.717 ; 11.717 ;
+; SW6        ; LEDG5       ; 11.223 ; 11.223 ; 11.223 ; 11.223 ;
+; SW6        ; LEDG7       ; 13.241 ; 13.241 ; 13.241 ; 13.241 ;
+; SW7        ; LEDG2       ; 12.171 ; 12.171 ; 12.171 ; 12.171 ;
+; SW7        ; LEDG3       ; 12.979 ; 12.979 ; 12.979 ; 12.979 ;
+; SW7        ; LEDG4       ; 11.243 ; 11.243 ; 11.243 ; 11.243 ;
+; SW7        ; LEDG5       ; 10.805 ; 10.805 ; 10.805 ; 10.805 ;
+; SW7        ; LEDG7       ; 12.772 ; 12.772 ; 12.772 ; 12.772 ;
+; SW8        ; LEDG3       ; 13.458 ; 13.458 ; 13.458 ; 13.458 ;
+; SW8        ; LEDG4       ; 11.612 ; 11.612 ; 11.612 ; 11.612 ;
+; SW8        ; LEDG5       ; 10.224 ; 10.224 ; 10.224 ; 10.224 ;
+; SW8        ; LEDG7       ; 12.835 ; 12.835 ; 12.835 ; 12.835 ;
+; SW14       ; LEDG0       ; 12.217 ; 12.217 ; 12.217 ; 12.217 ;
+; SW14       ; LEDG1       ; 12.605 ; 11.971 ; 11.971 ; 12.605 ;
+; SW14       ; LEDG2       ; 12.578 ; 12.578 ; 12.578 ; 12.578 ;
+; SW14       ; LEDG3       ; 14.924 ; 14.924 ; 14.924 ; 14.924 ;
+; SW14       ; LEDG4       ; 11.526 ;        ;        ; 11.526 ;
+; SW15       ; LEDG0       ; 13.399 ; 13.399 ; 13.399 ; 13.399 ;
+; SW15       ; LEDG1       ; 13.157 ; 13.157 ; 13.157 ; 13.157 ;
+; SW15       ; LEDG2       ; 14.075 ; 14.075 ; 14.075 ; 14.075 ;
+; SW15       ; LEDG3       ; 15.296 ; 15.296 ; 15.296 ; 15.296 ;
+; SW15       ; LEDG4       ; 11.946 ; 11.946 ; 11.946 ; 11.946 ;
+; SW15       ; LEDG5       ; 11.453 ; 11.453 ; 11.453 ; 11.453 ;
+; SW15       ; LEDG7       ; 14.676 ; 14.676 ; 14.676 ; 14.676 ;
+; SW16       ; LEDG0       ; 13.415 ; 13.415 ; 13.415 ; 13.415 ;
+; SW16       ; LEDG1       ; 13.352 ; 13.352 ; 13.352 ; 13.352 ;
+; SW16       ; LEDG2       ; 13.902 ; 13.902 ; 13.902 ; 13.902 ;
+; SW16       ; LEDG3       ; 15.640 ; 15.640 ; 15.640 ; 15.640 ;
+; SW16       ; LEDG4       ; 12.103 ; 12.103 ; 12.103 ; 12.103 ;
+; SW16       ; LEDG7       ; 14.503 ; 14.503 ; 14.503 ; 14.503 ;
+; SW17       ; LEDG0       ; 13.269 ; 13.269 ; 13.269 ; 13.269 ;
+; SW17       ; LEDG1       ; 12.829 ; 12.587 ; 12.587 ; 12.829 ;
+; SW17       ; LEDG2       ; 12.033 ; 12.322 ; 12.322 ; 12.033 ;
+; SW17       ; LEDG3       ; 13.337 ; 14.906 ; 14.906 ; 13.337 ;
+; SW17       ; LEDG4       ; 11.668 ;        ;        ; 11.668 ;
+; SW17       ; LEDG7       ; 13.671 ; 13.671 ; 13.671 ; 13.671 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; SW0        ; LEDG0       ; 10.934 ; 10.934 ; 10.934 ; 10.934 ;
+; SW0        ; LEDG1       ; 11.451 ; 11.451 ; 11.451 ; 11.451 ;
+; SW0        ; LEDG2       ; 12.051 ; 12.051 ; 12.051 ; 12.051 ;
+; SW0        ; LEDG3       ; 13.450 ; 13.450 ; 13.450 ; 13.450 ;
+; SW0        ; LEDG4       ; 11.412 ; 11.412 ; 11.412 ; 11.412 ;
+; SW0        ; LEDG5       ; 11.456 ; 11.456 ; 11.456 ; 11.456 ;
+; SW0        ; LEDG7       ; 11.336 ; 11.336 ; 11.336 ; 11.336 ;
+; SW1        ; LEDG1       ; 10.861 ; 10.861 ; 10.861 ; 10.861 ;
+; SW1        ; LEDG2       ; 11.984 ; 11.984 ; 11.984 ; 11.984 ;
+; SW1        ; LEDG3       ; 13.404 ; 13.404 ; 13.404 ; 13.404 ;
+; SW1        ; LEDG4       ; 11.493 ; 11.493 ; 11.493 ; 11.493 ;
+; SW1        ; LEDG5       ; 11.564 ; 11.564 ; 11.564 ; 11.564 ;
+; SW1        ; LEDG7       ; 11.004 ; 11.004 ; 11.004 ; 11.004 ;
+; SW2        ; LEDG2       ; 10.857 ; 10.857 ; 10.857 ; 10.857 ;
+; SW2        ; LEDG3       ; 12.548 ; 12.548 ; 12.548 ; 12.548 ;
+; SW2        ; LEDG4       ; 10.930 ; 10.930 ; 10.930 ; 10.930 ;
+; SW2        ; LEDG5       ; 10.052 ; 10.052 ; 10.052 ; 10.052 ;
+; SW2        ; LEDG7       ; 11.458 ; 11.458 ; 11.458 ; 11.458 ;
+; SW3        ; LEDG3       ; 12.358 ; 12.358 ; 12.358 ; 12.358 ;
+; SW3        ; LEDG4       ; 10.341 ; 10.341 ; 10.341 ; 10.341 ;
+; SW3        ; LEDG5       ; 9.847  ; 9.847  ; 9.847  ; 9.847  ;
+; SW3        ; LEDG7       ; 11.090 ; 11.090 ; 11.090 ; 11.090 ;
+; SW5        ; LEDG0       ; 10.235 ; 10.235 ; 10.235 ; 10.235 ;
+; SW5        ; LEDG1       ; 10.754 ; 10.754 ; 10.754 ; 10.754 ;
+; SW5        ; LEDG2       ; 11.953 ; 11.953 ; 11.953 ; 11.953 ;
+; SW5        ; LEDG3       ; 13.022 ; 13.022 ; 13.022 ; 13.022 ;
+; SW5        ; LEDG4       ; 10.267 ; 10.267 ; 10.267 ; 10.267 ;
+; SW5        ; LEDG5       ; 10.308 ; 10.308 ; 10.308 ; 10.308 ;
+; SW5        ; LEDG7       ; 10.637 ; 10.637 ; 10.637 ; 10.637 ;
+; SW6        ; LEDG1       ; 10.842 ; 10.842 ; 10.842 ; 10.842 ;
+; SW6        ; LEDG2       ; 11.931 ; 11.931 ; 11.931 ; 11.931 ;
+; SW6        ; LEDG3       ; 13.001 ; 13.001 ; 13.001 ; 13.001 ;
+; SW6        ; LEDG4       ; 10.243 ; 10.243 ; 10.243 ; 10.243 ;
+; SW6        ; LEDG5       ; 10.287 ; 10.287 ; 10.287 ; 10.287 ;
+; SW6        ; LEDG7       ; 10.808 ; 10.808 ; 10.808 ; 10.808 ;
+; SW7        ; LEDG2       ; 11.154 ; 11.154 ; 11.154 ; 11.154 ;
+; SW7        ; LEDG3       ; 12.311 ; 12.311 ; 12.311 ; 12.311 ;
+; SW7        ; LEDG4       ; 10.695 ; 10.695 ; 10.695 ; 10.695 ;
+; SW7        ; LEDG5       ; 9.813  ; 9.813  ; 9.813  ; 9.813  ;
+; SW7        ; LEDG7       ; 11.397 ; 11.397 ; 11.397 ; 11.397 ;
+; SW8        ; LEDG3       ; 12.942 ; 12.942 ; 12.942 ; 12.942 ;
+; SW8        ; LEDG4       ; 10.545 ; 10.545 ; 10.545 ; 10.545 ;
+; SW8        ; LEDG5       ; 10.051 ; 10.051 ; 10.051 ; 10.051 ;
+; SW8        ; LEDG7       ; 11.294 ; 11.294 ; 11.294 ; 11.294 ;
+; SW14       ; LEDG0       ; 12.217 ; 12.217 ; 12.217 ; 12.217 ;
+; SW14       ; LEDG1       ; 12.605 ; 11.971 ; 11.971 ; 12.605 ;
+; SW14       ; LEDG2       ; 12.578 ; 11.834 ; 11.834 ; 12.578 ;
+; SW14       ; LEDG3       ; 14.924 ; 13.640 ; 13.640 ; 14.924 ;
+; SW14       ; LEDG4       ; 11.526 ;        ;        ; 11.526 ;
+; SW15       ; LEDG0       ; 13.219 ; 13.219 ; 13.219 ; 13.219 ;
+; SW15       ; LEDG1       ; 12.955 ; 12.443 ; 12.443 ; 12.955 ;
+; SW15       ; LEDG2       ; 13.264 ; 13.264 ; 13.264 ; 13.264 ;
+; SW15       ; LEDG3       ; 14.521 ; 14.521 ; 14.521 ; 14.521 ;
+; SW15       ; LEDG4       ; 11.946 ; 11.946 ; 11.946 ; 11.946 ;
+; SW15       ; LEDG5       ; 11.453 ; 11.453 ; 11.453 ; 11.453 ;
+; SW15       ; LEDG7       ; 12.586 ; 12.921 ; 12.921 ; 12.586 ;
+; SW16       ; LEDG0       ; 13.415 ; 13.415 ; 13.415 ; 13.415 ;
+; SW16       ; LEDG1       ; 13.268 ; 13.097 ; 13.097 ; 13.268 ;
+; SW16       ; LEDG2       ; 13.285 ; 13.285 ; 13.285 ; 13.285 ;
+; SW16       ; LEDG3       ; 14.040 ; 14.040 ; 14.040 ; 14.040 ;
+; SW16       ; LEDG4       ; 12.103 ; 12.103 ; 12.103 ; 12.103 ;
+; SW16       ; LEDG7       ; 13.063 ; 13.279 ; 13.279 ; 13.063 ;
+; SW17       ; LEDG0       ; 13.094 ; 11.928 ; 11.928 ; 13.094 ;
+; SW17       ; LEDG1       ; 12.329 ; 12.329 ; 12.329 ; 12.329 ;
+; SW17       ; LEDG2       ; 12.033 ; 12.322 ; 12.322 ; 12.033 ;
+; SW17       ; LEDG3       ; 13.337 ; 14.906 ; 14.906 ; 13.337 ;
+; SW17       ; LEDG4       ; 11.668 ;        ;        ; 11.668 ;
+; SW17       ; LEDG7       ; 12.295 ; 12.295 ; 12.295 ; 12.295 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; SW13  ; 0.515 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; SW13  ; 0.244 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; SW13  ; -1.222 ; -5.222                ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'SW13'                                                                                                                                  ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.515 ; BoShilf:inst1|Res_4choice:inst|inst2 ; BoShilf:inst1|Res_4choice:inst|inst1 ; SW13         ; SW13        ; 1.000        ; 0.000      ; 0.517      ;
+; 0.518 ; BoShilf:inst1|Res_4choice:inst|inst3 ; BoShilf:inst1|Res_4choice:inst|inst2 ; SW13         ; SW13        ; 1.000        ; 0.000      ; 0.514      ;
+; 0.630 ; BoShilf:inst1|Res_4choice:inst|inst1 ; BoShilf:inst1|Res_4choice:inst|inst2 ; SW13         ; SW13        ; 1.000        ; 0.000      ; 0.402      ;
+; 0.634 ; BoShilf:inst1|Res_4choice:inst|inst1 ; BoShilf:inst1|Res_4choice:inst|inst  ; SW13         ; SW13        ; 1.000        ; 0.000      ; 0.398      ;
+; 0.636 ; BoShilf:inst1|Res_4choice:inst|inst2 ; BoShilf:inst1|Res_4choice:inst|inst3 ; SW13         ; SW13        ; 1.000        ; 0.000      ; 0.396      ;
+; 0.636 ; BoShilf:inst1|Res_4choice:inst|inst  ; BoShilf:inst1|Res_4choice:inst|inst1 ; SW13         ; SW13        ; 1.000        ; 0.000      ; 0.396      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'SW13'                                                                                                                                   ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.244 ; BoShilf:inst1|Res_4choice:inst|inst2 ; BoShilf:inst1|Res_4choice:inst|inst3 ; SW13         ; SW13        ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244 ; BoShilf:inst1|Res_4choice:inst|inst  ; BoShilf:inst1|Res_4choice:inst|inst1 ; SW13         ; SW13        ; 0.000        ; 0.000      ; 0.396      ;
+; 0.246 ; BoShilf:inst1|Res_4choice:inst|inst1 ; BoShilf:inst1|Res_4choice:inst|inst  ; SW13         ; SW13        ; 0.000        ; 0.000      ; 0.398      ;
+; 0.250 ; BoShilf:inst1|Res_4choice:inst|inst1 ; BoShilf:inst1|Res_4choice:inst|inst2 ; SW13         ; SW13        ; 0.000        ; 0.000      ; 0.402      ;
+; 0.362 ; BoShilf:inst1|Res_4choice:inst|inst3 ; BoShilf:inst1|Res_4choice:inst|inst2 ; SW13         ; SW13        ; 0.000        ; 0.000      ; 0.514      ;
+; 0.365 ; BoShilf:inst1|Res_4choice:inst|inst2 ; BoShilf:inst1|Res_4choice:inst|inst1 ; SW13         ; SW13        ; 0.000        ; 0.000      ; 0.517      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'SW13'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; SW13  ; Rise       ; SW13                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst2 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst2 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst3 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW13  ; Rise       ; BoShilf:inst1|Res_4choice:inst|inst3 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW13  ; Rise       ; SW13|combout                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW13  ; Rise       ; SW13|combout                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW13  ; Rise       ; inst1|inst|inst1|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW13  ; Rise       ; inst1|inst|inst1|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW13  ; Rise       ; inst1|inst|inst2|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW13  ; Rise       ; inst1|inst|inst2|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW13  ; Rise       ; inst1|inst|inst3|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW13  ; Rise       ; inst1|inst|inst3|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW13  ; Rise       ; inst1|inst|inst|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW13  ; Rise       ; inst1|inst|inst|clk                  ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW0       ; SW13       ; 0.923 ; 0.923 ; Rise       ; SW13            ;
+; SW1       ; SW13       ; 1.136 ; 1.136 ; Rise       ; SW13            ;
+; SW2       ; SW13       ; 1.071 ; 1.071 ; Rise       ; SW13            ;
+; SW3       ; SW13       ; 0.554 ; 0.554 ; Rise       ; SW13            ;
+; SW15      ; SW13       ; 2.900 ; 2.900 ; Rise       ; SW13            ;
+; SW16      ; SW13       ; 2.860 ; 2.860 ; Rise       ; SW13            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW0       ; SW13       ; -0.803 ; -0.803 ; Rise       ; SW13            ;
+; SW1       ; SW13       ; -1.016 ; -1.016 ; Rise       ; SW13            ;
+; SW2       ; SW13       ; -0.951 ; -0.951 ; Rise       ; SW13            ;
+; SW3       ; SW13       ; -0.434 ; -0.434 ; Rise       ; SW13            ;
+; SW15      ; SW13       ; -2.276 ; -2.276 ; Rise       ; SW13            ;
+; SW16      ; SW13       ; -2.387 ; -2.387 ; Rise       ; SW13            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG0     ; SW13       ; 4.884 ; 4.884 ; Rise       ; SW13            ;
+; LEDG1     ; SW13       ; 5.162 ; 5.162 ; Rise       ; SW13            ;
+; LEDG2     ; SW13       ; 4.739 ; 4.739 ; Rise       ; SW13            ;
+; LEDG3     ; SW13       ; 6.126 ; 6.126 ; Rise       ; SW13            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG0     ; SW13       ; 4.884 ; 4.884 ; Rise       ; SW13            ;
+; LEDG1     ; SW13       ; 5.162 ; 5.162 ; Rise       ; SW13            ;
+; LEDG2     ; SW13       ; 4.739 ; 4.739 ; Rise       ; SW13            ;
+; LEDG3     ; SW13       ; 6.126 ; 6.126 ; Rise       ; SW13            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; SW0        ; LEDG0       ; 5.575 ; 5.575 ; 5.575 ; 5.575 ;
+; SW0        ; LEDG1       ; 6.112 ; 6.112 ; 6.112 ; 6.112 ;
+; SW0        ; LEDG2       ; 6.792 ; 6.792 ; 6.792 ; 6.792 ;
+; SW0        ; LEDG3       ; 7.137 ; 7.137 ; 7.137 ; 7.137 ;
+; SW0        ; LEDG4       ; 6.423 ; 6.423 ; 6.423 ; 6.423 ;
+; SW0        ; LEDG5       ; 6.202 ; 6.202 ; 6.202 ; 6.202 ;
+; SW0        ; LEDG7       ; 7.033 ; 7.033 ; 7.033 ; 7.033 ;
+; SW1        ; LEDG1       ; 6.173 ; 6.173 ; 6.173 ; 6.173 ;
+; SW1        ; LEDG2       ; 6.857 ; 6.857 ; 6.857 ; 6.857 ;
+; SW1        ; LEDG3       ; 7.200 ; 7.200 ; 7.200 ; 7.200 ;
+; SW1        ; LEDG4       ; 6.488 ; 6.488 ; 6.488 ; 6.488 ;
+; SW1        ; LEDG5       ; 6.267 ; 6.267 ; 6.267 ; 6.267 ;
+; SW1        ; LEDG7       ; 7.098 ; 7.098 ; 7.098 ; 7.098 ;
+; SW2        ; LEDG2       ; 6.213 ; 6.213 ; 6.213 ; 6.213 ;
+; SW2        ; LEDG3       ; 6.678 ; 6.678 ; 6.678 ; 6.678 ;
+; SW2        ; LEDG4       ; 5.844 ; 5.844 ; 5.844 ; 5.844 ;
+; SW2        ; LEDG5       ; 5.623 ; 5.623 ; 5.623 ; 5.623 ;
+; SW2        ; LEDG7       ; 6.454 ; 6.454 ; 6.454 ; 6.454 ;
+; SW3        ; LEDG3       ; 6.657 ; 6.657 ; 6.657 ; 6.657 ;
+; SW3        ; LEDG4       ; 5.725 ; 5.725 ; 5.725 ; 5.725 ;
+; SW3        ; LEDG5       ; 5.072 ; 5.072 ; 5.072 ; 5.072 ;
+; SW3        ; LEDG7       ; 6.185 ; 6.185 ; 6.185 ; 6.185 ;
+; SW5        ; LEDG0       ; 5.222 ; 5.222 ; 5.222 ; 5.222 ;
+; SW5        ; LEDG1       ; 5.563 ; 5.563 ; 5.563 ; 5.563 ;
+; SW5        ; LEDG2       ; 6.242 ; 6.242 ; 6.242 ; 6.242 ;
+; SW5        ; LEDG3       ; 6.587 ; 6.587 ; 6.587 ; 6.587 ;
+; SW5        ; LEDG4       ; 5.873 ; 5.873 ; 5.873 ; 5.873 ;
+; SW5        ; LEDG5       ; 5.652 ; 5.652 ; 5.652 ; 5.652 ;
+; SW5        ; LEDG7       ; 6.483 ; 6.483 ; 6.483 ; 6.483 ;
+; SW6        ; LEDG1       ; 5.557 ; 5.557 ; 5.557 ; 5.557 ;
+; SW6        ; LEDG2       ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
+; SW6        ; LEDG3       ; 6.582 ; 6.582 ; 6.582 ; 6.582 ;
+; SW6        ; LEDG4       ; 5.868 ; 5.868 ; 5.868 ; 5.868 ;
+; SW6        ; LEDG5       ; 5.647 ; 5.647 ; 5.647 ; 5.647 ;
+; SW6        ; LEDG7       ; 6.478 ; 6.478 ; 6.478 ; 6.478 ;
+; SW7        ; LEDG2       ; 6.104 ; 6.104 ; 6.104 ; 6.104 ;
+; SW7        ; LEDG3       ; 6.597 ; 6.597 ; 6.597 ; 6.597 ;
+; SW7        ; LEDG4       ; 5.733 ; 5.733 ; 5.733 ; 5.733 ;
+; SW7        ; LEDG5       ; 5.529 ; 5.529 ; 5.529 ; 5.529 ;
+; SW7        ; LEDG7       ; 6.345 ; 6.345 ; 6.345 ; 6.345 ;
+; SW8        ; LEDG3       ; 6.785 ; 6.785 ; 6.785 ; 6.785 ;
+; SW8        ; LEDG4       ; 5.856 ; 5.856 ; 5.856 ; 5.856 ;
+; SW8        ; LEDG5       ; 5.268 ; 5.268 ; 5.268 ; 5.268 ;
+; SW8        ; LEDG7       ; 6.316 ; 6.316 ; 6.316 ; 6.316 ;
+; SW14       ; LEDG0       ; 6.684 ; 6.684 ; 6.684 ; 6.684 ;
+; SW14       ; LEDG1       ; 6.845 ; 6.575 ; 6.575 ; 6.845 ;
+; SW14       ; LEDG2       ; 6.848 ; 6.848 ; 6.848 ; 6.848 ;
+; SW14       ; LEDG3       ; 7.993 ; 7.993 ; 7.993 ; 7.993 ;
+; SW14       ; LEDG4       ; 6.417 ;       ;       ; 6.417 ;
+; SW15       ; LEDG0       ; 7.213 ; 7.213 ; 7.213 ; 7.213 ;
+; SW15       ; LEDG1       ; 7.094 ; 7.077 ; 7.077 ; 7.094 ;
+; SW15       ; LEDG2       ; 7.483 ; 7.483 ; 7.483 ; 7.483 ;
+; SW15       ; LEDG3       ; 8.141 ; 8.141 ; 8.141 ; 8.141 ;
+; SW15       ; LEDG4       ; 6.587 ; 6.587 ; 6.587 ; 6.587 ;
+; SW15       ; LEDG5       ; 6.367 ; 6.367 ; 6.367 ; 6.367 ;
+; SW15       ; LEDG7       ; 7.724 ; 7.724 ; 7.724 ; 7.724 ;
+; SW16       ; LEDG0       ; 7.189 ; 7.189 ; 7.189 ; 7.189 ;
+; SW16       ; LEDG1       ; 7.168 ; 7.168 ; 7.168 ; 7.168 ;
+; SW16       ; LEDG2       ; 7.404 ; 7.404 ; 7.404 ; 7.404 ;
+; SW16       ; LEDG3       ; 8.295 ; 8.295 ; 8.295 ; 8.295 ;
+; SW16       ; LEDG4       ; 6.667 ; 6.667 ; 6.667 ; 6.667 ;
+; SW16       ; LEDG7       ; 7.645 ; 7.645 ; 7.645 ; 7.645 ;
+; SW17       ; LEDG0       ; 7.122 ; 7.122 ; 7.122 ; 7.122 ;
+; SW17       ; LEDG1       ; 6.943 ; 6.842 ; 6.842 ; 6.943 ;
+; SW17       ; LEDG2       ; 6.595 ; 6.724 ; 6.724 ; 6.595 ;
+; SW17       ; LEDG3       ; 7.307 ; 7.989 ; 7.989 ; 7.307 ;
+; SW17       ; LEDG4       ; 6.485 ;       ;       ; 6.485 ;
+; SW17       ; LEDG7       ; 7.262 ; 7.262 ; 7.262 ; 7.262 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; SW0        ; LEDG0       ; 5.575 ; 5.575 ; 5.575 ; 5.575 ;
+; SW0        ; LEDG1       ; 5.797 ; 5.797 ; 5.797 ; 5.797 ;
+; SW0        ; LEDG2       ; 6.047 ; 6.047 ; 6.047 ; 6.047 ;
+; SW0        ; LEDG3       ; 6.792 ; 6.792 ; 6.792 ; 6.792 ;
+; SW0        ; LEDG4       ; 5.806 ; 5.806 ; 5.806 ; 5.806 ;
+; SW0        ; LEDG5       ; 5.800 ; 5.800 ; 5.800 ; 5.800 ;
+; SW0        ; LEDG7       ; 5.715 ; 5.715 ; 5.715 ; 5.715 ;
+; SW1        ; LEDG1       ; 5.542 ; 5.542 ; 5.542 ; 5.542 ;
+; SW1        ; LEDG2       ; 6.041 ; 6.041 ; 6.041 ; 6.041 ;
+; SW1        ; LEDG3       ; 6.783 ; 6.783 ; 6.783 ; 6.783 ;
+; SW1        ; LEDG4       ; 5.872 ; 5.872 ; 5.872 ; 5.872 ;
+; SW1        ; LEDG5       ; 5.865 ; 5.865 ; 5.865 ; 5.865 ;
+; SW1        ; LEDG7       ; 5.578 ; 5.578 ; 5.578 ; 5.578 ;
+; SW2        ; LEDG2       ; 5.530 ; 5.530 ; 5.530 ; 5.530 ;
+; SW2        ; LEDG3       ; 6.431 ; 6.431 ; 6.431 ; 6.431 ;
+; SW2        ; LEDG4       ; 5.601 ; 5.601 ; 5.601 ; 5.601 ;
+; SW2        ; LEDG5       ; 5.221 ; 5.221 ; 5.221 ; 5.221 ;
+; SW2        ; LEDG7       ; 5.771 ; 5.771 ; 5.771 ; 5.771 ;
+; SW3        ; LEDG3       ; 6.253 ; 6.253 ; 6.253 ; 6.253 ;
+; SW3        ; LEDG4       ; 5.278 ; 5.278 ; 5.278 ; 5.278 ;
+; SW3        ; LEDG5       ; 5.057 ; 5.057 ; 5.057 ; 5.057 ;
+; SW3        ; LEDG7       ; 5.552 ; 5.552 ; 5.552 ; 5.552 ;
+; SW5        ; LEDG0       ; 5.222 ; 5.222 ; 5.222 ; 5.222 ;
+; SW5        ; LEDG1       ; 5.445 ; 5.445 ; 5.445 ; 5.445 ;
+; SW5        ; LEDG2       ; 5.946 ; 5.946 ; 5.946 ; 5.946 ;
+; SW5        ; LEDG3       ; 6.549 ; 6.549 ; 6.549 ; 6.549 ;
+; SW5        ; LEDG4       ; 5.257 ; 5.257 ; 5.257 ; 5.257 ;
+; SW5        ; LEDG5       ; 5.250 ; 5.250 ; 5.250 ; 5.250 ;
+; SW5        ; LEDG7       ; 5.362 ; 5.362 ; 5.362 ; 5.362 ;
+; SW6        ; LEDG1       ; 5.467 ; 5.467 ; 5.467 ; 5.467 ;
+; SW6        ; LEDG2       ; 5.941 ; 5.941 ; 5.941 ; 5.941 ;
+; SW6        ; LEDG3       ; 6.544 ; 6.544 ; 6.544 ; 6.544 ;
+; SW6        ; LEDG4       ; 5.252 ; 5.252 ; 5.252 ; 5.252 ;
+; SW6        ; LEDG5       ; 5.245 ; 5.245 ; 5.245 ; 5.245 ;
+; SW6        ; LEDG7       ; 5.424 ; 5.424 ; 5.424 ; 5.424 ;
+; SW7        ; LEDG2       ; 5.684 ; 5.684 ; 5.684 ; 5.684 ;
+; SW7        ; LEDG3       ; 6.321 ; 6.321 ; 6.321 ; 6.321 ;
+; SW7        ; LEDG4       ; 5.492 ; 5.492 ; 5.492 ; 5.492 ;
+; SW7        ; LEDG5       ; 5.110 ; 5.110 ; 5.110 ; 5.110 ;
+; SW7        ; LEDG7       ; 5.764 ; 5.764 ; 5.764 ; 5.764 ;
+; SW8        ; LEDG3       ; 6.548 ; 6.548 ; 6.548 ; 6.548 ;
+; SW8        ; LEDG4       ; 5.406 ; 5.406 ; 5.406 ; 5.406 ;
+; SW8        ; LEDG5       ; 5.185 ; 5.185 ; 5.185 ; 5.185 ;
+; SW8        ; LEDG7       ; 5.680 ; 5.680 ; 5.680 ; 5.680 ;
+; SW14       ; LEDG0       ; 6.684 ; 6.684 ; 6.684 ; 6.684 ;
+; SW14       ; LEDG1       ; 6.845 ; 6.575 ; 6.575 ; 6.845 ;
+; SW14       ; LEDG2       ; 6.848 ; 6.500 ; 6.500 ; 6.848 ;
+; SW14       ; LEDG3       ; 7.993 ; 7.440 ; 7.440 ; 7.993 ;
+; SW14       ; LEDG4       ; 6.417 ;       ;       ; 6.417 ;
+; SW15       ; LEDG0       ; 7.100 ; 7.100 ; 7.100 ; 7.100 ;
+; SW15       ; LEDG1       ; 7.028 ; 6.778 ; 6.778 ; 7.028 ;
+; SW15       ; LEDG2       ; 7.123 ; 7.123 ; 7.123 ; 7.123 ;
+; SW15       ; LEDG3       ; 7.793 ; 7.793 ; 7.793 ; 7.793 ;
+; SW15       ; LEDG4       ; 6.587 ; 6.587 ; 6.587 ; 6.587 ;
+; SW15       ; LEDG5       ; 6.367 ; 6.367 ; 6.367 ; 6.367 ;
+; SW15       ; LEDG7       ; 6.814 ; 6.985 ; 6.985 ; 6.814 ;
+; SW16       ; LEDG0       ; 7.189 ; 7.189 ; 7.189 ; 7.189 ;
+; SW16       ; LEDG1       ; 7.129 ; 7.087 ; 7.087 ; 7.129 ;
+; SW16       ; LEDG2       ; 7.114 ; 7.114 ; 7.114 ; 7.114 ;
+; SW16       ; LEDG3       ; 7.605 ; 7.605 ; 7.605 ; 7.605 ;
+; SW16       ; LEDG4       ; 6.667 ; 6.667 ; 6.667 ; 6.667 ;
+; SW16       ; LEDG7       ; 7.044 ; 7.111 ; 7.111 ; 7.044 ;
+; SW17       ; LEDG0       ; 7.043 ; 6.563 ; 6.563 ; 7.043 ;
+; SW17       ; LEDG1       ; 6.726 ; 6.726 ; 6.726 ; 6.726 ;
+; SW17       ; LEDG2       ; 6.595 ; 6.724 ; 6.724 ; 6.595 ;
+; SW17       ; LEDG3       ; 7.307 ; 7.989 ; 7.989 ; 7.307 ;
+; SW17       ; LEDG4       ; 6.485 ;       ;       ; 6.485 ;
+; SW17       ; LEDG7       ; 6.683 ; 6.683 ; 6.683 ; 6.683 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.033 ; 0.244 ; N/A      ; N/A     ; -1.222              ;
+;  SW13            ; -0.033 ; 0.244 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -0.062 ; 0.0   ; 0.0      ; 0.0     ; -5.222              ;
+;  SW13            ; -0.062 ; 0.000 ; N/A      ; N/A     ; -5.222              ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW0       ; SW13       ; 1.903 ; 1.903 ; Rise       ; SW13            ;
+; SW1       ; SW13       ; 2.353 ; 2.353 ; Rise       ; SW13            ;
+; SW2       ; SW13       ; 2.208 ; 2.208 ; Rise       ; SW13            ;
+; SW3       ; SW13       ; 1.191 ; 1.191 ; Rise       ; SW13            ;
+; SW15      ; SW13       ; 5.042 ; 5.042 ; Rise       ; SW13            ;
+; SW16      ; SW13       ; 4.944 ; 4.944 ; Rise       ; SW13            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW0       ; SW13       ; -0.803 ; -0.803 ; Rise       ; SW13            ;
+; SW1       ; SW13       ; -1.016 ; -1.016 ; Rise       ; SW13            ;
+; SW2       ; SW13       ; -0.951 ; -0.951 ; Rise       ; SW13            ;
+; SW3       ; SW13       ; -0.434 ; -0.434 ; Rise       ; SW13            ;
+; SW15      ; SW13       ; -2.276 ; -2.276 ; Rise       ; SW13            ;
+; SW16      ; SW13       ; -2.387 ; -2.387 ; Rise       ; SW13            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LEDG0     ; SW13       ; 9.438  ; 9.438  ; Rise       ; SW13            ;
+; LEDG1     ; SW13       ; 10.047 ; 10.047 ; Rise       ; SW13            ;
+; LEDG2     ; SW13       ; 9.114  ; 9.114  ; Rise       ; SW13            ;
+; LEDG3     ; SW13       ; 11.973 ; 11.973 ; Rise       ; SW13            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG0     ; SW13       ; 4.884 ; 4.884 ; Rise       ; SW13            ;
+; LEDG1     ; SW13       ; 5.162 ; 5.162 ; Rise       ; SW13            ;
+; LEDG2     ; SW13       ; 4.739 ; 4.739 ; Rise       ; SW13            ;
+; LEDG3     ; SW13       ; 6.126 ; 6.126 ; Rise       ; SW13            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; SW0        ; LEDG0       ; 10.934 ; 10.934 ; 10.934 ; 10.934 ;
+; SW0        ; LEDG1       ; 12.176 ; 12.176 ; 12.176 ; 12.176 ;
+; SW0        ; LEDG2       ; 13.809 ; 13.809 ; 13.809 ; 13.809 ;
+; SW0        ; LEDG3       ; 14.299 ; 14.299 ; 14.299 ; 14.299 ;
+; SW0        ; LEDG4       ; 12.886 ; 12.886 ; 12.886 ; 12.886 ;
+; SW0        ; LEDG5       ; 12.392 ; 12.392 ; 12.392 ; 12.392 ;
+; SW0        ; LEDG7       ; 14.410 ; 14.410 ; 14.410 ; 14.410 ;
+; SW1        ; LEDG1       ; 12.283 ; 12.283 ; 12.283 ; 12.283 ;
+; SW1        ; LEDG2       ; 13.917 ; 13.917 ; 13.917 ; 13.917 ;
+; SW1        ; LEDG3       ; 14.407 ; 14.407 ; 14.407 ; 14.407 ;
+; SW1        ; LEDG4       ; 12.994 ; 12.994 ; 12.994 ; 12.994 ;
+; SW1        ; LEDG5       ; 12.500 ; 12.500 ; 12.500 ; 12.500 ;
+; SW1        ; LEDG7       ; 14.518 ; 14.518 ; 14.518 ; 14.518 ;
+; SW2        ; LEDG2       ; 12.406 ; 12.406 ; 12.406 ; 12.406 ;
+; SW2        ; LEDG3       ; 13.175 ; 13.175 ; 13.175 ; 13.175 ;
+; SW2        ; LEDG4       ; 11.482 ; 11.482 ; 11.482 ; 11.482 ;
+; SW2        ; LEDG5       ; 10.988 ; 10.988 ; 10.988 ; 10.988 ;
+; SW2        ; LEDG7       ; 13.007 ; 13.007 ; 13.007 ; 13.007 ;
+; SW3        ; LEDG3       ; 13.254 ; 13.254 ; 13.254 ; 13.254 ;
+; SW3        ; LEDG4       ; 11.405 ; 11.405 ; 11.405 ; 11.405 ;
+; SW3        ; LEDG5       ; 9.877  ; 9.877  ; 9.877  ; 9.877  ;
+; SW3        ; LEDG7       ; 12.628 ; 12.628 ; 12.628 ; 12.628 ;
+; SW5        ; LEDG0       ; 10.235 ; 10.235 ; 10.235 ; 10.235 ;
+; SW5        ; LEDG1       ; 11.030 ; 11.030 ; 11.030 ; 11.030 ;
+; SW5        ; LEDG2       ; 12.661 ; 12.661 ; 12.661 ; 12.661 ;
+; SW5        ; LEDG3       ; 13.153 ; 13.153 ; 13.153 ; 13.153 ;
+; SW5        ; LEDG4       ; 11.738 ; 11.738 ; 11.738 ; 11.738 ;
+; SW5        ; LEDG5       ; 11.244 ; 11.244 ; 11.244 ; 11.244 ;
+; SW5        ; LEDG7       ; 13.262 ; 13.262 ; 13.262 ; 13.262 ;
+; SW6        ; LEDG1       ; 11.006 ; 11.006 ; 11.006 ; 11.006 ;
+; SW6        ; LEDG2       ; 12.640 ; 12.640 ; 12.640 ; 12.640 ;
+; SW6        ; LEDG3       ; 13.131 ; 13.131 ; 13.131 ; 13.131 ;
+; SW6        ; LEDG4       ; 11.717 ; 11.717 ; 11.717 ; 11.717 ;
+; SW6        ; LEDG5       ; 11.223 ; 11.223 ; 11.223 ; 11.223 ;
+; SW6        ; LEDG7       ; 13.241 ; 13.241 ; 13.241 ; 13.241 ;
+; SW7        ; LEDG2       ; 12.171 ; 12.171 ; 12.171 ; 12.171 ;
+; SW7        ; LEDG3       ; 12.979 ; 12.979 ; 12.979 ; 12.979 ;
+; SW7        ; LEDG4       ; 11.243 ; 11.243 ; 11.243 ; 11.243 ;
+; SW7        ; LEDG5       ; 10.805 ; 10.805 ; 10.805 ; 10.805 ;
+; SW7        ; LEDG7       ; 12.772 ; 12.772 ; 12.772 ; 12.772 ;
+; SW8        ; LEDG3       ; 13.458 ; 13.458 ; 13.458 ; 13.458 ;
+; SW8        ; LEDG4       ; 11.612 ; 11.612 ; 11.612 ; 11.612 ;
+; SW8        ; LEDG5       ; 10.224 ; 10.224 ; 10.224 ; 10.224 ;
+; SW8        ; LEDG7       ; 12.835 ; 12.835 ; 12.835 ; 12.835 ;
+; SW14       ; LEDG0       ; 12.217 ; 12.217 ; 12.217 ; 12.217 ;
+; SW14       ; LEDG1       ; 12.605 ; 11.971 ; 11.971 ; 12.605 ;
+; SW14       ; LEDG2       ; 12.578 ; 12.578 ; 12.578 ; 12.578 ;
+; SW14       ; LEDG3       ; 14.924 ; 14.924 ; 14.924 ; 14.924 ;
+; SW14       ; LEDG4       ; 11.526 ;        ;        ; 11.526 ;
+; SW15       ; LEDG0       ; 13.399 ; 13.399 ; 13.399 ; 13.399 ;
+; SW15       ; LEDG1       ; 13.157 ; 13.157 ; 13.157 ; 13.157 ;
+; SW15       ; LEDG2       ; 14.075 ; 14.075 ; 14.075 ; 14.075 ;
+; SW15       ; LEDG3       ; 15.296 ; 15.296 ; 15.296 ; 15.296 ;
+; SW15       ; LEDG4       ; 11.946 ; 11.946 ; 11.946 ; 11.946 ;
+; SW15       ; LEDG5       ; 11.453 ; 11.453 ; 11.453 ; 11.453 ;
+; SW15       ; LEDG7       ; 14.676 ; 14.676 ; 14.676 ; 14.676 ;
+; SW16       ; LEDG0       ; 13.415 ; 13.415 ; 13.415 ; 13.415 ;
+; SW16       ; LEDG1       ; 13.352 ; 13.352 ; 13.352 ; 13.352 ;
+; SW16       ; LEDG2       ; 13.902 ; 13.902 ; 13.902 ; 13.902 ;
+; SW16       ; LEDG3       ; 15.640 ; 15.640 ; 15.640 ; 15.640 ;
+; SW16       ; LEDG4       ; 12.103 ; 12.103 ; 12.103 ; 12.103 ;
+; SW16       ; LEDG7       ; 14.503 ; 14.503 ; 14.503 ; 14.503 ;
+; SW17       ; LEDG0       ; 13.269 ; 13.269 ; 13.269 ; 13.269 ;
+; SW17       ; LEDG1       ; 12.829 ; 12.587 ; 12.587 ; 12.829 ;
+; SW17       ; LEDG2       ; 12.033 ; 12.322 ; 12.322 ; 12.033 ;
+; SW17       ; LEDG3       ; 13.337 ; 14.906 ; 14.906 ; 13.337 ;
+; SW17       ; LEDG4       ; 11.668 ;        ;        ; 11.668 ;
+; SW17       ; LEDG7       ; 13.671 ; 13.671 ; 13.671 ; 13.671 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; SW0        ; LEDG0       ; 5.575 ; 5.575 ; 5.575 ; 5.575 ;
+; SW0        ; LEDG1       ; 5.797 ; 5.797 ; 5.797 ; 5.797 ;
+; SW0        ; LEDG2       ; 6.047 ; 6.047 ; 6.047 ; 6.047 ;
+; SW0        ; LEDG3       ; 6.792 ; 6.792 ; 6.792 ; 6.792 ;
+; SW0        ; LEDG4       ; 5.806 ; 5.806 ; 5.806 ; 5.806 ;
+; SW0        ; LEDG5       ; 5.800 ; 5.800 ; 5.800 ; 5.800 ;
+; SW0        ; LEDG7       ; 5.715 ; 5.715 ; 5.715 ; 5.715 ;
+; SW1        ; LEDG1       ; 5.542 ; 5.542 ; 5.542 ; 5.542 ;
+; SW1        ; LEDG2       ; 6.041 ; 6.041 ; 6.041 ; 6.041 ;
+; SW1        ; LEDG3       ; 6.783 ; 6.783 ; 6.783 ; 6.783 ;
+; SW1        ; LEDG4       ; 5.872 ; 5.872 ; 5.872 ; 5.872 ;
+; SW1        ; LEDG5       ; 5.865 ; 5.865 ; 5.865 ; 5.865 ;
+; SW1        ; LEDG7       ; 5.578 ; 5.578 ; 5.578 ; 5.578 ;
+; SW2        ; LEDG2       ; 5.530 ; 5.530 ; 5.530 ; 5.530 ;
+; SW2        ; LEDG3       ; 6.431 ; 6.431 ; 6.431 ; 6.431 ;
+; SW2        ; LEDG4       ; 5.601 ; 5.601 ; 5.601 ; 5.601 ;
+; SW2        ; LEDG5       ; 5.221 ; 5.221 ; 5.221 ; 5.221 ;
+; SW2        ; LEDG7       ; 5.771 ; 5.771 ; 5.771 ; 5.771 ;
+; SW3        ; LEDG3       ; 6.253 ; 6.253 ; 6.253 ; 6.253 ;
+; SW3        ; LEDG4       ; 5.278 ; 5.278 ; 5.278 ; 5.278 ;
+; SW3        ; LEDG5       ; 5.057 ; 5.057 ; 5.057 ; 5.057 ;
+; SW3        ; LEDG7       ; 5.552 ; 5.552 ; 5.552 ; 5.552 ;
+; SW5        ; LEDG0       ; 5.222 ; 5.222 ; 5.222 ; 5.222 ;
+; SW5        ; LEDG1       ; 5.445 ; 5.445 ; 5.445 ; 5.445 ;
+; SW5        ; LEDG2       ; 5.946 ; 5.946 ; 5.946 ; 5.946 ;
+; SW5        ; LEDG3       ; 6.549 ; 6.549 ; 6.549 ; 6.549 ;
+; SW5        ; LEDG4       ; 5.257 ; 5.257 ; 5.257 ; 5.257 ;
+; SW5        ; LEDG5       ; 5.250 ; 5.250 ; 5.250 ; 5.250 ;
+; SW5        ; LEDG7       ; 5.362 ; 5.362 ; 5.362 ; 5.362 ;
+; SW6        ; LEDG1       ; 5.467 ; 5.467 ; 5.467 ; 5.467 ;
+; SW6        ; LEDG2       ; 5.941 ; 5.941 ; 5.941 ; 5.941 ;
+; SW6        ; LEDG3       ; 6.544 ; 6.544 ; 6.544 ; 6.544 ;
+; SW6        ; LEDG4       ; 5.252 ; 5.252 ; 5.252 ; 5.252 ;
+; SW6        ; LEDG5       ; 5.245 ; 5.245 ; 5.245 ; 5.245 ;
+; SW6        ; LEDG7       ; 5.424 ; 5.424 ; 5.424 ; 5.424 ;
+; SW7        ; LEDG2       ; 5.684 ; 5.684 ; 5.684 ; 5.684 ;
+; SW7        ; LEDG3       ; 6.321 ; 6.321 ; 6.321 ; 6.321 ;
+; SW7        ; LEDG4       ; 5.492 ; 5.492 ; 5.492 ; 5.492 ;
+; SW7        ; LEDG5       ; 5.110 ; 5.110 ; 5.110 ; 5.110 ;
+; SW7        ; LEDG7       ; 5.764 ; 5.764 ; 5.764 ; 5.764 ;
+; SW8        ; LEDG3       ; 6.548 ; 6.548 ; 6.548 ; 6.548 ;
+; SW8        ; LEDG4       ; 5.406 ; 5.406 ; 5.406 ; 5.406 ;
+; SW8        ; LEDG5       ; 5.185 ; 5.185 ; 5.185 ; 5.185 ;
+; SW8        ; LEDG7       ; 5.680 ; 5.680 ; 5.680 ; 5.680 ;
+; SW14       ; LEDG0       ; 6.684 ; 6.684 ; 6.684 ; 6.684 ;
+; SW14       ; LEDG1       ; 6.845 ; 6.575 ; 6.575 ; 6.845 ;
+; SW14       ; LEDG2       ; 6.848 ; 6.500 ; 6.500 ; 6.848 ;
+; SW14       ; LEDG3       ; 7.993 ; 7.440 ; 7.440 ; 7.993 ;
+; SW14       ; LEDG4       ; 6.417 ;       ;       ; 6.417 ;
+; SW15       ; LEDG0       ; 7.100 ; 7.100 ; 7.100 ; 7.100 ;
+; SW15       ; LEDG1       ; 7.028 ; 6.778 ; 6.778 ; 7.028 ;
+; SW15       ; LEDG2       ; 7.123 ; 7.123 ; 7.123 ; 7.123 ;
+; SW15       ; LEDG3       ; 7.793 ; 7.793 ; 7.793 ; 7.793 ;
+; SW15       ; LEDG4       ; 6.587 ; 6.587 ; 6.587 ; 6.587 ;
+; SW15       ; LEDG5       ; 6.367 ; 6.367 ; 6.367 ; 6.367 ;
+; SW15       ; LEDG7       ; 6.814 ; 6.985 ; 6.985 ; 6.814 ;
+; SW16       ; LEDG0       ; 7.189 ; 7.189 ; 7.189 ; 7.189 ;
+; SW16       ; LEDG1       ; 7.129 ; 7.087 ; 7.087 ; 7.129 ;
+; SW16       ; LEDG2       ; 7.114 ; 7.114 ; 7.114 ; 7.114 ;
+; SW16       ; LEDG3       ; 7.605 ; 7.605 ; 7.605 ; 7.605 ;
+; SW16       ; LEDG4       ; 6.667 ; 6.667 ; 6.667 ; 6.667 ;
+; SW16       ; LEDG7       ; 7.044 ; 7.111 ; 7.111 ; 7.044 ;
+; SW17       ; LEDG0       ; 7.043 ; 6.563 ; 6.563 ; 7.043 ;
+; SW17       ; LEDG1       ; 6.726 ; 6.726 ; 6.726 ; 6.726 ;
+; SW17       ; LEDG2       ; 6.595 ; 6.724 ; 6.724 ; 6.595 ;
+; SW17       ; LEDG3       ; 7.307 ; 7.989 ; 7.989 ; 7.307 ;
+; SW17       ; LEDG4       ; 6.485 ;       ;       ; 6.485 ;
+; SW17       ; LEDG7       ; 6.683 ; 6.683 ; 6.683 ; 6.683 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; SW13       ; SW13     ; 6        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; SW13       ; SW13     ; 6        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 12    ; 12   ;
+; Unconstrained Input Port Paths  ; 80    ; 80   ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 72    ; 72   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Oct 18 13:23:01 2024
+Info: Command: quartus_sta Lab03_CE118 -c Lab03_CE118
+Info: qsta_default_script.tcl version: #1
+Warning (20013): Ignored assignments for entity "Shilf_right" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity Shilf_right -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity Shilf_right -section_id Top was ignored
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Lab03_CE118.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name SW13 SW13
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.033
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.033        -0.062 SW13 
+Info (332146): Worst-case hold slack is 0.530
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.530         0.000 SW13 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -5.222 SW13 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.515
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.515         0.000 SW13 
+Info (332146): Worst-case hold slack is 0.244
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.244         0.000 SW13 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -5.222 SW13 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4554 megabytes
+    Info: Processing ended: Fri Oct 18 13:23:01 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

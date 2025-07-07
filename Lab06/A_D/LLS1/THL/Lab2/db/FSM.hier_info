@@ -1,0 +1,95 @@
+|FSM
+clk => clk.IN1
+X => X.IN1
+Z <= Moore_Detector:MooreDetector.Z
+ledout1[0] <= led:led1.led
+ledout1[1] <= led:led1.led
+ledout1[2] <= led:led1.led
+ledout1[3] <= led:led1.led
+ledout1[4] <= led:led1.led
+ledout1[5] <= led:led1.led
+ledout1[6] <= led:led1.led
+ledout2[0] <= led:led2.led
+ledout2[1] <= led:led2.led
+ledout2[2] <= led:led2.led
+ledout2[3] <= led:led2.led
+ledout2[4] <= led:led2.led
+ledout2[5] <= led:led2.led
+ledout2[6] <= led:led2.led
+
+
+|FSM|delay_1s:delay
+clkin => clkout~reg0.CLK
+clkin => counter[0].CLK
+clkin => counter[1].CLK
+clkin => counter[2].CLK
+clkin => counter[3].CLK
+clkin => counter[4].CLK
+clkin => counter[5].CLK
+clkin => counter[6].CLK
+clkin => counter[7].CLK
+clkin => counter[8].CLK
+clkin => counter[9].CLK
+clkin => counter[10].CLK
+clkin => counter[11].CLK
+clkin => counter[12].CLK
+clkin => counter[13].CLK
+clkin => counter[14].CLK
+clkin => counter[15].CLK
+clkin => counter[16].CLK
+clkin => counter[17].CLK
+clkin => counter[18].CLK
+clkin => counter[19].CLK
+clkin => counter[20].CLK
+clkin => counter[21].CLK
+clkin => counter[22].CLK
+clkin => counter[23].CLK
+clkin => counter[24].CLK
+clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FSM|Moore_Detector:MooreDetector
+X => Mux1.IN5
+X => Mux1.IN6
+X => Mux1.IN7
+X => Mux0.IN6
+X => Mux0.IN7
+X => Mux2.IN7
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+CLK => Cstate[0]~reg0.CLK
+CLK => Cstate[1]~reg0.CLK
+CLK => Cstate[2]~reg0.CLK
+Cstate[0] <= Cstate[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cstate[1] <= Cstate[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cstate[2] <= Cstate[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Nstate[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Nstate[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Nstate[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FSM|led:led1
+bcd[0] => Decoder0.IN2
+bcd[1] => Decoder0.IN1
+bcd[2] => Decoder0.IN0
+led[0] <= led.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= led.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FSM|led:led2
+bcd[0] => Decoder0.IN2
+bcd[1] => Decoder0.IN1
+bcd[2] => Decoder0.IN0
+led[0] <= led.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= led.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

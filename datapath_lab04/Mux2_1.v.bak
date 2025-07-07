@@ -1,0 +1,8 @@
+module Mux2_1(
+    input [3:0] a, // Đầu vào 1
+    input [3:0] b, // Đầu vào 2
+    input sel,     // Tín hiệu chọn
+    output [3:0] muxout // Đầu ra
+);
+    assign muxout = sel ? b : a;
+endmodule

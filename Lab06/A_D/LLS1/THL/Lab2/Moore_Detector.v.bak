@@ -1,0 +1,32 @@
+module Moore_Detector(X, Z, CLK, Cstate, Nstate);
+	input wire X;
+	input wire CLK;
+	output reg Z;
+	output reg [2:0]Cstate;
+	output reg [2:0]Nstate;
+	
+	parameter START = 3'b000;
+	parameter GET0 = 3'b001;
+	parameter GET01 = 3'b011;
+	parameter GET1 = 3'b010;
+	parameter GET10 = 3'b110;
+	
+	always@(posedge CLK) begin
+		Cstate <= Nstate;
+		case(Cstate) begin
+			START: Nstate = (X)? GET1:GET0;
+			GET0: begin Nstate = (X)? GET01:GET0;
+					Z<=0; end 
+			GET01: begin Nstate = (X)? GET1:GET10;
+					Z <= 1; end
+			GET1: begin Nstate = (X)? GET1:GET10;
+					Z<=0; end
+			GET10: begin Nstate = (X)? GET01:GET0;
+					Z<=1; end
+			default: begin Nstate = START;
+					Z<=0; end
+		endcase
+	end
+	
+	
+endmodule

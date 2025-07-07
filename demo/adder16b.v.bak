@@ -1,0 +1,8 @@
+module adder16 (
+    input wire [15:0] a,     // Đầu vào 16 bit thứ nhất
+    input wire [15:0] b,     // Đầu vào 16 bit thứ hai
+    output wire [15:0] sum,  // Kết quả tổng
+    output wire cout         // Carry-out
+);
+    assign {cout, sum} = a + b; // Tính tổng và carry-out
+endmodule

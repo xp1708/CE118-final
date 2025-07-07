@@ -1,0 +1,725 @@
+$comment
+	File created using the following command:
+		vcd file FSM.msim.vcd -direction
+$end
+$date
+	Mon Nov 04 15:53:15 2024
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module FSM_vlg_vec_tst $end
+$var reg 1 ! X $end
+$var reg 1 " clk $end
+$var wire 1 # Z $end
+$var wire 1 $ ledout1 [6] $end
+$var wire 1 % ledout1 [5] $end
+$var wire 1 & ledout1 [4] $end
+$var wire 1 ' ledout1 [3] $end
+$var wire 1 ( ledout1 [2] $end
+$var wire 1 ) ledout1 [1] $end
+$var wire 1 * ledout1 [0] $end
+$var wire 1 + ledout2 [6] $end
+$var wire 1 , ledout2 [5] $end
+$var wire 1 - ledout2 [4] $end
+$var wire 1 . ledout2 [3] $end
+$var wire 1 / ledout2 [2] $end
+$var wire 1 0 ledout2 [1] $end
+$var wire 1 1 ledout2 [0] $end
+$var wire 1 2 sampler $end
+$scope module i1 $end
+$var wire 1 3 gnd $end
+$var wire 1 4 vcc $end
+$var wire 1 5 unknown $end
+$var tri1 1 6 devclrn $end
+$var tri1 1 7 devpor $end
+$var tri1 1 8 devoe $end
+$var wire 1 9 delay|Add0~0_combout $end
+$var wire 1 : delay|Add0~1 $end
+$var wire 1 ; delay|Add0~2_combout $end
+$var wire 1 < delay|Add0~3 $end
+$var wire 1 = delay|Add0~4_combout $end
+$var wire 1 > delay|Add0~5 $end
+$var wire 1 ? delay|Add0~6_combout $end
+$var wire 1 @ delay|Add0~7 $end
+$var wire 1 A delay|Add0~8_combout $end
+$var wire 1 B delay|Add0~9 $end
+$var wire 1 C delay|Add0~10_combout $end
+$var wire 1 D delay|Add0~11 $end
+$var wire 1 E delay|Add0~12_combout $end
+$var wire 1 F delay|Add0~13 $end
+$var wire 1 G delay|Add0~14_combout $end
+$var wire 1 H delay|Add0~15 $end
+$var wire 1 I delay|Add0~16_combout $end
+$var wire 1 J delay|Add0~17 $end
+$var wire 1 K delay|Add0~18_combout $end
+$var wire 1 L delay|Add0~19 $end
+$var wire 1 M delay|Add0~20_combout $end
+$var wire 1 N delay|Add0~21 $end
+$var wire 1 O delay|Add0~22_combout $end
+$var wire 1 P delay|Add0~23 $end
+$var wire 1 Q delay|Add0~24_combout $end
+$var wire 1 R delay|Add0~25 $end
+$var wire 1 S delay|Add0~26_combout $end
+$var wire 1 T delay|Add0~27 $end
+$var wire 1 U delay|Add0~28_combout $end
+$var wire 1 V delay|Add0~29 $end
+$var wire 1 W delay|Add0~30_combout $end
+$var wire 1 X delay|Add0~31 $end
+$var wire 1 Y delay|Add0~32_combout $end
+$var wire 1 Z delay|Add0~33 $end
+$var wire 1 [ delay|Add0~34_combout $end
+$var wire 1 \ delay|Add0~35 $end
+$var wire 1 ] delay|Add0~36_combout $end
+$var wire 1 ^ delay|Add0~37 $end
+$var wire 1 _ delay|Add0~38_combout $end
+$var wire 1 ` delay|Add0~39 $end
+$var wire 1 a delay|Add0~40_combout $end
+$var wire 1 b delay|Add0~41 $end
+$var wire 1 c delay|Add0~42_combout $end
+$var wire 1 d delay|Add0~43 $end
+$var wire 1 e delay|Add0~44_combout $end
+$var wire 1 f delay|Add0~45 $end
+$var wire 1 g delay|Add0~46_combout $end
+$var wire 1 h delay|Add0~47 $end
+$var wire 1 i delay|Add0~48_combout $end
+$var wire 1 j delay|clkout~regout $end
+$var wire 1 k delay|Equal0~0_combout $end
+$var wire 1 l delay|Equal0~1_combout $end
+$var wire 1 m delay|Equal0~2_combout $end
+$var wire 1 n delay|Equal0~3_combout $end
+$var wire 1 o delay|Equal0~4_combout $end
+$var wire 1 p delay|Equal0~5_combout $end
+$var wire 1 q delay|Equal0~6_combout $end
+$var wire 1 r delay|Equal0~7_combout $end
+$var wire 1 s delay|clkout~0_combout $end
+$var wire 1 t delay|counter~0_combout $end
+$var wire 1 u delay|counter~1_combout $end
+$var wire 1 v delay|counter~2_combout $end
+$var wire 1 w delay|counter~3_combout $end
+$var wire 1 x delay|counter~4_combout $end
+$var wire 1 y delay|counter~5_combout $end
+$var wire 1 z delay|counter~6_combout $end
+$var wire 1 { delay|counter~7_combout $end
+$var wire 1 | clk~combout $end
+$var wire 1 } delay|clkout~clkctrl_outclk $end
+$var wire 1 ~ clk~clkctrl_outclk $end
+$var wire 1 !! X~combout $end
+$var wire 1 "! MooreDetector|Mux1~0_combout $end
+$var wire 1 #! MooreDetector|Mux0~0_combout $end
+$var wire 1 $! MooreDetector|Mux2~0_combout $end
+$var wire 1 %! MooreDetector|Z~0_combout $end
+$var wire 1 &! led1|led[0]~0_combout $end
+$var wire 1 '! led1|led[1]~1_combout $end
+$var wire 1 (! led1|Decoder0~0_combout $end
+$var wire 1 )! led1|WideOr3~0_combout $end
+$var wire 1 *! led1|WideOr1~0_combout $end
+$var wire 1 +! led1|WideOr0~0_combout $end
+$var wire 1 ,! led2|led[0]~0_combout $end
+$var wire 1 -! led2|led[1]~1_combout $end
+$var wire 1 .! led2|Decoder0~0_combout $end
+$var wire 1 /! led2|WideOr3~0_combout $end
+$var wire 1 0! led2|WideOr2~0_combout $end
+$var wire 1 1! led2|WideOr1~0_combout $end
+$var wire 1 2! led2|WideOr0~0_combout $end
+$var wire 1 3! delay|counter [24] $end
+$var wire 1 4! delay|counter [23] $end
+$var wire 1 5! delay|counter [22] $end
+$var wire 1 6! delay|counter [21] $end
+$var wire 1 7! delay|counter [20] $end
+$var wire 1 8! delay|counter [19] $end
+$var wire 1 9! delay|counter [18] $end
+$var wire 1 :! delay|counter [17] $end
+$var wire 1 ;! delay|counter [16] $end
+$var wire 1 <! delay|counter [15] $end
+$var wire 1 =! delay|counter [14] $end
+$var wire 1 >! delay|counter [13] $end
+$var wire 1 ?! delay|counter [12] $end
+$var wire 1 @! delay|counter [11] $end
+$var wire 1 A! delay|counter [10] $end
+$var wire 1 B! delay|counter [9] $end
+$var wire 1 C! delay|counter [8] $end
+$var wire 1 D! delay|counter [7] $end
+$var wire 1 E! delay|counter [6] $end
+$var wire 1 F! delay|counter [5] $end
+$var wire 1 G! delay|counter [4] $end
+$var wire 1 H! delay|counter [3] $end
+$var wire 1 I! delay|counter [2] $end
+$var wire 1 J! delay|counter [1] $end
+$var wire 1 K! delay|counter [0] $end
+$var wire 1 L! MooreDetector|Cstate [2] $end
+$var wire 1 M! MooreDetector|Cstate [1] $end
+$var wire 1 N! MooreDetector|Cstate [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+1*
+0)
+0(
+1'
+1&
+1%
+1$
+01
+00
+0/
+0.
+0-
+0,
+1+
+x2
+03
+14
+x5
+16
+17
+18
+19
+0:
+1;
+1<
+1=
+0>
+1?
+1@
+1A
+0B
+1C
+1D
+1E
+0F
+1G
+1H
+1I
+0J
+1K
+1L
+1M
+0N
+1O
+1P
+1Q
+0R
+1S
+1T
+1U
+0V
+1W
+1X
+1Y
+0Z
+1[
+1\
+1]
+0^
+1_
+1`
+1a
+0b
+1c
+1d
+1e
+0f
+1g
+1h
+1i
+0j
+1k
+1l
+1m
+1n
+1o
+1p
+1q
+1r
+1s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+1$!
+0%!
+0&!
+0'!
+0(!
+1)!
+1*!
+1+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+12!
+0K!
+0J!
+0I!
+0H!
+0G!
+0F!
+0E!
+0D!
+0C!
+0B!
+0A!
+0@!
+0?!
+0>!
+0=!
+0<!
+0;!
+0:!
+09!
+08!
+07!
+06!
+05!
+04!
+03!
+0N!
+0M!
+0L!
+$end
+#40000
+1"
+1|
+1~
+02
+13!
+15!
+16!
+17!
+18!
+19!
+1;!
+1=!
+1>!
+1?!
+1@!
+1F!
+1G!
+1H!
+1K!
+1J!
+1I!
+1j
+1}
+0r
+0i
+0q
+1f
+0e
+0d
+0c
+1b
+0a
+0p
+0`
+0_
+1^
+0]
+1Z
+0Y
+0n
+1V
+0U
+0T
+0S
+1R
+0Q
+0m
+0P
+0O
+0l
+0D
+0C
+1B
+0A
+0k
+0@
+0?
+1:
+09
+0<
+0;
+1>
+0=
+0s
+1{
+1z
+1y
+1x
+1w
+1v
+1u
+1t
+1s
+0h
+0g
+1e
+1c
+1a
+1_
+0\
+0[
+0o
+0X
+0W
+1U
+1S
+1Q
+1F
+0E
+1C
+1A
+1;
+1=
+1?
+1i
+0{
+1]
+0z
+1Y
+0y
+0H
+0G
+0t
+1J
+0I
+0u
+0L
+0K
+0v
+1N
+0M
+0w
+1O
+0x
+1N!
+11!
+10!
+1/!
+1,!
+1,
+1-
+1.
+11
+#80000
+0"
+0|
+0~
+12
+#110000
+1!
+1!!
+02
+0+!
+0)!
+1&!
+1"!
+0$
+0'
+0*
+#120000
+1"
+1|
+1~
+12
+0K!
+0:
+19
+0;
+#140000
+0!
+0!!
+02
+1+!
+1)!
+0&!
+0"!
+1$
+1'
+1*
+#160000
+0"
+0|
+0~
+12
+#190000
+1!
+1!!
+02
+0+!
+0)!
+1&!
+1"!
+0$
+0'
+0*
+#200000
+1"
+1|
+1~
+12
+1K!
+0J!
+1:
+09
+1<
+1;
+0<
+0;
+0=
+1=
+#210000
+0!
+0!!
+02
+1+!
+1)!
+0&!
+0"!
+1$
+1'
+1*
+#240000
+0"
+0|
+0~
+12
+#280000
+1"
+1|
+1~
+02
+0K!
+0:
+19
+1<
+1;
+0=
+#320000
+0"
+0|
+0~
+12
+#350000
+1!
+1!!
+02
+0+!
+0)!
+1&!
+1"!
+0$
+0'
+0*
+#360000
+1"
+1|
+1~
+12
+1K!
+1J!
+0I!
+1:
+09
+0<
+0;
+0>
+1=
+1;
+1>
+0=
+0?
+1?
+#380000
+0!
+0!!
+02
+1+!
+1)!
+0&!
+0"!
+1$
+1'
+1*
+#400000
+0"
+0|
+0~
+12
+#440000
+1"
+1|
+1~
+02
+0K!
+0:
+19
+0;
+#480000
+0"
+0|
+0~
+12
+#520000
+1"
+1|
+1~
+02
+1K!
+0J!
+1:
+09
+1<
+1;
+0<
+0;
+0>
+1=
+1>
+0=
+0?
+1?
+#560000
+0"
+0|
+0~
+12
+#600000
+1"
+1|
+1~
+02
+0K!
+0:
+19
+1<
+1;
+0>
+1=
+0?
+#640000
+0"
+0|
+0~
+12
+#670000
+1!
+1!!
+02
+0+!
+0)!
+1&!
+1"!
+0$
+0'
+0*
+#680000
+1"
+1|
+1~
+12
+0H!
+1K!
+1J!
+1I!
+1@
+1?
+1:
+09
+0<
+0;
+1>
+0=
+0A
+1;
+1=
+0@
+0?
+1A
+#720000
+0"
+0|
+0~
+02
+#760000
+1"
+1|
+1~
+12
+0K!
+0:
+19
+0;
+#800000
+0"
+0|
+0~
+02
+#840000
+1"
+1|
+1~
+12
+1K!
+0J!
+1:
+09
+1<
+1;
+0<
+0;
+0=
+1=
+#880000
+0"
+0|
+0~
+02
+#920000
+1"
+1|
+1~
+12
+0K!
+0:
+19
+1<
+1;
+0=
+#960000
+0!
+0"
+0!!
+0|
+0~
+02
+1+!
+1)!
+0&!
+0"!
+1$
+1'
+1*
+#1000000

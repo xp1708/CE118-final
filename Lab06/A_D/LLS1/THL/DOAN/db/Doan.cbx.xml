@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Doan">
+		<CBX_INST_ENTRY INSTANCE_NAME="|BoardFactorial|giaithua:giaithua|Data_Path:DP|ALU:ALU1|Multiplier:Mul|lpm_mult:Mult0" CBX_FILE_NAME="mult_h1t.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

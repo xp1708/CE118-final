@@ -1,0 +1,3 @@
+module Or(a,b,Or);
+	assign Or = a | b;
+endmodule

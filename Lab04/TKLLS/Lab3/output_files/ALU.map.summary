@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Oct 15 09:15:57 2024
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : ALU
+Top-level Entity Name : bcd_to_led
+Family : Cyclone II
+Total logic elements : 115
+    Total combinational functions : 115
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 84
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

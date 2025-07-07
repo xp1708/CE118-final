@@ -1,0 +1,13 @@
+Warning (10273): Verilog HDL warning at RegisterFile.v(21): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at RegisterFile.v(22): extended using "x" or "z"
+Info (10281): Verilog HDL Declaration information at bcd_to_led.v(10): object "leda" differs only in case from object "ledA" in the same scope
+Info (10281): Verilog HDL Declaration information at bcd_to_led.v(11): object "ledb" differs only in case from object "ledB" in the same scope
+Info (10281): Verilog HDL Declaration information at ALU.v(11): object "comp" differs only in case from object "Comp" in the same scope
+Info (10281): Verilog HDL Declaration information at ALU.v(15): object "decre" differs only in case from object "Decre" in the same scope
+Info (10281): Verilog HDL Declaration information at ALU.v(16): object "add" differs only in case from object "Add" in the same scope
+Info (10281): Verilog HDL Declaration information at ALU.v(17): object "sub" differs only in case from object "Sub" in the same scope
+Info (10281): Verilog HDL Declaration information at ALU.v(18): object "incre" differs only in case from object "Incre" in the same scope
+Info (10281): Verilog HDL Declaration information at ALU.v(21): object "mul" differs only in case from object "Mul" in the same scope
+Warning (10273): Verilog HDL warning at tri_state.v(6): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at register_file.v(21): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at register_file.v(22): extended using "x" or "z"

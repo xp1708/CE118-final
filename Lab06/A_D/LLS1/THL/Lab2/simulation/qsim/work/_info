@@ -1,0 +1,321 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Admin\Desktop\LLS\THL\Lab2\simulation\qsim
+vdetector
+Z1 ICG9^@Zmi4A=0kZM:XIjgY0
+Z2 V_HP8SDMKhk;mecOYeZo]S3
+Z3 dC:\Users\Admin\Desktop\LLS\THL\Lab2\simulation\qsim
+Z4 w1727142494
+Z5 8FSM.vo
+Z6 FFSM.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|FSM.vo|
+Z9 o-work work -O0
+Z10 !s100 n9QL`1^]O^T1aBG_h[_lZ3
+Z11 !s108 1727142495.453000
+Z12 !s107 FSM.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vdetector_Mealy
+Z13 IkG>zgY6lDJ?gB3oG`:JD_0
+Z14 V<lNQ094XNC[maI0UUeK8=1
+R3
+Z15 w1727404087
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z16 ndetector_@mealy
+Z17 !s100 `zH7UANUdfSCA[]^Z7@<c0
+Z18 !s108 1727404088.387000
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vdetector_Mealy_vlg_check_tst
+Z19 IO;2c;]oWP0Xo7?I@IAf;a0
+Z20 VV>>5MD`SM0IMYaeld^4mM1
+R3
+Z21 w1727404086
+Z22 8FSM.vt
+Z23 FFSM.vt
+L0 59
+R7
+r1
+31
+Z24 !s108 1727404088.455000
+Z25 !s107 FSM.vt|
+Z26 !s90 -work|work|FSM.vt|
+R9
+Z27 ndetector_@mealy_vlg_check_tst
+Z28 !s100 =Ko0<S<K:c1LaFf1=;9h91
+!i10b 1
+!s85 0
+!s101 -O0
+vdetector_Mealy_vlg_sample_tst
+Z29 IMWXiDMh9H[?MaXT01PgLE0
+Z30 VIeH]dGh^=U7kA@o75lkaZ2
+R3
+R21
+R22
+R23
+L0 29
+R7
+r1
+31
+R24
+R25
+R26
+R9
+Z31 ndetector_@mealy_vlg_sample_tst
+Z32 !s100 Cz0HbaEN<@mSTGIEhB^6F2
+!i10b 1
+!s85 0
+!s101 -O0
+vdetector_Mealy_vlg_vec_tst
+Z33 IX`jU6kBdFV;E>gSPCeN?l2
+Z34 V^4EDSm4feoh?dSRY4A5aA2
+R3
+R21
+R22
+R23
+Z35 L0 269
+R7
+r1
+31
+R24
+R25
+R26
+R9
+Z36 ndetector_@mealy_vlg_vec_tst
+Z37 !s100 NiON2hT:je@h3oZb=eHT=0
+!i10b 1
+!s85 0
+!s101 -O0
+vdetector_vlg_check_tst
+Z38 !s100 8RnLl96m@0jM[j?h>Oc7z3
+Z39 IX[^1G]7nP@Ol`U^ce;^7Z1
+Z40 VnQMkj8cF^WfEFTeD98kYX1
+R3
+Z41 w1727142493
+R22
+R23
+L0 59
+R7
+r1
+31
+Z42 !s108 1727142495.544000
+R25
+R26
+R9
+!i10b 1
+!s85 0
+!s101 -O0
+vdetector_vlg_sample_tst
+Z43 !s100 HQ1=@l2g5L2AM2k:WUfB23
+Z44 IodXe<ZDP8^abFfX]]Mo<Z0
+Z45 Vom?cLK02>jXT:Gm4bJ7[i0
+R3
+R41
+R22
+R23
+L0 29
+R7
+r1
+31
+R42
+R25
+R26
+R9
+!i10b 1
+!s85 0
+!s101 -O0
+vdetector_vlg_vec_tst
+Z46 IMJ^eM?NE2dfSI:FP;ZU:c2
+Z47 V>hE@3fZ8mbLJdd<4XGI0m3
+R3
+R41
+R22
+R23
+R35
+R7
+r1
+31
+R42
+R25
+R26
+R9
+Z48 !s100 GgzVY0lP62?PDdemDz7hO0
+!i10b 1
+!s85 0
+!s101 -O0
+vFSM
+Z49 IGRk1Z4_cf8Q2:za>4SH<42
+Z50 VN@<F;j5_T_AcL_UUkSWb]3
+R3
+Z51 w1730710394
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z52 n@f@s@m
+!i10b 1
+Z53 !s100 f@]`EmfA7@_SdmQkjAYhl3
+!s85 0
+Z54 !s108 1730710394.755000
+R12
+!s101 -O0
+vFSM_vlg_check_tst
+!i10b 1
+Z55 !s100 @Qni59GZ9cL1O5AJmNZMZ3
+Z56 I7jkJ4K?]K@g:j0E2hVNC^2
+Z57 V@31T4Q6Jmb2[18GUM6;[72
+R3
+Z58 w1730710393
+R22
+R23
+L0 59
+R7
+r1
+!s85 0
+31
+Z59 !s108 1730710394.829000
+Z60 !s107 FSM.vt|
+R26
+!s101 -O0
+R9
+Z61 n@f@s@m_vlg_check_tst
+vFSM_vlg_sample_tst
+!i10b 1
+Z62 !s100 3T1]FL_7Kl:a072J2M2Bi2
+Z63 IT@b<@U`Hd@^3@lWXIOHNo2
+Z64 V`9h3z?A?^XE1Q:niPi`IH0
+R3
+R58
+R22
+R23
+L0 29
+R7
+r1
+!s85 0
+31
+R59
+R60
+R26
+!s101 -O0
+R9
+Z65 n@f@s@m_vlg_sample_tst
+vFSM_vlg_vec_tst
+!i10b 1
+!s100 ;67NQcB6;U;NUOK<n45Ea2
+IZ<6hD=mY1^B>1UCHkXUzm1
+Z66 VQXU`if7O5mNhI[hi^JE;M3
+R3
+R58
+R22
+R23
+Z67 L0 164
+R7
+r1
+!s85 0
+31
+R59
+R60
+R26
+!s101 -O0
+R9
+Z68 n@f@s@m_vlg_vec_tst
+vMoore_Detector
+Z69 !s100 _0mA4Dim2J@Cl5nGe6Hi23
+Z70 IbY0HUVI25HigI3dZPbZVl0
+Z71 VVJOBJTM;MBI2K8i_;hP:M1
+R3
+Z72 w1727660820
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z73 n@moore_@detector
+Z74 !s108 1727660820.925000
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vMoore_Detector_vlg_check_tst
+Z75 !s100 gldc_FahNJ]SPf3`Db9R:2
+Z76 IUoJCH;k_IG9S^mB2;USfA2
+Z77 VJP5cz;36LBz5f`=g@iYaS3
+R3
+Z78 w1727660819
+R22
+R23
+L0 59
+R7
+r1
+31
+Z79 !s108 1727660820.983000
+R25
+R26
+R9
+Z80 n@moore_@detector_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vMoore_Detector_vlg_sample_tst
+Z81 !s100 c;4]Jd<oc<9gb1ddJ`>;`1
+Z82 IL:B@J_JiCI4XGM`<PPmo:1
+Z83 VmhzMDIzR_Uj>I^aHdT6fL3
+R3
+R78
+R22
+R23
+L0 29
+R7
+r1
+31
+R79
+R25
+R26
+R9
+Z84 n@moore_@detector_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vMoore_Detector_vlg_vec_tst
+Z85 !s100 15zRm=<SiNNoRg4564En91
+Z86 I;ULohAgOk3MP189gV5O;k2
+Z87 ViASB[5_7jL8ONCPTOKQaQ1
+R3
+R78
+R22
+R23
+Z88 L0 278
+R7
+r1
+31
+R79
+R25
+R26
+R9
+Z89 n@moore_@detector_vlg_vec_tst
+!i10b 1
+!s85 0
+!s101 -O0

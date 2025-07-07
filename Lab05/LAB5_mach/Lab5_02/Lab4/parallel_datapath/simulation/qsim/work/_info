@@ -1,0 +1,161 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\CE118_ThietKeLuanLySo\Lab4\parallel_datapath\simulation\qsim
+vparallel_datapath
+Z1 IndlZb;UVRJ5b]_<TJOo312
+Z2 VSZK60B7XSFZ?0XJN0UGX31
+Z3 dD:\CE118_ThietKeLuanLySo\Lab4\parallel_datapath\simulation\qsim
+Z4 w1730658535
+Z5 8parallel_datapath.vo
+Z6 Fparallel_datapath.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|parallel_datapath.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 eV=D7]@0bGWSV3]c`z?2A0
+!s85 0
+Z11 !s108 1730658536.756000
+Z12 !s107 parallel_datapath.vo|
+!s101 -O0
+vparallel_datapath_vlg_check_tst
+!i10b 1
+!s100 jjh4LFUz@OUe[XEd;MOH]3
+Ic<KzGo3L6Y[dmdJVZg;:A0
+VE9_I>R]9kJz3l^XBB8fV`1
+R3
+Z13 w1730658534
+Z14 8parallel_datapath.vt
+Z15 Fparallel_datapath.vt
+L0 83
+R7
+r1
+!s85 0
+31
+Z16 !s108 1730658536.855000
+Z17 !s107 parallel_datapath.vt|
+Z18 !s90 -work|work|parallel_datapath.vt|
+!s101 -O0
+R9
+vparallel_datapath_vlg_sample_tst
+!i10b 1
+!s100 Zhm@O3Gj>L[fazl7Z>04Z0
+IjIG`7@FhD2BzP34ENA89W0
+VEWD`<1MaLeDjb[K;h3dfE3
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R9
+vparallel_datapath_vlg_vec_tst
+!i10b 1
+!s100 ;L?8G0kZHLQcDG1E20dcc2
+I1^da?:lbE36]8=@9gKXf^1
+V]TCKdBgLW:@VY]3;XdT[02
+R3
+R13
+R14
+R15
+L0 236
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R9
+vRF
+Z19 I:^1bhDIHKg?a0mG>8ZH5=3
+Z20 V5KKToVkEZGGgR0RWDoo`h2
+R3
+Z21 w1730536619
+R5
+R6
+L0 31
+R7
+r1
+31
+R9
+n@r@f
+Z22 !s100 Ai`PFb5ZTT7mmnRO8F5K`0
+Z23 !s108 1730536621.322000
+R12
+R8
+!i10b 1
+!s85 0
+!s101 -O0
+vRF_vlg_check_tst
+Z24 ImVeXHWM7e3dgZa1:mbX4G2
+Z25 V`i`PA[U:W>kodiFnPXgn83
+R3
+R21
+R14
+R15
+L0 77
+R7
+r1
+31
+Z26 !s108 1730536621.413000
+Z27 !s107 parallel_datapath.vt|
+R18
+R9
+Z28 n@r@f_vlg_check_tst
+Z29 !s100 >RY0M>U>8H6IKozEkBbgk0
+!i10b 1
+!s85 0
+!s101 -O0
+vRF_vlg_sample_tst
+Z30 Ih3F<5M<9F<U7lN?Lf]F??3
+Z31 VW`BKjzb7JO0lnUChi1QdW2
+R3
+R21
+R14
+R15
+L0 29
+R7
+r1
+31
+R26
+R27
+R18
+R9
+Z32 n@r@f_vlg_sample_tst
+Z33 !s100 dSC8S1BLY8eT[P_dRiJ9K0
+!i10b 1
+!s85 0
+!s101 -O0
+vRF_vlg_vec_tst
+Z34 I8[PekA;FmiW2?0z13Z2H[1
+Z35 VTmom22HjoDPXWNe?V6IYP3
+R3
+R21
+R14
+R15
+Z36 L0 305
+R7
+r1
+31
+R26
+R27
+R18
+R9
+Z37 n@r@f_vlg_vec_tst
+Z38 !s100 nbIib`OXkTnVUMno8E0G32
+!i10b 1
+!s85 0
+!s101 -O0

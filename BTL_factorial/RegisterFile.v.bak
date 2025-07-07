@@ -1,0 +1,27 @@
+module RegisterFile (
+    input wire clk,                    // Tín hiệu xung nhịp
+    input wire [7:0] data_in,          // Dữ liệu đầu vào 8 bit
+    input wire we,                     // Tín hiệu ghi enable
+    input wire [1:0] wa,               // Địa chỉ ghi
+    input wire rea,                    // Tín hiệu đọc enable cho cổng A
+    input wire reb,                    // Tín hiệu đọc enable cho cổng B
+    input wire [1:0] raa,              // Địa chỉ đọc cho cổng A
+    input wire [1:0] rab,              // Địa chỉ đọc cho cổng B
+    output wire [7:0] rda,             // Dữ liệu đầu ra từ cổng A
+    output wire [7:0] rdb              // Dữ liệu đầu ra từ cổng B
+);
+
+    reg [7:0] regfile [3:0];            // Khai báo 4 thanh ghi 8 bit
+
+    // Gán dữ liệu đầu ra từ các thanh ghi
+    assign rda = (rea) ? regfile[raa] : 8'bz;
+    assign rdb = (reb) ? regfile[rab] : 8'bz;
+
+    // Khối luôn chạy khi có cạnh lên của tín hiệu xung nhịp
+    always @(posedge clk) begin
+        if (we) begin 
+            regfile[wa] <= data_in;    // Ghi dữ liệu vào thanh ghi tại địa chỉ wa
+        end
+    end
+
+endmodule

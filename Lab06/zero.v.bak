@@ -1,0 +1,7 @@
+module zero(a,b,zero);
+	input [15:0]a;
+	input [1:0]b;
+	output [15:0]zero;
+);
+	assign zero = ~(a & b); // NAND = NOT(AND)
+endmodule

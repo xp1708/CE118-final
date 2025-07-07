@@ -1,0 +1,1018 @@
+TimeQuest Timing Analyzer report for factorial
+Fri Nov 15 10:42:18 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'c_state.state5'
+ 12. Slow Model Setup: 'c_state.state1'
+ 13. Slow Model Setup: 'clk'
+ 14. Slow Model Hold: 'c_state.state1'
+ 15. Slow Model Hold: 'clk'
+ 16. Slow Model Hold: 'c_state.state5'
+ 17. Slow Model Minimum Pulse Width: 'clk'
+ 18. Slow Model Minimum Pulse Width: 'c_state.state1'
+ 19. Slow Model Minimum Pulse Width: 'c_state.state5'
+ 20. Setup Times
+ 21. Hold Times
+ 22. Clock to Output Times
+ 23. Minimum Clock to Output Times
+ 24. Fast Model Setup Summary
+ 25. Fast Model Hold Summary
+ 26. Fast Model Recovery Summary
+ 27. Fast Model Removal Summary
+ 28. Fast Model Minimum Pulse Width Summary
+ 29. Fast Model Setup: 'c_state.state5'
+ 30. Fast Model Setup: 'c_state.state1'
+ 31. Fast Model Setup: 'clk'
+ 32. Fast Model Hold: 'c_state.state1'
+ 33. Fast Model Hold: 'clk'
+ 34. Fast Model Hold: 'c_state.state5'
+ 35. Fast Model Minimum Pulse Width: 'clk'
+ 36. Fast Model Minimum Pulse Width: 'c_state.state1'
+ 37. Fast Model Minimum Pulse Width: 'c_state.state5'
+ 38. Setup Times
+ 39. Hold Times
+ 40. Clock to Output Times
+ 41. Minimum Clock to Output Times
+ 42. Multicorner Timing Analysis Summary
+ 43. Setup Times
+ 44. Hold Times
+ 45. Clock to Output Times
+ 46. Minimum Clock to Output Times
+ 47. Setup Transfers
+ 48. Hold Transfers
+ 49. Report TCCS
+ 50. Report RSKM
+ 51. Unconstrained Paths
+ 52. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; factorial                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                         ;
++----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
+; Clock Name     ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets            ;
++----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
+; c_state.state1 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { c_state.state1 } ;
+; c_state.state5 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { c_state.state5 } ;
+; clk            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }            ;
++----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                    ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; 1254.71 MHz ; 420.17 MHz      ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------+
+; Slow Model Setup Summary                ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; c_state.state5 ; -3.219 ; -3.219        ;
+; c_state.state1 ; -1.361 ; -4.929        ;
+; clk            ; 0.203  ; 0.000         ;
++----------------+--------+---------------+
+
+
++-----------------------------------------+
+; Slow Model Hold Summary                 ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; c_state.state1 ; -1.954 ; -9.182        ;
+; clk            ; -1.446 ; -2.734        ;
+; c_state.state5 ; 2.675  ; 0.000         ;
++----------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------+
+; Slow Model Minimum Pulse Width Summary  ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; clk            ; -1.380 ; -7.380        ;
+; c_state.state1 ; 0.500  ; 0.000         ;
+; c_state.state5 ; 0.500  ; 0.000         ;
++----------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'c_state.state5'                                                                             ;
++--------+----------------+-------------+--------------+----------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node     ; Launch Clock ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+-------------+--------------+----------------+--------------+------------+------------+
+; -3.219 ; c_state.state4 ; wa[0]$latch ; clk          ; c_state.state5 ; 1.000        ; -2.062     ; 1.160      ;
+; -2.672 ; c_state.state2 ; wa[0]$latch ; clk          ; c_state.state5 ; 1.000        ; -1.250     ; 1.425      ;
++--------+----------------+-------------+--------------+----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'c_state.state1'                                                                                    ;
++--------+----------------+------------------+----------------+----------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node          ; Launch Clock   ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+------------------+----------------+----------------+--------------+------------+------------+
+; -1.361 ; c_state.state3 ; reb$latch        ; clk            ; c_state.state1 ; 1.000        ; 0.127      ; 1.133      ;
+; -1.249 ; c_state.state3 ; rea$latch        ; clk            ; c_state.state1 ; 1.000        ; 0.125      ; 1.380      ;
+; -1.010 ; c_state.state4 ; rea$latch        ; clk            ; c_state.state1 ; 1.000        ; 0.125      ; 1.141      ;
+; -0.809 ; c_state.state4 ; Sel_alu[2]$latch ; clk            ; c_state.state1 ; 1.000        ; 0.289      ; 1.148      ;
+; -0.804 ; c_state.state4 ; rab[0]$latch     ; clk            ; c_state.state1 ; 1.000        ; 0.291      ; 1.147      ;
+; -0.706 ; c_state.state4 ; raa[0]$latch     ; clk            ; c_state.state1 ; 1.000        ; 0.146      ; 1.028      ;
+; 0.937  ; c_state.state5 ; reb$latch        ; c_state.state5 ; c_state.state1 ; 0.500        ; 2.807      ; 1.265      ;
+; 1.124  ; c_state.state5 ; rea$latch        ; c_state.state5 ; c_state.state1 ; 0.500        ; 2.805      ; 1.437      ;
+; 1.437  ; c_state.state5 ; reb$latch        ; c_state.state5 ; c_state.state1 ; 1.000        ; 2.807      ; 1.265      ;
+; 1.501  ; c_state.state5 ; Sel_alu[2]$latch ; c_state.state5 ; c_state.state1 ; 0.500        ; 2.969      ; 1.268      ;
+; 1.506  ; c_state.state5 ; rab[0]$latch     ; c_state.state5 ; c_state.state1 ; 0.500        ; 2.971      ; 1.267      ;
+; 1.624  ; c_state.state5 ; rea$latch        ; c_state.state5 ; c_state.state1 ; 1.000        ; 2.805      ; 1.437      ;
+; 1.681  ; c_state.state5 ; rab[1]$latch     ; c_state.state5 ; c_state.state1 ; 0.500        ; 2.807      ; 1.190      ;
+; 2.001  ; c_state.state5 ; Sel_alu[2]$latch ; c_state.state5 ; c_state.state1 ; 1.000        ; 2.969      ; 1.268      ;
+; 2.006  ; c_state.state5 ; rab[0]$latch     ; c_state.state5 ; c_state.state1 ; 1.000        ; 2.971      ; 1.267      ;
+; 2.181  ; c_state.state5 ; rab[1]$latch     ; c_state.state5 ; c_state.state1 ; 1.000        ; 2.807      ; 1.190      ;
++--------+----------------+------------------+----------------+----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                         ;
++-------+----------------+----------------+----------------+-------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node        ; Launch Clock   ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+----------------+----------------+-------------+--------------+------------+------------+
+; 0.203 ; c_state.state4 ; c_state.state5 ; clk            ; clk         ; 1.000        ; 0.000      ; 0.833      ;
+; 0.208 ; c_state.state4 ; c_state.state3 ; clk            ; clk         ; 1.000        ; 0.000      ; 0.828      ;
+; 0.219 ; c_state.state3 ; c_state.state4 ; clk            ; clk         ; 1.000        ; 0.000      ; 0.817      ;
+; 0.379 ; c_state.state0 ; c_state.state0 ; clk            ; clk         ; 1.000        ; 0.000      ; 0.657      ;
+; 0.755 ; c_state.state2 ; c_state.state3 ; clk            ; clk         ; 1.000        ; 0.812      ; 1.093      ;
+; 0.907 ; c_state.state0 ; c_state.state1 ; clk            ; clk         ; 1.000        ; 0.808      ; 0.937      ;
+; 1.421 ; c_state.state5 ; c_state.state0 ; c_state.state5 ; clk         ; 0.500        ; 1.868      ; 1.233      ;
+; 1.716 ; c_state.state1 ; c_state.state2 ; c_state.state1 ; clk         ; 0.500        ; 1.868      ; 0.938      ;
+; 1.921 ; c_state.state5 ; c_state.state0 ; c_state.state5 ; clk         ; 1.000        ; 1.868      ; 1.233      ;
+; 2.216 ; c_state.state1 ; c_state.state2 ; c_state.state1 ; clk         ; 1.000        ; 1.868      ; 0.938      ;
++-------+----------------+----------------+----------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'c_state.state1'                                                                                     ;
++--------+----------------+------------------+----------------+----------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node          ; Launch Clock   ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+------------------+----------------+----------------+--------------+------------+------------+
+; -1.954 ; c_state.state5 ; rab[0]$latch     ; c_state.state5 ; c_state.state1 ; 0.000        ; 2.971      ; 1.267      ;
+; -1.951 ; c_state.state5 ; Sel_alu[2]$latch ; c_state.state5 ; c_state.state1 ; 0.000        ; 2.969      ; 1.268      ;
+; -1.867 ; c_state.state5 ; rab[1]$latch     ; c_state.state5 ; c_state.state1 ; 0.000        ; 2.807      ; 1.190      ;
+; -1.792 ; c_state.state5 ; reb$latch        ; c_state.state5 ; c_state.state1 ; 0.000        ; 2.807      ; 1.265      ;
+; -1.618 ; c_state.state5 ; rea$latch        ; c_state.state5 ; c_state.state1 ; 0.000        ; 2.805      ; 1.437      ;
+; -1.454 ; c_state.state5 ; rab[0]$latch     ; c_state.state5 ; c_state.state1 ; -0.500       ; 2.971      ; 1.267      ;
+; -1.451 ; c_state.state5 ; Sel_alu[2]$latch ; c_state.state5 ; c_state.state1 ; -0.500       ; 2.969      ; 1.268      ;
+; -1.367 ; c_state.state5 ; rab[1]$latch     ; c_state.state5 ; c_state.state1 ; -0.500       ; 2.807      ; 1.190      ;
+; -1.292 ; c_state.state5 ; reb$latch        ; c_state.state5 ; c_state.state1 ; -0.500       ; 2.807      ; 1.265      ;
+; -1.118 ; c_state.state5 ; rea$latch        ; c_state.state5 ; c_state.state1 ; -0.500       ; 2.805      ; 1.437      ;
+; 0.856  ; c_state.state4 ; rab[0]$latch     ; clk            ; c_state.state1 ; 0.000        ; 0.291      ; 1.147      ;
+; 0.859  ; c_state.state4 ; Sel_alu[2]$latch ; clk            ; c_state.state1 ; 0.000        ; 0.289      ; 1.148      ;
+; 0.882  ; c_state.state4 ; raa[0]$latch     ; clk            ; c_state.state1 ; 0.000        ; 0.146      ; 1.028      ;
+; 1.006  ; c_state.state3 ; reb$latch        ; clk            ; c_state.state1 ; 0.000        ; 0.127      ; 1.133      ;
+; 1.016  ; c_state.state4 ; rea$latch        ; clk            ; c_state.state1 ; 0.000        ; 0.125      ; 1.141      ;
+; 1.255  ; c_state.state3 ; rea$latch        ; clk            ; c_state.state1 ; 0.000        ; 0.125      ; 1.380      ;
++--------+----------------+------------------+----------------+----------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                           ;
++--------+----------------+----------------+----------------+-------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node        ; Launch Clock   ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+----------------+----------------+-------------+--------------+------------+------------+
+; -1.446 ; c_state.state1 ; c_state.state2 ; c_state.state1 ; clk         ; 0.000        ; 1.868      ; 0.938      ;
+; -1.151 ; c_state.state5 ; c_state.state0 ; c_state.state5 ; clk         ; 0.000        ; 1.868      ; 1.233      ;
+; -0.946 ; c_state.state1 ; c_state.state2 ; c_state.state1 ; clk         ; -0.500       ; 1.868      ; 0.938      ;
+; -0.651 ; c_state.state5 ; c_state.state0 ; c_state.state5 ; clk         ; -0.500       ; 1.868      ; 1.233      ;
+; -0.137 ; c_state.state0 ; c_state.state1 ; clk            ; clk         ; 0.000        ; 0.808      ; 0.937      ;
+; 0.015  ; c_state.state2 ; c_state.state3 ; clk            ; clk         ; 0.000        ; 0.812      ; 1.093      ;
+; 0.391  ; c_state.state0 ; c_state.state0 ; clk            ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.551  ; c_state.state3 ; c_state.state4 ; clk            ; clk         ; 0.000        ; 0.000      ; 0.817      ;
+; 0.562  ; c_state.state4 ; c_state.state3 ; clk            ; clk         ; 0.000        ; 0.000      ; 0.828      ;
+; 0.567  ; c_state.state4 ; c_state.state5 ; clk            ; clk         ; 0.000        ; 0.000      ; 0.833      ;
++--------+----------------+----------------+----------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'c_state.state5'                                                                             ;
++-------+----------------+-------------+--------------+----------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node     ; Launch Clock ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+-------------+--------------+----------------+--------------+------------+------------+
+; 2.675 ; c_state.state2 ; wa[0]$latch ; clk          ; c_state.state5 ; 0.000        ; -1.250     ; 1.425      ;
+; 3.222 ; c_state.state4 ; wa[0]$latch ; clk          ; c_state.state5 ; 0.000        ; -2.062     ; 1.160      ;
++-------+----------------+-------------+--------------+----------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state1       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state1       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state2       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state2       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state3       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state3       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state4       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state4       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state5       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state5       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state4|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state4|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state5|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state5|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'c_state.state1'                                                                  ;
++-------+--------------+----------------+------------------+----------------+------------+--------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock          ; Clock Edge ; Target                   ;
++-------+--------------+----------------+------------------+----------------+------------+--------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Fall       ; IE~0clkctrl|inclk[0]     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Fall       ; IE~0clkctrl|inclk[0]     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Fall       ; IE~0clkctrl|outclk       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Fall       ; IE~0clkctrl|outclk       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Fall       ; IE~0|combout             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Fall       ; IE~0|combout             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; IE~0|datac               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; IE~0|datac               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; Sel_alu[2]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; Sel_alu[2]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; Sel_alu[2]$latch|datac   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; Sel_alu[2]$latch|datac   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; WideOr4|combout          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; WideOr4|combout          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; WideOr4|datab            ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; WideOr4|datab            ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; WideOr4~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; WideOr4~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; WideOr4~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; WideOr4~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; c_state.state1|regout    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; c_state.state1|regout    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; raa[0]$latch             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; raa[0]$latch             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; raa[0]$latch|datad       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; raa[0]$latch|datad       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; rab[0]$latch             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; rab[0]$latch             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; rab[0]$latch|datac       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; rab[0]$latch|datac       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; rab[1]$latch             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; rab[1]$latch             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; rab[1]$latch|datad       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; rab[1]$latch|datad       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; rea$latch                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; rea$latch                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Fall       ; rea$latch|datac          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Fall       ; rea$latch|datac          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; reb$latch                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; reb$latch                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Fall       ; reb$latch|datac          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Fall       ; reb$latch|datac          ;
++-------+--------------+----------------+------------------+----------------+------------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'c_state.state5'                                                               ;
++-------+--------------+----------------+------------------+----------------+------------+-----------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock          ; Clock Edge ; Target                ;
++-------+--------------+----------------+------------------+----------------+------------+-----------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state5 ; Rise       ; c_state.state5|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state5 ; Rise       ; c_state.state5|regout ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state5 ; Rise       ; wa[0]$latch           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state5 ; Rise       ; wa[0]$latch           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state5 ; Rise       ; wa[0]$latch|datac     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state5 ; Rise       ; wa[0]$latch|datac     ;
++-------+--------------+----------------+------------------+----------------+------------+-----------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; compare   ; clk        ; 0.958 ; 0.958 ; Rise       ; clk             ;
+; start     ; clk        ; 1.604 ; 1.604 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; compare   ; clk        ; -0.585 ; -0.585 ; Rise       ; clk             ;
+; start     ; clk        ; -0.842 ; -0.842 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++-------------+----------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port     ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+----------------+-------+-------+------------+-----------------+
+; IE          ; c_state.state1 ; 3.987 ;       ; Rise       ; c_state.state1  ;
+; Sel_alu[*]  ; c_state.state1 ; 6.578 ; 6.578 ; Rise       ; c_state.state1  ;
+;  Sel_alu[0] ; c_state.state1 ; 6.224 ; 6.224 ; Rise       ; c_state.state1  ;
+;  Sel_alu[2] ; c_state.state1 ; 6.578 ; 6.578 ; Rise       ; c_state.state1  ;
+; raa[*]      ; c_state.state1 ; 6.428 ; 6.428 ; Rise       ; c_state.state1  ;
+;  raa[0]     ; c_state.state1 ; 6.428 ; 6.428 ; Rise       ; c_state.state1  ;
+; rab[*]      ; c_state.state1 ; 6.533 ; 6.533 ; Rise       ; c_state.state1  ;
+;  rab[0]     ; c_state.state1 ; 6.533 ; 6.533 ; Rise       ; c_state.state1  ;
+;  rab[1]     ; c_state.state1 ; 6.204 ; 6.204 ; Rise       ; c_state.state1  ;
+; rea         ; c_state.state1 ; 6.379 ; 6.379 ; Rise       ; c_state.state1  ;
+; reb         ; c_state.state1 ; 6.405 ; 6.405 ; Rise       ; c_state.state1  ;
+; IE          ; c_state.state1 ;       ; 3.987 ; Fall       ; c_state.state1  ;
+; OE          ; c_state.state5 ; 3.932 ;       ; Rise       ; c_state.state5  ;
+; done        ; c_state.state5 ; 3.912 ;       ; Rise       ; c_state.state5  ;
+; wa[*]       ; c_state.state5 ; 4.180 ; 4.180 ; Rise       ; c_state.state5  ;
+;  wa[0]      ; c_state.state5 ; 4.180 ; 4.180 ; Rise       ; c_state.state5  ;
+; we          ; c_state.state5 ;       ; 4.061 ; Rise       ; c_state.state5  ;
+; OE          ; c_state.state5 ;       ; 3.932 ; Fall       ; c_state.state5  ;
+; done        ; c_state.state5 ;       ; 3.912 ; Fall       ; c_state.state5  ;
+; we          ; c_state.state5 ; 4.061 ;       ; Fall       ; c_state.state5  ;
+; IE          ; clk            ; 5.971 ; 5.971 ; Rise       ; clk             ;
+; we          ; clk            ; 6.266 ; 6.266 ; Rise       ; clk             ;
++-------------+----------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++-------------+----------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port     ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+----------------+-------+-------+------------+-----------------+
+; IE          ; c_state.state1 ; 3.987 ;       ; Rise       ; c_state.state1  ;
+; Sel_alu[*]  ; c_state.state1 ; 6.224 ; 6.224 ; Rise       ; c_state.state1  ;
+;  Sel_alu[0] ; c_state.state1 ; 6.224 ; 6.224 ; Rise       ; c_state.state1  ;
+;  Sel_alu[2] ; c_state.state1 ; 6.578 ; 6.578 ; Rise       ; c_state.state1  ;
+; raa[*]      ; c_state.state1 ; 6.428 ; 6.428 ; Rise       ; c_state.state1  ;
+;  raa[0]     ; c_state.state1 ; 6.428 ; 6.428 ; Rise       ; c_state.state1  ;
+; rab[*]      ; c_state.state1 ; 6.204 ; 6.204 ; Rise       ; c_state.state1  ;
+;  rab[0]     ; c_state.state1 ; 6.533 ; 6.533 ; Rise       ; c_state.state1  ;
+;  rab[1]     ; c_state.state1 ; 6.204 ; 6.204 ; Rise       ; c_state.state1  ;
+; rea         ; c_state.state1 ; 6.379 ; 6.379 ; Rise       ; c_state.state1  ;
+; reb         ; c_state.state1 ; 6.405 ; 6.405 ; Rise       ; c_state.state1  ;
+; IE          ; c_state.state1 ;       ; 3.987 ; Fall       ; c_state.state1  ;
+; OE          ; c_state.state5 ; 3.932 ;       ; Rise       ; c_state.state5  ;
+; done        ; c_state.state5 ; 3.912 ;       ; Rise       ; c_state.state5  ;
+; wa[*]       ; c_state.state5 ; 4.180 ; 4.180 ; Rise       ; c_state.state5  ;
+;  wa[0]      ; c_state.state5 ; 4.180 ; 4.180 ; Rise       ; c_state.state5  ;
+; we          ; c_state.state5 ;       ; 4.061 ; Rise       ; c_state.state5  ;
+; OE          ; c_state.state5 ;       ; 3.932 ; Fall       ; c_state.state5  ;
+; done        ; c_state.state5 ;       ; 3.912 ; Fall       ; c_state.state5  ;
+; we          ; c_state.state5 ; 4.061 ;       ; Fall       ; c_state.state5  ;
+; IE          ; clk            ; 5.971 ; 5.971 ; Rise       ; clk             ;
+; we          ; clk            ; 6.266 ; 6.266 ; Rise       ; clk             ;
++-------------+----------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------+
+; Fast Model Setup Summary                ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; c_state.state5 ; -1.338 ; -1.338        ;
+; c_state.state1 ; -0.224 ; -0.394        ;
+; clk            ; 0.613  ; 0.000         ;
++----------------+--------+---------------+
+
+
++-----------------------------------------+
+; Fast Model Hold Summary                 ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; c_state.state1 ; -1.170 ; -5.577        ;
+; clk            ; -0.856 ; -2.119        ;
+; c_state.state5 ; 1.445  ; 0.000         ;
++----------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------+
+; Fast Model Minimum Pulse Width Summary  ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; clk            ; -1.380 ; -7.380        ;
+; c_state.state1 ; 0.500  ; 0.000         ;
+; c_state.state5 ; 0.500  ; 0.000         ;
++----------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'c_state.state5'                                                                             ;
++--------+----------------+-------------+--------------+----------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node     ; Launch Clock ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+-------------+--------------+----------------+--------------+------------+------------+
+; -1.338 ; c_state.state4 ; wa[0]$latch ; clk          ; c_state.state5 ; 1.000        ; -1.377     ; 0.552      ;
+; -0.854 ; c_state.state2 ; wa[0]$latch ; clk          ; c_state.state5 ; 1.000        ; -0.771     ; 0.674      ;
++--------+----------------+-------------+--------------+----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'c_state.state1'                                                                                    ;
++--------+----------------+------------------+----------------+----------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node          ; Launch Clock   ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+------------------+----------------+----------------+--------------+------------+------------+
+; -0.224 ; c_state.state3 ; reb$latch        ; clk            ; c_state.state1 ; 1.000        ; -0.118     ; 0.533      ;
+; -0.170 ; c_state.state3 ; rea$latch        ; clk            ; c_state.state1 ; 1.000        ; -0.117     ; 0.643      ;
+; -0.066 ; c_state.state4 ; rea$latch        ; clk            ; c_state.state1 ; 1.000        ; -0.117     ; 0.539      ;
+; 0.023  ; c_state.state4 ; Sel_alu[2]$latch ; clk            ; c_state.state1 ; 1.000        ; -0.036     ; 0.544      ;
+; 0.031  ; c_state.state4 ; rab[0]$latch     ; clk            ; c_state.state1 ; 1.000        ; -0.037     ; 0.543      ;
+; 0.073  ; c_state.state4 ; raa[0]$latch     ; clk            ; c_state.state1 ; 1.000        ; -0.096     ; 0.485      ;
+; 1.018  ; c_state.state5 ; reb$latch        ; c_state.state5 ; c_state.state1 ; 0.500        ; 1.536      ; 0.586      ;
+; 1.109  ; c_state.state5 ; rea$latch        ; c_state.state5 ; c_state.state1 ; 0.500        ; 1.537      ; 0.659      ;
+; 1.273  ; c_state.state5 ; Sel_alu[2]$latch ; c_state.state5 ; c_state.state1 ; 0.500        ; 1.618      ; 0.589      ;
+; 1.281  ; c_state.state5 ; rab[0]$latch     ; c_state.state5 ; c_state.state1 ; 0.500        ; 1.617      ; 0.588      ;
+; 1.346  ; c_state.state5 ; rab[1]$latch     ; c_state.state5 ; c_state.state1 ; 0.500        ; 1.548      ; 0.562      ;
+; 1.518  ; c_state.state5 ; reb$latch        ; c_state.state5 ; c_state.state1 ; 1.000        ; 1.536      ; 0.586      ;
+; 1.609  ; c_state.state5 ; rea$latch        ; c_state.state5 ; c_state.state1 ; 1.000        ; 1.537      ; 0.659      ;
+; 1.773  ; c_state.state5 ; Sel_alu[2]$latch ; c_state.state5 ; c_state.state1 ; 1.000        ; 1.618      ; 0.589      ;
+; 1.781  ; c_state.state5 ; rab[0]$latch     ; c_state.state5 ; c_state.state1 ; 1.000        ; 1.617      ; 0.588      ;
+; 1.846  ; c_state.state5 ; rab[1]$latch     ; c_state.state5 ; c_state.state1 ; 1.000        ; 1.548      ; 0.562      ;
++--------+----------------+------------------+----------------+----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                         ;
++-------+----------------+----------------+----------------+-------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node        ; Launch Clock   ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+----------------+----------------+-------------+--------------+------------+------------+
+; 0.613 ; c_state.state4 ; c_state.state5 ; clk            ; clk         ; 1.000        ; 0.000      ; 0.419      ;
+; 0.617 ; c_state.state4 ; c_state.state3 ; clk            ; clk         ; 1.000        ; 0.000      ; 0.415      ;
+; 0.623 ; c_state.state3 ; c_state.state4 ; clk            ; clk         ; 1.000        ; 0.000      ; 0.409      ;
+; 0.665 ; c_state.state0 ; c_state.state0 ; clk            ; clk         ; 1.000        ; 0.000      ; 0.367      ;
+; 1.103 ; c_state.state2 ; c_state.state3 ; clk            ; clk         ; 1.000        ; 0.606      ; 0.535      ;
+; 1.117 ; c_state.state5 ; c_state.state0 ; c_state.state5 ; clk         ; 0.500        ; 1.048      ; 0.604      ;
+; 1.183 ; c_state.state0 ; c_state.state1 ; clk            ; clk         ; 1.000        ; 0.605      ; 0.454      ;
+; 1.236 ; c_state.state1 ; c_state.state2 ; c_state.state1 ; clk         ; 0.500        ; 1.048      ; 0.485      ;
+; 1.617 ; c_state.state5 ; c_state.state0 ; c_state.state5 ; clk         ; 1.000        ; 1.048      ; 0.604      ;
+; 1.736 ; c_state.state1 ; c_state.state2 ; c_state.state1 ; clk         ; 1.000        ; 1.048      ; 0.485      ;
++-------+----------------+----------------+----------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'c_state.state1'                                                                                     ;
++--------+----------------+------------------+----------------+----------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node          ; Launch Clock   ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+------------------+----------------+----------------+--------------+------------+------------+
+; -1.170 ; c_state.state5 ; rab[0]$latch     ; c_state.state5 ; c_state.state1 ; 0.000        ; 1.617      ; 0.588      ;
+; -1.170 ; c_state.state5 ; Sel_alu[2]$latch ; c_state.state5 ; c_state.state1 ; 0.000        ; 1.618      ; 0.589      ;
+; -1.127 ; c_state.state5 ; rab[1]$latch     ; c_state.state5 ; c_state.state1 ; 0.000        ; 1.548      ; 0.562      ;
+; -1.091 ; c_state.state5 ; reb$latch        ; c_state.state5 ; c_state.state1 ; 0.000        ; 1.536      ; 0.586      ;
+; -1.019 ; c_state.state5 ; rea$latch        ; c_state.state5 ; c_state.state1 ; 0.000        ; 1.537      ; 0.659      ;
+; -0.670 ; c_state.state5 ; rab[0]$latch     ; c_state.state5 ; c_state.state1 ; -0.500       ; 1.617      ; 0.588      ;
+; -0.670 ; c_state.state5 ; Sel_alu[2]$latch ; c_state.state5 ; c_state.state1 ; -0.500       ; 1.618      ; 0.589      ;
+; -0.627 ; c_state.state5 ; rab[1]$latch     ; c_state.state5 ; c_state.state1 ; -0.500       ; 1.548      ; 0.562      ;
+; -0.591 ; c_state.state5 ; reb$latch        ; c_state.state5 ; c_state.state1 ; -0.500       ; 1.536      ; 0.586      ;
+; -0.519 ; c_state.state5 ; rea$latch        ; c_state.state5 ; c_state.state1 ; -0.500       ; 1.537      ; 0.659      ;
+; 0.580  ; c_state.state4 ; rab[0]$latch     ; clk            ; c_state.state1 ; 0.000        ; -0.037     ; 0.543      ;
+; 0.580  ; c_state.state4 ; Sel_alu[2]$latch ; clk            ; c_state.state1 ; 0.000        ; -0.036     ; 0.544      ;
+; 0.581  ; c_state.state4 ; raa[0]$latch     ; clk            ; c_state.state1 ; 0.000        ; -0.096     ; 0.485      ;
+; 0.651  ; c_state.state3 ; reb$latch        ; clk            ; c_state.state1 ; 0.000        ; -0.118     ; 0.533      ;
+; 0.656  ; c_state.state4 ; rea$latch        ; clk            ; c_state.state1 ; 0.000        ; -0.117     ; 0.539      ;
+; 0.760  ; c_state.state3 ; rea$latch        ; clk            ; c_state.state1 ; 0.000        ; -0.117     ; 0.643      ;
++--------+----------------+------------------+----------------+----------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                           ;
++--------+----------------+----------------+----------------+-------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node        ; Launch Clock   ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+----------------+----------------+-------------+--------------+------------+------------+
+; -0.856 ; c_state.state1 ; c_state.state2 ; c_state.state1 ; clk         ; 0.000        ; 1.048      ; 0.485      ;
+; -0.737 ; c_state.state5 ; c_state.state0 ; c_state.state5 ; clk         ; 0.000        ; 1.048      ; 0.604      ;
+; -0.356 ; c_state.state1 ; c_state.state2 ; c_state.state1 ; clk         ; -0.500       ; 1.048      ; 0.485      ;
+; -0.303 ; c_state.state0 ; c_state.state1 ; clk            ; clk         ; 0.000        ; 0.605      ; 0.454      ;
+; -0.237 ; c_state.state5 ; c_state.state0 ; c_state.state5 ; clk         ; -0.500       ; 1.048      ; 0.604      ;
+; -0.223 ; c_state.state2 ; c_state.state3 ; clk            ; clk         ; 0.000        ; 0.606      ; 0.535      ;
+; 0.215  ; c_state.state0 ; c_state.state0 ; clk            ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.257  ; c_state.state3 ; c_state.state4 ; clk            ; clk         ; 0.000        ; 0.000      ; 0.409      ;
+; 0.263  ; c_state.state4 ; c_state.state3 ; clk            ; clk         ; 0.000        ; 0.000      ; 0.415      ;
+; 0.267  ; c_state.state4 ; c_state.state5 ; clk            ; clk         ; 0.000        ; 0.000      ; 0.419      ;
++--------+----------------+----------------+----------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'c_state.state5'                                                                             ;
++-------+----------------+-------------+--------------+----------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node     ; Launch Clock ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+-------------+--------------+----------------+--------------+------------+------------+
+; 1.445 ; c_state.state2 ; wa[0]$latch ; clk          ; c_state.state5 ; 0.000        ; -0.771     ; 0.674      ;
+; 1.929 ; c_state.state4 ; wa[0]$latch ; clk          ; c_state.state5 ; 0.000        ; -1.377     ; 0.552      ;
++-------+----------------+-------------+--------------+----------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state1       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state1       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state2       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state2       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state3       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state3       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state4       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state4       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state5       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state5       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state2|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state3|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state4|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state4|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; c_state.state5|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; c_state.state5|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'c_state.state1'                                                                  ;
++-------+--------------+----------------+------------------+----------------+------------+--------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock          ; Clock Edge ; Target                   ;
++-------+--------------+----------------+------------------+----------------+------------+--------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Fall       ; IE~0clkctrl|inclk[0]     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Fall       ; IE~0clkctrl|inclk[0]     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Fall       ; IE~0clkctrl|outclk       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Fall       ; IE~0clkctrl|outclk       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Fall       ; IE~0|combout             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Fall       ; IE~0|combout             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; IE~0|datac               ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; IE~0|datac               ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; Sel_alu[2]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; Sel_alu[2]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; Sel_alu[2]$latch|datac   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; Sel_alu[2]$latch|datac   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; WideOr4|combout          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; WideOr4|combout          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; WideOr4|datab            ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; WideOr4|datab            ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; WideOr4~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; WideOr4~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; WideOr4~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; WideOr4~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; c_state.state1|regout    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; c_state.state1|regout    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; raa[0]$latch             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; raa[0]$latch             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; raa[0]$latch|datad       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; raa[0]$latch|datad       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; rab[0]$latch             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; rab[0]$latch             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; rab[0]$latch|datac       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; rab[0]$latch|datac       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; rab[1]$latch             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; rab[1]$latch             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; rab[1]$latch|datad       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; rab[1]$latch|datad       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; rea$latch                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; rea$latch                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Fall       ; rea$latch|datac          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Fall       ; rea$latch|datac          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Rise       ; reb$latch                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Rise       ; reb$latch                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state1 ; Fall       ; reb$latch|datac          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state1 ; Fall       ; reb$latch|datac          ;
++-------+--------------+----------------+------------------+----------------+------------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'c_state.state5'                                                               ;
++-------+--------------+----------------+------------------+----------------+------------+-----------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock          ; Clock Edge ; Target                ;
++-------+--------------+----------------+------------------+----------------+------------+-----------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state5 ; Rise       ; c_state.state5|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state5 ; Rise       ; c_state.state5|regout ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state5 ; Rise       ; wa[0]$latch           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state5 ; Rise       ; wa[0]$latch           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; c_state.state5 ; Rise       ; wa[0]$latch|datac     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; c_state.state5 ; Rise       ; wa[0]$latch|datac     ;
++-------+--------------+----------------+------------------+----------------+------------+-----------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; compare   ; clk        ; 0.202 ; 0.202 ; Rise       ; clk             ;
+; start     ; clk        ; 0.734 ; 0.734 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; compare   ; clk        ; -0.042 ; -0.042 ; Rise       ; clk             ;
+; start     ; clk        ; -0.133 ; -0.133 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++-------------+----------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port     ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+----------------+-------+-------+------------+-----------------+
+; IE          ; c_state.state1 ; 2.022 ;       ; Rise       ; c_state.state1  ;
+; Sel_alu[*]  ; c_state.state1 ; 3.475 ; 3.475 ; Rise       ; c_state.state1  ;
+;  Sel_alu[0] ; c_state.state1 ; 3.326 ; 3.326 ; Rise       ; c_state.state1  ;
+;  Sel_alu[2] ; c_state.state1 ; 3.475 ; 3.475 ; Rise       ; c_state.state1  ;
+; raa[*]      ; c_state.state1 ; 3.425 ; 3.425 ; Rise       ; c_state.state1  ;
+;  raa[0]     ; c_state.state1 ; 3.425 ; 3.425 ; Rise       ; c_state.state1  ;
+; rab[*]      ; c_state.state1 ; 3.450 ; 3.450 ; Rise       ; c_state.state1  ;
+;  rab[0]     ; c_state.state1 ; 3.450 ; 3.450 ; Rise       ; c_state.state1  ;
+;  rab[1]     ; c_state.state1 ; 3.306 ; 3.306 ; Rise       ; c_state.state1  ;
+; rea         ; c_state.state1 ; 3.376 ; 3.376 ; Rise       ; c_state.state1  ;
+; reb         ; c_state.state1 ; 3.402 ; 3.402 ; Rise       ; c_state.state1  ;
+; IE          ; c_state.state1 ;       ; 2.022 ; Fall       ; c_state.state1  ;
+; OE          ; c_state.state5 ; 2.069 ;       ; Rise       ; c_state.state5  ;
+; done        ; c_state.state5 ; 2.049 ;       ; Rise       ; c_state.state5  ;
+; wa[*]       ; c_state.state5 ; 2.108 ; 2.108 ; Rise       ; c_state.state5  ;
+;  wa[0]      ; c_state.state5 ; 2.108 ; 2.108 ; Rise       ; c_state.state5  ;
+; we          ; c_state.state5 ;       ; 2.061 ; Rise       ; c_state.state5  ;
+; OE          ; c_state.state5 ;       ; 2.069 ; Fall       ; c_state.state5  ;
+; done        ; c_state.state5 ;       ; 2.049 ; Fall       ; c_state.state5  ;
+; we          ; c_state.state5 ; 2.061 ;       ; Fall       ; c_state.state5  ;
+; IE          ; clk            ; 3.156 ; 3.156 ; Rise       ; clk             ;
+; we          ; clk            ; 3.296 ; 3.296 ; Rise       ; clk             ;
++-------------+----------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++-------------+----------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port     ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+----------------+-------+-------+------------+-----------------+
+; IE          ; c_state.state1 ; 2.022 ;       ; Rise       ; c_state.state1  ;
+; Sel_alu[*]  ; c_state.state1 ; 3.326 ; 3.326 ; Rise       ; c_state.state1  ;
+;  Sel_alu[0] ; c_state.state1 ; 3.326 ; 3.326 ; Rise       ; c_state.state1  ;
+;  Sel_alu[2] ; c_state.state1 ; 3.475 ; 3.475 ; Rise       ; c_state.state1  ;
+; raa[*]      ; c_state.state1 ; 3.425 ; 3.425 ; Rise       ; c_state.state1  ;
+;  raa[0]     ; c_state.state1 ; 3.425 ; 3.425 ; Rise       ; c_state.state1  ;
+; rab[*]      ; c_state.state1 ; 3.306 ; 3.306 ; Rise       ; c_state.state1  ;
+;  rab[0]     ; c_state.state1 ; 3.450 ; 3.450 ; Rise       ; c_state.state1  ;
+;  rab[1]     ; c_state.state1 ; 3.306 ; 3.306 ; Rise       ; c_state.state1  ;
+; rea         ; c_state.state1 ; 3.376 ; 3.376 ; Rise       ; c_state.state1  ;
+; reb         ; c_state.state1 ; 3.402 ; 3.402 ; Rise       ; c_state.state1  ;
+; IE          ; c_state.state1 ;       ; 2.022 ; Fall       ; c_state.state1  ;
+; OE          ; c_state.state5 ; 2.069 ;       ; Rise       ; c_state.state5  ;
+; done        ; c_state.state5 ; 2.049 ;       ; Rise       ; c_state.state5  ;
+; wa[*]       ; c_state.state5 ; 2.108 ; 2.108 ; Rise       ; c_state.state5  ;
+;  wa[0]      ; c_state.state5 ; 2.108 ; 2.108 ; Rise       ; c_state.state5  ;
+; we          ; c_state.state5 ;       ; 2.061 ; Rise       ; c_state.state5  ;
+; OE          ; c_state.state5 ;       ; 2.069 ; Fall       ; c_state.state5  ;
+; done        ; c_state.state5 ;       ; 2.049 ; Fall       ; c_state.state5  ;
+; we          ; c_state.state5 ; 2.061 ;       ; Fall       ; c_state.state5  ;
+; IE          ; clk            ; 3.156 ; 3.156 ; Rise       ; clk             ;
+; we          ; clk            ; 3.296 ; 3.296 ; Rise       ; clk             ;
++-------------+----------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+--------+---------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+---------+----------+---------+---------------------+
+; Worst-case Slack ; -3.219 ; -1.954  ; N/A      ; N/A     ; -1.380              ;
+;  c_state.state1  ; -1.361 ; -1.954  ; N/A      ; N/A     ; 0.500               ;
+;  c_state.state5  ; -3.219 ; 1.445   ; N/A      ; N/A     ; 0.500               ;
+;  clk             ; 0.203  ; -1.446  ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -8.148 ; -11.916 ; 0.0      ; 0.0     ; -7.38               ;
+;  c_state.state1  ; -4.929 ; -9.182  ; N/A      ; N/A     ; 0.000               ;
+;  c_state.state5  ; -3.219 ; 0.000   ; N/A      ; N/A     ; 0.000               ;
+;  clk             ; 0.000  ; -2.734  ; N/A      ; N/A     ; -7.380              ;
++------------------+--------+---------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; compare   ; clk        ; 0.958 ; 0.958 ; Rise       ; clk             ;
+; start     ; clk        ; 1.604 ; 1.604 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; compare   ; clk        ; -0.042 ; -0.042 ; Rise       ; clk             ;
+; start     ; clk        ; -0.133 ; -0.133 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++-------------+----------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port     ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+----------------+-------+-------+------------+-----------------+
+; IE          ; c_state.state1 ; 3.987 ;       ; Rise       ; c_state.state1  ;
+; Sel_alu[*]  ; c_state.state1 ; 6.578 ; 6.578 ; Rise       ; c_state.state1  ;
+;  Sel_alu[0] ; c_state.state1 ; 6.224 ; 6.224 ; Rise       ; c_state.state1  ;
+;  Sel_alu[2] ; c_state.state1 ; 6.578 ; 6.578 ; Rise       ; c_state.state1  ;
+; raa[*]      ; c_state.state1 ; 6.428 ; 6.428 ; Rise       ; c_state.state1  ;
+;  raa[0]     ; c_state.state1 ; 6.428 ; 6.428 ; Rise       ; c_state.state1  ;
+; rab[*]      ; c_state.state1 ; 6.533 ; 6.533 ; Rise       ; c_state.state1  ;
+;  rab[0]     ; c_state.state1 ; 6.533 ; 6.533 ; Rise       ; c_state.state1  ;
+;  rab[1]     ; c_state.state1 ; 6.204 ; 6.204 ; Rise       ; c_state.state1  ;
+; rea         ; c_state.state1 ; 6.379 ; 6.379 ; Rise       ; c_state.state1  ;
+; reb         ; c_state.state1 ; 6.405 ; 6.405 ; Rise       ; c_state.state1  ;
+; IE          ; c_state.state1 ;       ; 3.987 ; Fall       ; c_state.state1  ;
+; OE          ; c_state.state5 ; 3.932 ;       ; Rise       ; c_state.state5  ;
+; done        ; c_state.state5 ; 3.912 ;       ; Rise       ; c_state.state5  ;
+; wa[*]       ; c_state.state5 ; 4.180 ; 4.180 ; Rise       ; c_state.state5  ;
+;  wa[0]      ; c_state.state5 ; 4.180 ; 4.180 ; Rise       ; c_state.state5  ;
+; we          ; c_state.state5 ;       ; 4.061 ; Rise       ; c_state.state5  ;
+; OE          ; c_state.state5 ;       ; 3.932 ; Fall       ; c_state.state5  ;
+; done        ; c_state.state5 ;       ; 3.912 ; Fall       ; c_state.state5  ;
+; we          ; c_state.state5 ; 4.061 ;       ; Fall       ; c_state.state5  ;
+; IE          ; clk            ; 5.971 ; 5.971 ; Rise       ; clk             ;
+; we          ; clk            ; 6.266 ; 6.266 ; Rise       ; clk             ;
++-------------+----------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++-------------+----------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port     ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+----------------+-------+-------+------------+-----------------+
+; IE          ; c_state.state1 ; 2.022 ;       ; Rise       ; c_state.state1  ;
+; Sel_alu[*]  ; c_state.state1 ; 3.326 ; 3.326 ; Rise       ; c_state.state1  ;
+;  Sel_alu[0] ; c_state.state1 ; 3.326 ; 3.326 ; Rise       ; c_state.state1  ;
+;  Sel_alu[2] ; c_state.state1 ; 3.475 ; 3.475 ; Rise       ; c_state.state1  ;
+; raa[*]      ; c_state.state1 ; 3.425 ; 3.425 ; Rise       ; c_state.state1  ;
+;  raa[0]     ; c_state.state1 ; 3.425 ; 3.425 ; Rise       ; c_state.state1  ;
+; rab[*]      ; c_state.state1 ; 3.306 ; 3.306 ; Rise       ; c_state.state1  ;
+;  rab[0]     ; c_state.state1 ; 3.450 ; 3.450 ; Rise       ; c_state.state1  ;
+;  rab[1]     ; c_state.state1 ; 3.306 ; 3.306 ; Rise       ; c_state.state1  ;
+; rea         ; c_state.state1 ; 3.376 ; 3.376 ; Rise       ; c_state.state1  ;
+; reb         ; c_state.state1 ; 3.402 ; 3.402 ; Rise       ; c_state.state1  ;
+; IE          ; c_state.state1 ;       ; 2.022 ; Fall       ; c_state.state1  ;
+; OE          ; c_state.state5 ; 2.069 ;       ; Rise       ; c_state.state5  ;
+; done        ; c_state.state5 ; 2.049 ;       ; Rise       ; c_state.state5  ;
+; wa[*]       ; c_state.state5 ; 2.108 ; 2.108 ; Rise       ; c_state.state5  ;
+;  wa[0]      ; c_state.state5 ; 2.108 ; 2.108 ; Rise       ; c_state.state5  ;
+; we          ; c_state.state5 ;       ; 2.061 ; Rise       ; c_state.state5  ;
+; OE          ; c_state.state5 ;       ; 2.069 ; Fall       ; c_state.state5  ;
+; done        ; c_state.state5 ;       ; 2.049 ; Fall       ; c_state.state5  ;
+; we          ; c_state.state5 ; 2.061 ;       ; Fall       ; c_state.state5  ;
+; IE          ; clk            ; 3.156 ; 3.156 ; Rise       ; clk             ;
+; we          ; clk            ; 3.296 ; 3.296 ; Rise       ; clk             ;
++-------------+----------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Transfers                                                             ;
++----------------+----------------+----------+----------+----------+----------+
+; From Clock     ; To Clock       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------+----------------+----------+----------+----------+----------+
+; c_state.state5 ; c_state.state1 ; 5        ; 5        ; 0        ; 0        ;
+; clk            ; c_state.state1 ; 6        ; 0        ; 0        ; 0        ;
+; clk            ; c_state.state5 ; 2        ; 0        ; 0        ; 0        ;
+; c_state.state1 ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; c_state.state5 ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; clk            ; clk            ; 6        ; 0        ; 0        ; 0        ;
++----------------+----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------+
+; Hold Transfers                                                              ;
++----------------+----------------+----------+----------+----------+----------+
+; From Clock     ; To Clock       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------+----------------+----------+----------+----------+----------+
+; c_state.state5 ; c_state.state1 ; 5        ; 5        ; 0        ; 0        ;
+; clk            ; c_state.state1 ; 6        ; 0        ; 0        ; 0        ;
+; clk            ; c_state.state5 ; 2        ; 0        ; 0        ; 0        ;
+; c_state.state1 ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; c_state.state5 ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; clk            ; clk            ; 6        ; 0        ; 0        ; 0        ;
++----------------+----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 4     ; 4    ;
+; Unconstrained Output Ports      ; 12    ; 12   ;
+; Unconstrained Output Port Paths ; 14    ; 14   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Nov 15 10:42:17 2024
+Info: Command: quartus_sta factorial -c factorial
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 7 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'factorial.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name c_state.state1 c_state.state1
+    Info (332105): create_clock -period 1.000 -name c_state.state5 c_state.state5
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.219
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.219        -3.219 c_state.state5 
+    Info (332119):    -1.361        -4.929 c_state.state1 
+    Info (332119):     0.203         0.000 clk 
+Info (332146): Worst-case hold slack is -1.954
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.954        -9.182 c_state.state1 
+    Info (332119):    -1.446        -2.734 clk 
+    Info (332119):     2.675         0.000 c_state.state5 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -7.380 clk 
+    Info (332119):     0.500         0.000 c_state.state1 
+    Info (332119):     0.500         0.000 c_state.state5 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.338
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.338        -1.338 c_state.state5 
+    Info (332119):    -0.224        -0.394 c_state.state1 
+    Info (332119):     0.613         0.000 clk 
+Info (332146): Worst-case hold slack is -1.170
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.170        -5.577 c_state.state1 
+    Info (332119):    -0.856        -2.119 clk 
+    Info (332119):     1.445         0.000 c_state.state5 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -7.380 clk 
+    Info (332119):     0.500         0.000 c_state.state1 
+    Info (332119):     0.500         0.000 c_state.state5 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4539 megabytes
+    Info: Processing ended: Fri Nov 15 10:42:18 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,1174 @@
+|lab04
+O[15] <= tri16:inst3.O[15]
+O[14] <= tri16:inst3.O[14]
+O[13] <= tri16:inst3.O[13]
+O[12] <= tri16:inst3.O[12]
+O[11] <= tri16:inst3.O[11]
+O[10] <= tri16:inst3.O[10]
+O[9] <= tri16:inst3.O[9]
+O[8] <= tri16:inst3.O[8]
+O[7] <= tri16:inst3.O[7]
+O[6] <= tri16:inst3.O[6]
+O[5] <= tri16:inst3.O[5]
+O[4] <= tri16:inst3.O[4]
+O[3] <= tri16:inst3.O[3]
+O[2] <= tri16:inst3.O[2]
+O[1] <= tri16:inst3.O[1]
+O[0] <= tri16:inst3.O[0]
+Tri => tri16:inst3.D
+CLK => shifter16bit:inst27.CLK
+Select_mux => mux2_16bit:inst.S
+D0[15] => mux2_16bit:inst.D0[0]
+D0[14] => mux2_16bit:inst.D0[1]
+D0[13] => mux2_16bit:inst.D0[2]
+D0[12] => mux2_16bit:inst.D0[3]
+D0[11] => mux2_16bit:inst.D0[4]
+D0[10] => mux2_16bit:inst.D0[5]
+D0[9] => mux2_16bit:inst.D0[6]
+D0[8] => mux2_16bit:inst.D0[7]
+D0[7] => mux2_16bit:inst.D0[8]
+D0[6] => mux2_16bit:inst.D0[9]
+D0[5] => mux2_16bit:inst.D0[10]
+D0[4] => mux2_16bit:inst.D0[11]
+D0[3] => mux2_16bit:inst.D0[12]
+D0[2] => mux2_16bit:inst.D0[13]
+D0[1] => mux2_16bit:inst.D0[14]
+D0[0] => mux2_16bit:inst.D0[15]
+D1[15] => mux2_16bit:inst.D1[0]
+D1[14] => mux2_16bit:inst.D1[1]
+D1[13] => mux2_16bit:inst.D1[2]
+D1[12] => mux2_16bit:inst.D1[3]
+D1[11] => mux2_16bit:inst.D1[4]
+D1[10] => mux2_16bit:inst.D1[5]
+D1[9] => mux2_16bit:inst.D1[6]
+D1[8] => mux2_16bit:inst.D1[7]
+D1[7] => mux2_16bit:inst.D1[8]
+D1[6] => mux2_16bit:inst.D1[9]
+D1[5] => mux2_16bit:inst.D1[10]
+D1[4] => mux2_16bit:inst.D1[11]
+D1[3] => mux2_16bit:inst.D1[12]
+D1[2] => mux2_16bit:inst.D1[13]
+D1[1] => mux2_16bit:inst.D1[14]
+D1[0] => mux2_16bit:inst.D1[15]
+S[0] => shifter16bit:inst27.S[0]
+S[1] => shifter16bit:inst27.S[1]
+
+
+|lab04|tri16:inst3
+O[15] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+O[14] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+O[13] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+O[12] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+O[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+O[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+O[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+O[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+O[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+O[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+O[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+O[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+O[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+O[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] => inst15.DATAIN
+Q[14] => inst14.DATAIN
+Q[13] => inst13.DATAIN
+Q[12] => inst12.DATAIN
+Q[11] => inst11.DATAIN
+Q[10] => inst10.DATAIN
+Q[9] => inst9.DATAIN
+Q[8] => inst8.DATAIN
+Q[7] => inst7.DATAIN
+Q[6] => inst6.DATAIN
+Q[5] => inst5.DATAIN
+Q[4] => inst4.DATAIN
+Q[3] => inst3.DATAIN
+Q[2] => inst2.DATAIN
+Q[1] => inst1.DATAIN
+Q[0] => inst.DATAIN
+D => inst.OE
+D => inst1.OE
+D => inst2.OE
+D => inst3.OE
+D => inst4.OE
+D => inst5.OE
+D => inst6.OE
+D => inst7.OE
+D => inst8.OE
+D => inst9.OE
+D => inst10.OE
+D => inst11.OE
+D => inst12.OE
+D => inst13.OE
+D => inst14.OE
+D => inst15.OE
+
+
+|lab04|shifter16bit:inst27
+Q[15] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst20.CLK
+CLK => inst18.CLK
+CLK => inst17.CLK
+CLK => inst16.CLK
+CLK => inst19.CLK
+CLK => inst9.CLK
+CLK => inst.CLK
+CLK => inst11.CLK
+CLK => inst21.CLK
+CLK => inst23.CLK
+CLK => inst10.CLK
+CLK => inst12.CLK
+CLK => inst13.CLK
+CLK => inst14.CLK
+CLK => inst15.CLK
+CLK => inst22.CLK
+I[15] => mux41:inst32.D1
+I[14] => mux41:inst33.D1
+I[13] => mux41:inst34.D1
+I[12] => mux41:inst35.D1
+I[11] => mux41:inst36.D1
+I[10] => mux41:inst37.D1
+I[9] => mux41:inst38.D1
+I[8] => mux41:inst39.D1
+I[7] => mux41:inst24.D1
+I[6] => mux41:inst25.D1
+I[5] => mux41:inst26.D1
+I[4] => mux41:inst27.D1
+I[3] => mux41:inst28.D1
+I[2] => mux41:inst29.D1
+I[1] => mux41:inst30.D1
+I[0] => mux41:inst31.D1
+S[0] => mux41:inst35.S[0]
+S[0] => mux41:inst37.S[0]
+S[0] => mux41:inst38.S[0]
+S[0] => mux41:inst39.S[0]
+S[0] => mux41:inst36.S[0]
+S[0] => mux41:inst30.S[0]
+S[0] => mux41:inst31.S[0]
+S[0] => mux41:inst28.S[0]
+S[0] => mux41:inst34.S[0]
+S[0] => mux41:inst32.S[0]
+S[0] => mux41:inst29.S[0]
+S[0] => mux41:inst27.S[0]
+S[0] => mux41:inst26.S[0]
+S[0] => mux41:inst25.S[0]
+S[0] => mux41:inst24.S[0]
+S[0] => mux41:inst33.S[0]
+S[1] => mux41:inst35.S[1]
+S[1] => mux41:inst37.S[1]
+S[1] => mux41:inst38.S[1]
+S[1] => mux41:inst39.S[1]
+S[1] => mux41:inst36.S[1]
+S[1] => mux41:inst30.S[1]
+S[1] => mux41:inst31.S[1]
+S[1] => mux41:inst28.S[1]
+S[1] => mux41:inst34.S[1]
+S[1] => mux41:inst32.S[1]
+S[1] => mux41:inst29.S[1]
+S[1] => mux41:inst27.S[1]
+S[1] => mux41:inst26.S[1]
+S[1] => mux41:inst25.S[1]
+S[1] => mux41:inst24.S[1]
+S[1] => mux41:inst33.S[1]
+IR => mux41:inst31.D2
+IL => mux41:inst32.D3
+
+
+|lab04|shifter16bit:inst27|mux41:inst35
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst35|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst35|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst35|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst37
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst37|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst37|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst37|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst38
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst38|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst38|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst38|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst39
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst39|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst39|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst39|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst36
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst36|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst36|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst36|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst30
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst30|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst30|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst30|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst31
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst31|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst31|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst31|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst28
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst28|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst28|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst28|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst34
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst34|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst34|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst34|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst32
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst32|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst32|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst32|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst29
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst29|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst29|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst29|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst27
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst27|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst27|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst27|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst26
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst26|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst26|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst26|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst25
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst25|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst25|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst25|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst24
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst24|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst24|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst24|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst33
+R <= mux21:inst2.Y
+D0 => mux21:inst3.D0
+D1 => mux21:inst3.D1
+S[0] => mux21:inst3.S
+S[0] => mux21:inst1.S
+S[1] => mux21:inst2.S
+D2 => mux21:inst1.D0
+D3 => mux21:inst1.D1
+
+
+|lab04|shifter16bit:inst27|mux41:inst33|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst33|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|shifter16bit:inst27|mux41:inst33|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|adder16bit:inst2
+S[15] <= Full_Adder:inst17.S
+S[14] <= Full_Adder:inst16.S
+S[13] <= Full_Adder:inst15.S
+S[12] <= Full_Adder:inst14.S
+S[11] <= Full_Adder:inst13.S
+S[10] <= Full_Adder:inst12.S
+S[9] <= Full_Adder:inst10.S
+S[8] <= Full_Adder:inst9.S
+S[7] <= Full_Adder:inst8.S
+S[6] <= Full_Adder:inst7.S
+S[5] <= Full_Adder:inst6.S
+S[4] <= Full_Adder:inst5.S
+S[3] <= Full_Adder:inst4.S
+S[2] <= Full_Adder:inst3.S
+S[1] <= Full_Adder:inst1.S
+S[0] <= Full_Adder:inst.S
+A[15] => Full_Adder:inst17.A
+A[14] => Full_Adder:inst16.A
+A[13] => Full_Adder:inst15.A
+A[12] => Full_Adder:inst14.A
+A[11] => Full_Adder:inst13.A
+A[10] => Full_Adder:inst12.A
+A[9] => Full_Adder:inst10.A
+A[8] => Full_Adder:inst9.A
+A[7] => Full_Adder:inst8.A
+A[6] => Full_Adder:inst7.A
+A[5] => Full_Adder:inst6.A
+A[4] => Full_Adder:inst5.A
+A[3] => Full_Adder:inst4.A
+A[2] => Full_Adder:inst3.A
+A[1] => Full_Adder:inst1.A
+A[0] => Full_Adder:inst.A
+B[15] => Full_Adder:inst17.B
+B[14] => Full_Adder:inst16.B
+B[13] => Full_Adder:inst15.B
+B[12] => Full_Adder:inst14.B
+B[11] => Full_Adder:inst13.B
+B[10] => Full_Adder:inst12.B
+B[9] => Full_Adder:inst10.B
+B[8] => Full_Adder:inst9.B
+B[7] => Full_Adder:inst8.B
+B[6] => Full_Adder:inst7.B
+B[5] => Full_Adder:inst6.B
+B[4] => Full_Adder:inst5.B
+B[3] => Full_Adder:inst4.B
+B[2] => Full_Adder:inst3.B
+B[1] => Full_Adder:inst1.B
+B[0] => Full_Adder:inst.B
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst3
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst4
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst5
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst6
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst7
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst8
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst9
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst12
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst10
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst13
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst14
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst15
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst16
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|adder16bit:inst2|Full_Adder:inst17
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+Cin => inst1.IN1
+Cin => inst2.IN0
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|mux2_16bit:inst
+O[0] <= mux21:inst16.Y
+O[1] <= mux21:inst4.Y
+O[2] <= mux21:inst8.Y
+O[3] <= mux21:inst12.Y
+O[4] <= mux21:inst1.Y
+O[5] <= mux21:inst5.Y
+O[6] <= mux21:inst9.Y
+O[7] <= mux21:inst13.Y
+O[8] <= mux21:inst2.Y
+O[9] <= mux21:inst6.Y
+O[10] <= mux21:inst10.Y
+O[11] <= mux21:inst14.Y
+O[12] <= mux21:inst3.Y
+O[13] <= mux21:inst7.Y
+O[14] <= mux21:inst11.Y
+O[15] <= mux21:inst15.Y
+D0[15] => mux21:inst15.D0
+D0[14] => mux21:inst11.D0
+D0[13] => mux21:inst7.D0
+D0[12] => mux21:inst3.D0
+D0[11] => mux21:inst14.D0
+D0[10] => mux21:inst10.D0
+D0[9] => mux21:inst6.D0
+D0[8] => mux21:inst2.D0
+D0[7] => mux21:inst13.D0
+D0[6] => mux21:inst9.D0
+D0[5] => mux21:inst5.D0
+D0[4] => mux21:inst1.D0
+D0[3] => mux21:inst12.D0
+D0[2] => mux21:inst8.D0
+D0[1] => mux21:inst4.D0
+D0[0] => mux21:inst16.D0
+D1[15] => mux21:inst15.D1
+D1[14] => mux21:inst11.D1
+D1[13] => mux21:inst7.D1
+D1[12] => mux21:inst3.D1
+D1[11] => mux21:inst14.D1
+D1[10] => mux21:inst10.D1
+D1[9] => mux21:inst6.D1
+D1[8] => mux21:inst2.D1
+D1[7] => mux21:inst13.D1
+D1[6] => mux21:inst9.D1
+D1[5] => mux21:inst5.D1
+D1[4] => mux21:inst1.D1
+D1[3] => mux21:inst12.D1
+D1[2] => mux21:inst8.D1
+D1[1] => mux21:inst4.D1
+D1[0] => mux21:inst16.D1
+S => mux21:inst1.S
+S => mux21:inst2.S
+S => mux21:inst3.S
+S => mux21:inst4.S
+S => mux21:inst5.S
+S => mux21:inst6.S
+S => mux21:inst7.S
+S => mux21:inst8.S
+S => mux21:inst9.S
+S => mux21:inst10.S
+S => mux21:inst11.S
+S => mux21:inst12.S
+S => mux21:inst13.S
+S => mux21:inst14.S
+S => mux21:inst15.S
+S => mux21:inst16.S
+
+
+|lab04|mux2_16bit:inst|mux21:inst1
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst4
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst5
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst6
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst7
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst8
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst9
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst10
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst11
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst12
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst13
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst14
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst15
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+
+|lab04|mux2_16bit:inst|mux21:inst16
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst3.IN0
+S => inst3.IN1
+S => inst4.IN0
+D0 => inst.IN0
+
+

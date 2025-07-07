@@ -1,0 +1,28 @@
+module RegisterFile (
+    input wire CLK,                    
+  	input wire [2:0] WA,   				// Write_address             
+  	input wire [7:0] WD,                // Write_data
+    input wire WE,                	    // write_enable
+  	input wire [3:0] RAA,            	 // Read_address_A
+  	output wire [7:0] RDA,              // Read A
+    input wire REA,                     // Read_enable A
+    input wire [3:0] RAB,               // Read address B
+  	output wire [7:0] RDB,              // Read B
+    input wire REB                      // Read enable B 
+);
+
+    // Khai báo mảng 5 thanh ghi 8 bib
+  reg [7:0] register [0:4];
+
+    // Đọc dữ liệu
+  assign RDA = (REA) ? register[RAA] : 8'bz;
+  assign RDB = (REB) ? register[RAB] : 8'bz;
+
+    // Khối always để ghi dữ liệu
+    always @(posedge CLK) begin
+        if (WE) begin 
+            register[WA] <= WD;   
+        end
+    end
+
+endmodule

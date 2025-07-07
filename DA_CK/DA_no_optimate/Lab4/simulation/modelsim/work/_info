@@ -1,0 +1,461 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vALU
+Z1 !s100 LA:4b`3eG?4kz3W@8a=m90
+Z2 Ize_4D6^1dN[NO@egD:Zej3
+Z3 Vzo1A@bZWHg2Jio]kQ3>NL0
+Z4 dC:\Users\Admin\Desktop\LLS\THL\Lab4\simulation\modelsim
+Z5 w1730777684
+Z6 8C:/Users/Admin/Desktop/LLS/THL/Lab3/ALU.v
+Z7 FC:/Users/Admin/Desktop/LLS/THL/Lab3/ALU.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/ALU.v|
+Z10 o-work work -O0
+Z11 n@a@l@u
+Z12 !s108 1730782744.047000
+Z13 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/ALU.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vAnd
+Z14 !s100 mVR?55ni6[]C?Wg?dSF]E2
+Z15 ID@JCZEZ[A0_0JkA]H9WK_3
+Z16 Vl8VzT`Oe3`dF:[8Z3Ac7=1
+R4
+Z17 w1729668572
+Z18 8C:/Users/Admin/Desktop/LLS/THL/Lab3/And.v
+Z19 FC:/Users/Admin/Desktop/LLS/THL/Lab3/And.v
+L0 1
+R8
+r1
+31
+Z20 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/And.v|
+R10
+n@and
+Z21 !s108 1730782744.102000
+Z22 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/And.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vAnd2
+Z23 !s100 M8K1G6f^_aPbfh:8^e3Co3
+Z24 IlWd8V]C6>OcoSVTjo2T[I3
+Z25 VP^:H_Hd7U]KIb2]dT@_T63
+R4
+Z26 w1729668584
+Z27 8C:/Users/Admin/Desktop/LLS/THL/Lab3/And2.v
+Z28 FC:/Users/Admin/Desktop/LLS/THL/Lab3/And2.v
+L0 1
+R8
+r1
+31
+Z29 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/And2.v|
+R10
+Z30 n@and2
+Z31 !s108 1730782744.156000
+Z32 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/And2.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vbcd_to_led
+Z33 !s100 O_^>_bn9;?>6S4cNHYg880
+Z34 I0OY3WY]oV7Rh?Lo2H@57o2
+Z35 V[all][AW`GKKRfjS@g2>f2
+R4
+Z36 w1728956883
+Z37 8C:/Users/Admin/Desktop/LLS/THL/Lab3/bcd_to_led.v
+Z38 FC:/Users/Admin/Desktop/LLS/THL/Lab3/bcd_to_led.v
+L0 1
+R8
+r1
+31
+Z39 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/bcd_to_led.v|
+R10
+Z40 !s108 1730782744.213000
+Z41 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/bcd_to_led.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vcomp
+Z42 !s100 Gn?T=WAgOMm;e3lzH[LB91
+Z43 I4=8gUSMR9YP0OQiKA<8lQ3
+Z44 VaUMjJG:IzL:1@l[OPP?ad2
+R4
+Z45 w1730095283
+Z46 8C:/Users/Admin/Desktop/LLS/THL/Lab3/comp.v
+Z47 FC:/Users/Admin/Desktop/LLS/THL/Lab3/comp.v
+L0 1
+R8
+r1
+31
+Z48 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/comp.v|
+R10
+Z49 !s108 1730782744.267000
+Z50 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/comp.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vControl_Unit
+Z51 !s100 KA5DWYa5B`YV2XNFV1`KF1
+Z52 IO14Mo>WaA0W?[k:HjIBjf2
+Z53 V5zN_4CEFk9e>CALMF=S>=3
+R4
+Z54 w1730779703
+Z55 8C:/Users/Admin/Desktop/LLS/THL/Lab4/Control_Unit.v
+Z56 FC:/Users/Admin/Desktop/LLS/THL/Lab4/Control_Unit.v
+L0 1
+R8
+r1
+31
+Z57 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab4/Control_Unit.v|
+R10
+Z58 n@control_@unit
+Z59 !s108 1730782743.544000
+Z60 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab4/Control_Unit.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vControl_Unit_tb
+!i10b 1
+!s100 DUkz3IHa3Z2AHUFYgYW<Y3
+Idh=L`PXhmOJ9jlZgAGljU2
+VMQ03belhNV;4fDSdJM6c`3
+R4
+w1730782740
+8C:/Users/Admin/Desktop/LLS/THL/Lab4/simulation/modelsim/Control_Unit_tb.v
+FC:/Users/Admin/Desktop/LLS/THL/Lab4/simulation/modelsim/Control_Unit_tb.v
+L0 4
+R8
+r1
+!s85 0
+31
+!s108 1730782744.832000
+!s107 C:/Users/Admin/Desktop/LLS/THL/Lab4/simulation/modelsim/Control_Unit_tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab4/simulation/modelsim/Control_Unit_tb.v|
+!s101 -O0
+R10
+n@control_@unit_tb
+vData_Path
+Z61 !s100 bD4o]`Y>;hHfW@P3B:ee82
+Z62 I1`0;k@6oQR8CgN`k9;CzF3
+Z63 VU:RL]<F67e2QD1XZ>ZCZ:1
+R4
+Z64 w1730780472
+Z65 8C:/Users/Admin/Desktop/LLS/THL/Lab4/Data_Path.v
+Z66 FC:/Users/Admin/Desktop/LLS/THL/Lab4/Data_Path.v
+L0 1
+R8
+r1
+31
+Z67 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab4/Data_Path.v|
+R10
+Z68 n@data_@path
+Z69 !s108 1730782743.599000
+Z70 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab4/Data_Path.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vFullAdder
+Z71 !s100 ZORfOCVF:hLO8nk?S4Bo>3
+Z72 I><U4c]>5MFcVaSBK2l:G=2
+Z73 Vk:dAe50QOan=UcZcHi:Re0
+R4
+Z74 w1728286198
+Z75 8C:/Users/Admin/Desktop/LLS/THL/Lab3/FullAdder.v
+Z76 FC:/Users/Admin/Desktop/LLS/THL/Lab3/FullAdder.v
+L0 1
+R8
+r1
+31
+Z77 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/FullAdder.v|
+R10
+Z78 n@full@adder
+Z79 !s108 1730782744.320000
+Z80 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/FullAdder.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vFullSubtracter
+Z81 !s100 9XgYLb5miV9^KNRb:kLC@3
+Z82 IiX6?ThKNkZRKBVYhne6cU1
+Z83 V@OEgYC0SF>fnIVfXHlb4H3
+R4
+Z84 w1728286085
+Z85 8C:/Users/Admin/Desktop/LLS/THL/Lab3/FullSubtracter.v
+Z86 FC:/Users/Admin/Desktop/LLS/THL/Lab3/FullSubtracter.v
+L0 1
+R8
+r1
+31
+Z87 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/FullSubtracter.v|
+R10
+Z88 n@full@subtracter
+Z89 !s108 1730782744.374000
+Z90 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/FullSubtracter.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vLED
+Z91 !s100 TJDI[JESGWWH50`I4S7h@2
+Z92 I2nF;G_6<kKkT>KRAbl?kY0
+Z93 Vbh=[iS[UIULYCf=XmC_]V0
+R4
+Z94 w1728891233
+Z95 8C:/Users/Admin/Desktop/LLS/THL/Lab3/LED.v
+Z96 FC:/Users/Admin/Desktop/LLS/THL/Lab3/LED.v
+L0 1
+R8
+r1
+31
+Z97 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/LED.v|
+R10
+Z98 n@l@e@d
+Z99 !s108 1730782744.433000
+Z100 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/LED.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMultiplier
+Z101 !s100 n?KebzAjmIc_Z;TU3@8gT2
+Z102 I:foioBA=Wn4]>cQ0Vie=Y3
+Z103 VV`k:GE1AgE8KjWVn[J_1I1
+R4
+Z104 w1728450166
+Z105 8C:/Users/Admin/Desktop/LLS/THL/Lab3/Multiplier.v
+Z106 FC:/Users/Admin/Desktop/LLS/THL/Lab3/Multiplier.v
+L0 1
+R8
+r1
+31
+Z107 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/Multiplier.v|
+R10
+Z108 n@multiplier
+Z109 !s108 1730782744.491000
+Z110 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/Multiplier.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmux16_1
+Z111 !s100 ]0`AIDoMmXIY?@@]hjb@30
+Z112 I5YRbS`Vo2l9L66WZUnURa0
+Z113 VgU=_SdDPQo:e4SiI5dQY=1
+R4
+Z114 w1730110719
+Z115 8C:/Users/Admin/Desktop/LLS/THL/Lab3/mux16_1.v
+Z116 FC:/Users/Admin/Desktop/LLS/THL/Lab3/mux16_1.v
+L0 1
+R8
+r1
+31
+Z117 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/mux16_1.v|
+R10
+Z118 !s108 1730782744.657000
+Z119 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/mux16_1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMux2_1
+Z120 !s100 a=ZRHJF<Kj47]1obO?T_z2
+Z121 Ic=JSi]kWBTJAKn5Sh3X0i1
+Z122 VMOEhl6ae5[RWJ6BjF0XEf3
+R4
+Z123 w1730090095
+Z124 8C:/Users/Admin/Desktop/LLS/THL/Lab3/Mux2_1.v
+Z125 FC:/Users/Admin/Desktop/LLS/THL/Lab3/Mux2_1.v
+L0 1
+R8
+r1
+31
+Z126 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/Mux2_1.v|
+R10
+Z127 n@mux2_1
+Z128 !s108 1730782744.546000
+Z129 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/Mux2_1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmux4_1
+Z130 !s100 GXKZPnB?7IcKj0cE2P@2i3
+Z131 Ioo0ke9@k_Td1U92Tz??ki1
+Z132 V@J0Z4e@4d_:o;K0OHLhzD0
+R4
+Z133 w1728450326
+Z134 8C:/Users/Admin/Desktop/LLS/THL/Lab3/mux4_1.v
+Z135 FC:/Users/Admin/Desktop/LLS/THL/Lab3/mux4_1.v
+L0 1
+R8
+r1
+31
+Z136 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/mux4_1.v|
+R10
+Z137 !s108 1730782744.601000
+Z138 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/mux4_1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vOne_Counter
+Z139 !s100 K]1YXKO:==?gL?7;I=c_l0
+Z140 Ii>J7iQjLCcCZOVZ9kBSHl0
+Z141 V3N[iLn820@7[=ZBFi1e0]1
+R4
+Z142 w1730780555
+Z143 8C:/Users/Admin/Desktop/LLS/THL/Lab4/One_Counter.v
+Z144 FC:/Users/Admin/Desktop/LLS/THL/Lab4/One_Counter.v
+L0 1
+R8
+r1
+31
+Z145 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab4/One_Counter.v|
+R10
+Z146 n@one_@counter
+Z147 !s108 1730782743.651000
+Z148 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab4/One_Counter.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vOne_Counter_tb
+Z149 !s100 4JcI[9G8_[]mzihU3Vk5:3
+Z150 I=DE0H1obDZiLK6WIOGTHT2
+Z151 VIY3R`bP3W@`iiN?znmZH?1
+R4
+Z152 w1730780872
+Z153 8C:/Users/Admin/Desktop/LLS/THL/Lab4/One_Counter_tb.v
+Z154 FC:/Users/Admin/Desktop/LLS/THL/Lab4/One_Counter_tb.v
+L0 3
+R8
+r1
+31
+Z155 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab4/One_Counter_tb.v|
+R10
+Z156 n@one_@counter_tb
+Z157 !s108 1730782743.704000
+Z158 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab4/One_Counter_tb.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vOr
+Z159 !s100 W3i0jM8;]LcJ1BEPJfFXR0
+Z160 I=NN^RJYa;R?UdKj3X90L:0
+Z161 Va6UI:DB7Y8XSJ7hUDf[>n0
+R4
+Z162 w1728444370
+Z163 8C:/Users/Admin/Desktop/LLS/THL/Lab3/Or.v
+Z164 FC:/Users/Admin/Desktop/LLS/THL/Lab3/Or.v
+L0 1
+R8
+r1
+31
+Z165 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/Or.v|
+R10
+n@or
+Z166 !s108 1730782744.715000
+Z167 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/Or.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRAM_2_Port
+Z168 IYHj:GVjQ>aj0<i2^HJG1B3
+Z169 V2oF9<hm[[@YcmT<REZ6RW3
+R4
+Z170 w1729650031
+Z171 8C:/Users/Admin/Desktop/LLS/THL/Lab4/RAM_2_Port_bb.v
+Z172 FC:/Users/Admin/Desktop/LLS/THL/Lab4/RAM_2_Port_bb.v
+L0 34
+R8
+r1
+31
+R10
+Z173 n@r@a@m_2_@port
+Z174 !s100 O8:okE9h6KRkbj0GeiVF52
+Z175 !s108 1730782743.815000
+Z176 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab4/RAM_2_Port_bb.v|
+Z177 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab4/RAM_2_Port_bb.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRegister4Bit
+Z178 !s100 a;A?7D1j^@fU0^5DLF^6?3
+Z179 IiLRUOlH2N82hz`?j>WL963
+Z180 VCUQAOVHV[?OfhNmPIjb=91
+R4
+Z181 w1730169761
+Z182 8C:/Users/Admin/Desktop/LLS/THL/Lab4/Register4Bit.v
+Z183 FC:/Users/Admin/Desktop/LLS/THL/Lab4/Register4Bit.v
+L0 1
+R8
+r1
+31
+Z184 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab4/Register4Bit.v|
+R10
+Z185 n@register4@bit
+Z186 !s108 1730782743.871000
+Z187 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab4/Register4Bit.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRegisterFile
+Z188 !s100 nj5`Oca5W^;NOjnbPk5l?1
+Z189 IE4gQ;@HngieZM5d2Adc^o3
+Z190 V7lCk1aBN6o^eO5F__TG6g2
+R4
+Z191 w1730169617
+Z192 8C:/Users/Admin/Desktop/LLS/THL/Lab4/RegisterFile.v
+Z193 FC:/Users/Admin/Desktop/LLS/THL/Lab4/RegisterFile.v
+L0 1
+R8
+r1
+31
+Z194 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab4/RegisterFile.v|
+R10
+Z195 n@register@file
+Z196 !s108 1730782743.928000
+Z197 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab4/RegisterFile.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vShift_Register
+Z198 !s100 ReOeE<>JE2YgzL:WZDZWg1
+Z199 IkgYiH_hkRVW8m]VG`F:`A0
+Z200 V80a2`EI;82F8IUAFjXh9A2
+R4
+Z201 w1730169616
+Z202 8C:/Users/Admin/Desktop/LLS/THL/Lab4/Shift_Register.v
+Z203 FC:/Users/Admin/Desktop/LLS/THL/Lab4/Shift_Register.v
+L0 1
+R8
+r1
+31
+Z204 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab4/Shift_Register.v|
+R10
+Z205 n@shift_@register
+Z206 !s108 1730782743.989000
+Z207 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab4/Shift_Register.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vXor
+Z208 !s100 FWZb267I5;<bCnoPCMPNg0
+Z209 I?N:@6K2hPnjDd[41dz:=S1
+Z210 V;<j@0VAm?;=<NljmCe[bi1
+R4
+Z211 w1728444342
+Z212 8C:/Users/Admin/Desktop/LLS/THL/Lab3/Xor.v
+Z213 FC:/Users/Admin/Desktop/LLS/THL/Lab3/Xor.v
+L0 1
+R8
+r1
+31
+Z214 !s90 -reportprogress|300|-work|work|C:/Users/Admin/Desktop/LLS/THL/Lab3/Xor.v|
+R10
+n@xor
+!i10b 1
+!s85 0
+Z215 !s108 1730782744.774000
+Z216 !s107 C:/Users/Admin/Desktop/LLS/THL/Lab3/Xor.v|
+!s101 -O0

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ALU">
+		<CBX_INST_ENTRY INSTANCE_NAME="|bcd_to_led|ALU:comb_3|Multiplier:Mul|lpm_mult:Mult0" CBX_FILE_NAME="mult_uss.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

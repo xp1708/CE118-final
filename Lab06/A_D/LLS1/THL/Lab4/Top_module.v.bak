@@ -1,0 +1,55 @@
+module Top_module(
+    input CLK,             // Clock signal
+    input Start,           // Start signal to begin the operation
+    input [15:0] DataIn,   // Input data
+    output [15:0] Out,     // Final output
+    output Done            // Completion flag
+);
+    // Internal signals for connections
+    wire IE, OE;
+    wire [3:0] WAA, WAB, RAA, RAB;
+    wire WEA, WEB, REA, REB;
+    wire [3:0] S_ALU1, S_ALU2;
+    wire [15:0] Datapath;
+    
+    // Instantiate the datapath module
+    one_counter_op datapath (
+        .CLK(CLK),
+        .DataIn(DataIn),
+        .IE(IE),
+        .WAA(WAA),
+        .WEA(WEA),
+        .WAB(WAB),
+        .WEB(WEB),
+        .RAA(RAA),
+        .REA(REA),
+        .RAB(RAB),
+        .REB(REB),
+        .OE(OE),
+        .S_ALU1(S_ALU1),
+        .S_ALU2(S_ALU2),
+        .Out(Out),
+        .Datapath(Datapath)
+    );
+
+    // Instantiate the control unit
+    controler control (
+        .CLK(CLK),
+        .Datapath(Datapath),
+        .IE(IE),
+        .WAA(WAA),
+        .WEA(WEA),
+        .WAB(WAB),
+        .WEB(WEB),
+        .RAA(RAA),
+        .REA(REA),
+        .RAB(RAB),
+        .REB(REB),
+        .OE(OE),
+        .S_ALU1(S_ALU1),
+        .S_ALU2(S_ALU2),
+        .Done(Done),
+        .Start(Start)
+    );
+
+endmodule

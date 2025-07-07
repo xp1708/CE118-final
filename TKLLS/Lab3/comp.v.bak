@@ -1,0 +1,3 @@
+module comp(a,comp);
+	assign comp = ~a;
+endmodule

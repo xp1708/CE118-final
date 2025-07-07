@@ -1,0 +1,1376 @@
+TimeQuest Timing Analyzer report for datapath
+Sat Dec 07 10:11:13 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLK'
+ 12. Slow Model Setup: 'Control_Unit:CU|c_state.state0'
+ 13. Slow Model Hold: 'CLK'
+ 14. Slow Model Hold: 'Control_Unit:CU|c_state.state0'
+ 15. Slow Model Minimum Pulse Width: 'CLK'
+ 16. Slow Model Minimum Pulse Width: 'Control_Unit:CU|c_state.state0'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'CLK'
+ 27. Fast Model Setup: 'Control_Unit:CU|c_state.state0'
+ 28. Fast Model Hold: 'CLK'
+ 29. Fast Model Hold: 'Control_Unit:CU|c_state.state0'
+ 30. Fast Model Minimum Pulse Width: 'CLK'
+ 31. Fast Model Minimum Pulse Width: 'Control_Unit:CU|c_state.state0'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; datapath                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                         ;
++--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
+; Clock Name                     ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                            ;
++--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
+; CLK                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK }                            ;
+; Control_Unit:CU|c_state.state0 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Control_Unit:CU|c_state.state0 } ;
++--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 160.03 MHz ; 160.03 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------------------------+
+; Slow Model Setup Summary                                ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; CLK                            ; -6.696 ; -244.165      ;
+; Control_Unit:CU|c_state.state0 ; -1.172 ; -5.371        ;
++--------------------------------+--------+---------------+
+
+
++---------------------------------------------------------+
+; Slow Model Hold Summary                                 ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; CLK                            ; -2.857 ; -19.473       ;
+; Control_Unit:CU|c_state.state0 ; -0.053 ; -0.053        ;
++--------------------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++---------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                  ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; CLK                            ; -1.380 ; -45.380       ;
+; Control_Unit:CU|c_state.state0 ; 0.500  ; 0.000         ;
++--------------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                                                                              ;
++--------+------------------------+--------------------------------------------+--------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node              ; To Node                                    ; Launch Clock                   ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------+--------------------------------------------+--------------------------------+-------------+--------------+------------+------------+
+; -6.696 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.534     ; 5.698      ;
+; -6.696 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~20   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.534     ; 5.698      ;
+; -6.677 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~18   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.680      ;
+; -6.674 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~3    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.687      ;
+; -6.673 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~15   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.686      ;
+; -6.670 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~14   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.683      ;
+; -6.669 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~2    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.682      ;
+; -6.667 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~22   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.534     ; 5.669      ;
+; -6.664 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~31   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.667      ;
+; -6.660 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~19   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.663      ;
+; -6.627 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.640      ;
+; -6.626 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~8    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.639      ;
+; -6.580 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~29   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.583      ;
+; -6.580 ; Control_Unit:CU|RAA[1] ; Control_Unit:CU|c_state.state7             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.524     ; 5.592      ;
+; -6.579 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~17   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.582      ;
+; -6.549 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~30   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.552      ;
+; -6.541 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~9    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.554      ;
+; -6.537 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~18   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.540      ;
+; -6.534 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~27   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.524     ; 5.546      ;
+; -6.534 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~3    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.547      ;
+; -6.533 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~23   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.524     ; 5.545      ;
+; -6.533 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~15   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.546      ;
+; -6.530 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~14   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.543      ;
+; -6.529 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~2    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.542      ;
+; -6.527 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~22   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.534     ; 5.529      ;
+; -6.524 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~31   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.527      ;
+; -6.520 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~19   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.523      ;
+; -6.512 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~26   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.524     ; 5.524      ;
+; -6.506 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~28   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.509      ;
+; -6.495 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.534     ; 5.497      ;
+; -6.495 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~20   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.534     ; 5.497      ;
+; -6.439 ; Control_Unit:CU|RAA[0] ; Control_Unit:CU|c_state.state7             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.524     ; 5.451      ;
+; -6.426 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.439      ;
+; -6.425 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~8    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.438      ;
+; -6.409 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~30   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.412      ;
+; -6.394 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~27   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.524     ; 5.406      ;
+; -6.393 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~23   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.524     ; 5.405      ;
+; -6.390 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~5    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.403      ;
+; -6.379 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~29   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.382      ;
+; -6.378 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~17   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.381      ;
+; -6.372 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~26   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.524     ; 5.384      ;
+; -6.366 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|Register4Bit:Reg1|data_out[3] ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.379      ;
+; -6.352 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~12   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.365      ;
+; -6.351 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~0    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.364      ;
+; -6.348 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~16   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.361      ;
+; -6.340 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~9    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.353      ;
+; -6.326 ; Control_Unit:CU|RAA[1] ; Control_Unit:CU|c_state.state4             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.524     ; 5.338      ;
+; -6.305 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~28   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.533     ; 5.308      ;
+; -6.226 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|Register4Bit:Reg1|data_out[3] ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.239      ;
+; -6.207 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~7    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.220      ;
+; -6.200 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~25   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.534     ; 5.202      ;
+; -6.197 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~21   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.534     ; 5.199      ;
+; -6.189 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~5    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.202      ;
+; -6.174 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.403     ; 5.307      ;
+; -6.174 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~20   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.403     ; 5.307      ;
+; -6.151 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~12   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.164      ;
+; -6.150 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~0    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.163      ;
+; -6.147 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~16   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.160      ;
+; -6.125 ; Control_Unit:CU|RAA[0] ; Control_Unit:CU|c_state.state4             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.524     ; 5.137      ;
+; -6.115 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~1    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.128      ;
+; -6.114 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~13   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.127      ;
+; -6.105 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.392     ; 5.249      ;
+; -6.104 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~8    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.392     ; 5.248      ;
+; -6.088 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~6    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.101      ;
+; -6.067 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~7    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 5.080      ;
+; -6.064 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~18   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.402     ; 5.198      ;
+; -6.058 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~3    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.392     ; 5.202      ;
+; -6.057 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~15   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.392     ; 5.201      ;
+; -6.057 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~14   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.392     ; 5.201      ;
+; -6.056 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~2    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.392     ; 5.200      ;
+; -6.054 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~22   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.403     ; 5.187      ;
+; -6.048 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~31   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.402     ; 5.182      ;
+; -6.044 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~19   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.402     ; 5.178      ;
+; -6.028 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~29   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.402     ; 5.162      ;
+; -6.028 ; Control_Unit:CU|RAB[1] ; Control_Unit:CU|c_state.state7             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.393     ; 5.171      ;
+; -6.027 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~17   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.402     ; 5.161      ;
+; -5.999 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~25   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.534     ; 5.001      ;
+; -5.996 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~21   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.534     ; 4.998      ;
+; -5.989 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~9    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.392     ; 5.133      ;
+; -5.984 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~28   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.402     ; 5.118      ;
+; -5.948 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~6    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 4.961      ;
+; -5.936 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~30   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.402     ; 5.070      ;
+; -5.918 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~27   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.393     ; 5.061      ;
+; -5.917 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~23   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.393     ; 5.060      ;
+; -5.914 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~1    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 4.927      ;
+; -5.913 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~13   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.523     ; 4.926      ;
+; -5.899 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~26   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.393     ; 5.042      ;
+; -5.840 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.402     ; 4.974      ;
+; -5.840 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~20   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.402     ; 4.974      ;
+; -5.838 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~5    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.392     ; 4.982      ;
+; -5.830 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~12   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.392     ; 4.974      ;
+; -5.829 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~0    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.392     ; 4.973      ;
+; -5.826 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~16   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.392     ; 4.970      ;
+; -5.792 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|Register4Bit:Reg1|data_out[1] ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.524     ; 4.804      ;
+; -5.774 ; Control_Unit:CU|RAB[1] ; Control_Unit:CU|c_state.state4             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.393     ; 4.917      ;
+; -5.771 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.391     ; 4.916      ;
+; -5.770 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~8    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.391     ; 4.915      ;
+; -5.750 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|Register4Bit:Reg1|data_out[3] ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.392     ; 4.894      ;
+; -5.727 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~18   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.401     ; 4.862      ;
+; -5.724 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~3    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -1.391     ; 4.869      ;
++--------+------------------------+--------------------------------------------+--------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Control_Unit:CU|c_state.state0'                                                                                                            ;
++--------+--------------------------------+----------------------------+--------------+--------------------------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                    ; Launch Clock ; Latch Clock                    ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+----------------------------+--------------+--------------------------------+--------------+------------+------------+
+; -1.172 ; Control_Unit:CU|c_state.state3 ; Control_Unit:CU|S_ALU1[1]  ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.684      ; 1.131      ;
+; -1.004 ; Control_Unit:CU|c_state.state6 ; Control_Unit:CU|RAA[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.524      ; 2.035      ;
+; -0.837 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|RAA[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.524      ; 1.868      ;
+; -0.765 ; Control_Unit:CU|c_state.state3 ; Control_Unit:CU|WA[0]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.157      ; 1.561      ;
+; -0.730 ; Control_Unit:CU|c_state.state7 ; Control_Unit:CU|RAA[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.524      ; 1.761      ;
+; -0.585 ; Control_Unit:CU|c_state.state5 ; Control_Unit:CU|RAB[1]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.393      ; 1.798      ;
+; -0.565 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|WA[0]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.157      ; 1.361      ;
+; -0.563 ; Control_Unit:CU|c_state.state2 ; Control_Unit:CU|WA[1]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.298      ; 1.379      ;
+; -0.486 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|RAB[1]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.393      ; 1.699      ;
+; -0.455 ; Control_Unit:CU|c_state.state7 ; Control_Unit:CU|WA[0]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.157      ; 1.251      ;
+; -0.399 ; Control_Unit:CU|c_state.state5 ; Control_Unit:CU|WA[1]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.298      ; 1.215      ;
+; -0.374 ; Control_Unit:CU|c_state.state7 ; Control_Unit:CU|RAA[1]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.524      ; 1.438      ;
+; -0.362 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|S_ALU1[2]  ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.410      ; 1.421      ;
+; -0.297 ; Control_Unit:CU|c_state.state3 ; Control_Unit:CU|WA[1]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.298      ; 1.113      ;
+; -0.232 ; Control_Unit:CU|c_state.state5 ; Control_Unit:CU|RAB[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.392      ; 1.264      ;
+; -0.188 ; Control_Unit:CU|c_state.state6 ; Control_Unit:CU|S_shift[1] ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.391      ; 1.185      ;
+; -0.126 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|WA[2]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 1.291      ; 1.222      ;
++--------+--------------------------------+----------------------------+--------------+--------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                                                                                                 ;
++--------+------------------------------------------+--------------------------------------------+--------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                ; To Node                                    ; Launch Clock                   ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------+--------------------------------------------+--------------------------------+-------------+--------------+------------+------------+
+; -2.857 ; Control_Unit:CU|c_state.state0           ; Control_Unit:CU|c_state.state1             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 3.778      ; 1.437      ;
+; -2.520 ; Control_Unit:CU|c_state.state0           ; Control_Unit:CU|c_state.state0             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.661      ; 0.657      ;
+; -2.357 ; Control_Unit:CU|c_state.state0           ; Control_Unit:CU|c_state.state1             ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 3.778      ; 1.437      ;
+; -2.020 ; Control_Unit:CU|c_state.state0           ; Control_Unit:CU|c_state.state0             ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.661      ; 0.657      ;
+; -0.960 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~27   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.661      ; 2.217      ;
+; -0.960 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~26   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.661      ; 2.217      ;
+; -0.943 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~23   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.661      ; 2.234      ;
+; -0.766 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~7    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.412      ;
+; -0.766 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~6    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.412      ;
+; -0.766 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~5    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.412      ;
+; -0.766 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.412      ;
+; -0.518 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~22   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.651      ; 2.649      ;
+; -0.518 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~21   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.651      ; 2.649      ;
+; -0.518 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~20   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.651      ; 2.649      ;
+; -0.514 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~25   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.651      ; 2.653      ;
+; -0.514 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.651      ; 2.653      ;
+; -0.460 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~27   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.661      ; 2.217      ;
+; -0.460 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~26   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.661      ; 2.217      ;
+; -0.443 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~23   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.661      ; 2.234      ;
+; -0.428 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~11   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.750      ;
+; -0.428 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~10   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.750      ;
+; -0.428 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~9    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.750      ;
+; -0.428 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~8    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.750      ;
+; -0.330 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~3    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.848      ;
+; -0.330 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~2    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.848      ;
+; -0.330 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~1    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.848      ;
+; -0.330 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~0    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.848      ;
+; -0.329 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~15   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.849      ;
+; -0.329 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~14   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.849      ;
+; -0.329 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~13   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.849      ;
+; -0.329 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~12   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 2.849      ;
+; -0.286 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~31   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.652      ; 2.882      ;
+; -0.286 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~30   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.652      ; 2.882      ;
+; -0.286 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~29   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.652      ; 2.882      ;
+; -0.286 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~28   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.652      ; 2.882      ;
+; -0.266 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~7    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.412      ;
+; -0.266 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~6    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.412      ;
+; -0.266 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~5    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.412      ;
+; -0.266 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.412      ;
+; -0.095 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~16   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.662      ; 3.083      ;
+; -0.018 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~22   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.651      ; 2.649      ;
+; -0.018 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~21   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.651      ; 2.649      ;
+; -0.018 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~20   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.651      ; 2.649      ;
+; -0.014 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~25   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.651      ; 2.653      ;
+; -0.014 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.651      ; 2.653      ;
+; 0.072  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~11   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.750      ;
+; 0.072  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~10   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.750      ;
+; 0.072  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~9    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.750      ;
+; 0.072  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~8    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.750      ;
+; 0.157  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~19   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.652      ; 3.325      ;
+; 0.157  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~18   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.652      ; 3.325      ;
+; 0.157  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~17   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.652      ; 3.325      ;
+; 0.170  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~3    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.848      ;
+; 0.170  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~2    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.848      ;
+; 0.170  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~1    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.848      ;
+; 0.170  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~0    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.848      ;
+; 0.171  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~15   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.849      ;
+; 0.171  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~14   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.849      ;
+; 0.171  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~13   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.849      ;
+; 0.171  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~12   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 2.849      ;
+; 0.214  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~31   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.652      ; 2.882      ;
+; 0.214  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~30   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.652      ; 2.882      ;
+; 0.214  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~29   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.652      ; 2.882      ;
+; 0.214  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~28   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.652      ; 2.882      ;
+; 0.405  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~16   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.662      ; 3.083      ;
+; 0.531  ; Control_Unit:CU|c_state.state2           ; Control_Unit:CU|c_state.state3             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.657  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~19   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.652      ; 3.325      ;
+; 0.657  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~18   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.652      ; 3.325      ;
+; 0.657  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~17   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.652      ; 3.325      ;
+; 0.743  ; Control_Unit:CU|c_state.state5           ; Control_Unit:CU|c_state.state6             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.009      ;
+; 1.152  ; Control_Unit:CU|c_state.state4           ; Control_Unit:CU|c_state.state5             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.418      ;
+; 1.231  ; Control_Unit:CU|c_state.state7           ; Control_Unit:CU|c_state.state0             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.497      ;
+; 1.371  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|Register4Bit:Reg1|data_out[1] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.637      ;
+; 1.373  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 1.640      ;
+; 1.373  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 1.640      ;
+; 1.373  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|Register4Bit:Reg1|data_out[3] ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 1.640      ;
+; 1.450  ; Control_Unit:CU|c_state.state3           ; Control_Unit:CU|c_state.state4             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.716      ;
+; 1.861  ; Control_Unit:CU|c_state.state6           ; Control_Unit:CU|c_state.state7             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 2.127      ;
+; 1.862  ; Control_Unit:CU|c_state.state6           ; Control_Unit:CU|c_state.state4             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 2.128      ;
+; 2.121  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~27   ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 2.387      ;
+; 2.121  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~26   ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 2.387      ;
+; 2.176  ; Control_Unit:CU|c_state.state1           ; Control_Unit:CU|c_state.state2             ; CLK                            ; CLK         ; 0.000        ; -1.117     ; 1.325      ;
+; 2.255  ; Data_Path:DP|RegisterFile:Reg|regfile~9  ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 2.521      ;
+; 2.272  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~23   ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 2.538      ;
+; 2.287  ; Data_Path:DP|RegisterFile:Reg|regfile~20 ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.011      ; 2.564      ;
+; 2.365  ; Data_Path:DP|RegisterFile:Reg|regfile~12 ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 2.631      ;
+; 2.390  ; Data_Path:DP|RegisterFile:Reg|regfile~13 ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 2.656      ;
+; 2.448  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~7    ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 2.715      ;
+; 2.448  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~6    ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 2.715      ;
+; 2.448  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~5    ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 2.715      ;
+; 2.448  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 2.715      ;
+; 2.470  ; Data_Path:DP|RegisterFile:Reg|regfile~4  ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 2.736      ;
+; 2.511  ; Data_Path:DP|RegisterFile:Reg|regfile~9  ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 2.777      ;
+; 2.516  ; Data_Path:DP|RegisterFile:Reg|regfile~29 ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.010      ; 2.792      ;
+; 2.562  ; Data_Path:DP|RegisterFile:Reg|regfile~6  ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 2.828      ;
+; 2.567  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~25   ; CLK                            ; CLK         ; 0.000        ; -0.010     ; 2.823      ;
+; 2.567  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; CLK                            ; CLK         ; 0.000        ; -0.010     ; 2.823      ;
+; 2.611  ; Control_Unit:CU|S_shift[1]               ; Data_Path:DP|Register4Bit:Reg1|data_out[1] ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; -1.391     ; 0.986      ;
+; 2.628  ; Data_Path:DP|RegisterFile:Reg|regfile~22 ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ; CLK                            ; CLK         ; 0.000        ; 0.011      ; 2.905      ;
+; 2.653  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~11   ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 2.920      ;
++--------+------------------------------------------+--------------------------------------------+--------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Control_Unit:CU|c_state.state0'                                                                                                             ;
++--------+--------------------------------+----------------------------+--------------+--------------------------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                    ; Launch Clock ; Latch Clock                    ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+----------------------------+--------------+--------------------------------+--------------+------------+------------+
+; -0.053 ; Control_Unit:CU|c_state.state3 ; Control_Unit:CU|S_ALU1[1]  ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.684      ; 1.131      ;
+; 0.294  ; Control_Unit:CU|c_state.state6 ; Control_Unit:CU|S_shift[1] ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.391      ; 1.185      ;
+; 0.315  ; Control_Unit:CU|c_state.state3 ; Control_Unit:CU|WA[1]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.298      ; 1.113      ;
+; 0.372  ; Control_Unit:CU|c_state.state5 ; Control_Unit:CU|RAB[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.392      ; 1.264      ;
+; 0.414  ; Control_Unit:CU|c_state.state7 ; Control_Unit:CU|RAA[1]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.524      ; 1.438      ;
+; 0.417  ; Control_Unit:CU|c_state.state5 ; Control_Unit:CU|WA[1]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.298      ; 1.215      ;
+; 0.431  ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|WA[2]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.291      ; 1.222      ;
+; 0.511  ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|S_ALU1[2]  ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.410      ; 1.421      ;
+; 0.581  ; Control_Unit:CU|c_state.state2 ; Control_Unit:CU|WA[1]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.298      ; 1.379      ;
+; 0.594  ; Control_Unit:CU|c_state.state7 ; Control_Unit:CU|WA[0]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.157      ; 1.251      ;
+; 0.704  ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|WA[0]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.157      ; 1.361      ;
+; 0.737  ; Control_Unit:CU|c_state.state7 ; Control_Unit:CU|RAA[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.524      ; 1.761      ;
+; 0.806  ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|RAB[1]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.393      ; 1.699      ;
+; 0.844  ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|RAA[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.524      ; 1.868      ;
+; 0.904  ; Control_Unit:CU|c_state.state3 ; Control_Unit:CU|WA[0]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.157      ; 1.561      ;
+; 0.905  ; Control_Unit:CU|c_state.state5 ; Control_Unit:CU|RAB[1]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.393      ; 1.798      ;
+; 1.011  ; Control_Unit:CU|c_state.state6 ; Control_Unit:CU|RAA[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 1.524      ; 2.035      ;
++--------+--------------------------------+----------------------------+--------------+--------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                     ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state0             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state0             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state1             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state1             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state2             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state2             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state3             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state3             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state4             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state4             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state5             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state5             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state6             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state6             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state7             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state7             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~0    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~0    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~1    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~1    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~10   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~10   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~11   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~11   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~12   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~12   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~13   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~13   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~14   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~14   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~15   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~15   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~16   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~16   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~17   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~17   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~18   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~18   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~19   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~19   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~2    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~2    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~20   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~20   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~21   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~21   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~22   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~22   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~23   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~23   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~24   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~24   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~25   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~25   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~26   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~26   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~27   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~27   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~28   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~28   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~29   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~29   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~3    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~3    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~30   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~30   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~31   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~31   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~4    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~4    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~5    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~5    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~6    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~6    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~7    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~7    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~8    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~8    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~9    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~9    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|outclk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|outclk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CU|c_state.state0|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CU|c_state.state0|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CU|c_state.state1|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CU|c_state.state1|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CU|c_state.state2|clk                      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Control_Unit:CU|c_state.state0'                                                                            ;
++-------+--------------+----------------+------------------+--------------------------------+------------+------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                          ; Clock Edge ; Target                             ;
++-------+--------------+----------------+------------------+--------------------------------+------------+------------------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA[0]|datac                    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA[0]|datac                    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA[1]|datac                    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA[1]|datac                    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA~0clkctrl|inclk[0]           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA~0clkctrl|inclk[0]           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA~0clkctrl|outclk             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA~0clkctrl|outclk             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA~0|combout                   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA~0|combout                   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|RAA~0|datac                     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|RAA~0|datac                     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAB[0]|datad                    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAB[0]|datad                    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAB[1]|datad                    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAB[1]|datad                    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|S_ALU1[1]|datab                 ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|S_ALU1[1]|datab                 ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|S_ALU1[2]|datad                 ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|S_ALU1[2]|datad                 ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|S_shift[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|S_shift[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|WA[0]|datad                     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|WA[0]|datad                     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|WA[1]|datac                     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|WA[1]|datac                     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|WA[2]|datac                     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|WA[2]|datac                     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|c_state.state0|regout           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|c_state.state0|regout           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|c_state.state0~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|c_state.state0~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|c_state.state0~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|c_state.state0~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAA[0]             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAA[0]             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAA[1]             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAA[1]             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAB[0]             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAB[0]             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAB[1]             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAB[1]             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|S_ALU1[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|S_ALU1[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|S_ALU1[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|S_ALU1[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|S_shift[1]         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|S_shift[1]         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|WA[0]              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|WA[0]              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|WA[1]              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|WA[1]              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|WA[2]              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|WA[2]              ;
++-------+--------------+----------------+------------------+--------------------------------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; DataIn[*]  ; CLK        ; 5.920 ; 5.920 ; Rise       ; CLK             ;
+;  DataIn[0] ; CLK        ; 1.347 ; 1.347 ; Rise       ; CLK             ;
+;  DataIn[1] ; CLK        ; 5.920 ; 5.920 ; Rise       ; CLK             ;
+;  DataIn[2] ; CLK        ; 2.479 ; 2.479 ; Rise       ; CLK             ;
+;  DataIn[3] ; CLK        ; 4.797 ; 4.797 ; Rise       ; CLK             ;
+; Start      ; CLK        ; 3.491 ; 3.491 ; Rise       ; CLK             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; DataIn[*]  ; CLK        ; -0.769 ; -0.769 ; Rise       ; CLK             ;
+;  DataIn[0] ; CLK        ; -0.769 ; -0.769 ; Rise       ; CLK             ;
+;  DataIn[1] ; CLK        ; -5.224 ; -5.224 ; Rise       ; CLK             ;
+;  DataIn[2] ; CLK        ; -1.237 ; -1.237 ; Rise       ; CLK             ;
+;  DataIn[3] ; CLK        ; -3.558 ; -3.558 ; Rise       ; CLK             ;
+; Start      ; CLK        ; -1.860 ; -1.860 ; Rise       ; CLK             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Done      ; CLK        ; 7.199 ; 7.199 ; Rise       ; CLK             ;
+; Out[*]    ; CLK        ; 6.896 ; 6.896 ; Rise       ; CLK             ;
+;  Out[0]   ; CLK        ; 6.684 ; 6.684 ; Rise       ; CLK             ;
+;  Out[1]   ; CLK        ; 6.657 ; 6.657 ; Rise       ; CLK             ;
+;  Out[2]   ; CLK        ; 6.896 ; 6.896 ; Rise       ; CLK             ;
+;  Out[3]   ; CLK        ; 6.679 ; 6.679 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Done      ; CLK        ; 7.199 ; 7.199 ; Rise       ; CLK             ;
+; Out[*]    ; CLK        ; 6.657 ; 6.657 ; Rise       ; CLK             ;
+;  Out[0]   ; CLK        ; 6.684 ; 6.684 ; Rise       ; CLK             ;
+;  Out[1]   ; CLK        ; 6.657 ; 6.657 ; Rise       ; CLK             ;
+;  Out[2]   ; CLK        ; 6.896 ; 6.896 ; Rise       ; CLK             ;
+;  Out[3]   ; CLK        ; 6.679 ; 6.679 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------+
+; Fast Model Setup Summary                                ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; CLK                            ; -2.481 ; -87.208       ;
+; Control_Unit:CU|c_state.state0 ; -0.440 ; -1.236        ;
++--------------------------------+--------+---------------+
+
+
++---------------------------------------------------------+
+; Fast Model Hold Summary                                 ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; CLK                            ; -1.652 ; -22.260       ;
+; Control_Unit:CU|c_state.state0 ; 0.459  ; 0.000         ;
++--------------------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++---------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                  ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; CLK                            ; -1.380 ; -45.380       ;
+; Control_Unit:CU|c_state.state0 ; 0.500  ; 0.000         ;
++--------------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                                                                                              ;
++--------+------------------------+--------------------------------------------+--------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node              ; To Node                                    ; Launch Clock                   ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------+--------------------------------------------+--------------------------------+-------------+--------------+------------+------------+
+; -2.481 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~20   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.521     ; 2.492      ;
+; -2.480 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.521     ; 2.491      ;
+; -2.440 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~18   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.453      ;
+; -2.437 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~22   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.521     ; 2.448      ;
+; -2.435 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.459      ;
+; -2.435 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~8    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.459      ;
+; -2.433 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~31   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.446      ;
+; -2.431 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~3    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.455      ;
+; -2.431 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~15   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.455      ;
+; -2.431 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~14   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.455      ;
+; -2.430 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~19   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.443      ;
+; -2.430 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~2    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.454      ;
+; -2.397 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~17   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.410      ;
+; -2.397 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~29   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.410      ;
+; -2.381 ; Control_Unit:CU|RAA[1] ; Control_Unit:CU|c_state.state7             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.509     ; 2.404      ;
+; -2.377 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~18   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.390      ;
+; -2.374 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~22   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.521     ; 2.385      ;
+; -2.371 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~20   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.521     ; 2.382      ;
+; -2.370 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.521     ; 2.381      ;
+; -2.370 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~31   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.383      ;
+; -2.368 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~3    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.392      ;
+; -2.368 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~15   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.392      ;
+; -2.368 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~14   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.392      ;
+; -2.367 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~9    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.391      ;
+; -2.367 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~19   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.380      ;
+; -2.367 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~2    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.391      ;
+; -2.364 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~28   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.377      ;
+; -2.361 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~30   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.374      ;
+; -2.358 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~27   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.382      ;
+; -2.357 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~23   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.381      ;
+; -2.332 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~26   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.356      ;
+; -2.325 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.349      ;
+; -2.325 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~8    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.349      ;
+; -2.318 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~12   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.342      ;
+; -2.317 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~0    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.341      ;
+; -2.315 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~16   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.339      ;
+; -2.298 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~30   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.311      ;
+; -2.295 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~27   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.319      ;
+; -2.294 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~23   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.318      ;
+; -2.287 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~17   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.300      ;
+; -2.287 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~29   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.300      ;
+; -2.287 ; Control_Unit:CU|RAA[0] ; Control_Unit:CU|c_state.state7             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.509     ; 2.310      ;
+; -2.285 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|Register4Bit:Reg1|data_out[3] ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.309      ;
+; -2.274 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~5    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.298      ;
+; -2.269 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~26   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.293      ;
+; -2.257 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~9    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.281      ;
+; -2.254 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~28   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.519     ; 2.267      ;
+; -2.253 ; Control_Unit:CU|RAA[1] ; Control_Unit:CU|c_state.state4             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.509     ; 2.276      ;
+; -2.232 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~20   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.477     ; 2.287      ;
+; -2.231 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.477     ; 2.286      ;
+; -2.222 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|Register4Bit:Reg1|data_out[3] ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.246      ;
+; -2.217 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~7    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.241      ;
+; -2.208 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~12   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.232      ;
+; -2.207 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~0    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.231      ;
+; -2.205 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~16   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.229      ;
+; -2.204 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~25   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.521     ; 2.215      ;
+; -2.202 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~21   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.521     ; 2.213      ;
+; -2.200 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~18   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.475     ; 2.257      ;
+; -2.197 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~22   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.477     ; 2.252      ;
+; -2.191 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~14   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.259      ;
+; -2.190 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~2    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.258      ;
+; -2.186 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.254      ;
+; -2.186 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~8    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.254      ;
+; -2.179 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~1    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.203      ;
+; -2.178 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~13   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.202      ;
+; -2.165 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~31   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.475     ; 2.222      ;
+; -2.164 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~5    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.188      ;
+; -2.163 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~3    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.231      ;
+; -2.163 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~15   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.231      ;
+; -2.162 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~19   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.475     ; 2.219      ;
+; -2.154 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~7    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.178      ;
+; -2.152 ; Control_Unit:CU|RAA[0] ; Control_Unit:CU|c_state.state4             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.509     ; 2.175      ;
+; -2.150 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~17   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.475     ; 2.207      ;
+; -2.150 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~29   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.475     ; 2.207      ;
+; -2.144 ; Control_Unit:CU|RAA[1] ; Data_Path:DP|RegisterFile:Reg|regfile~6    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.168      ;
+; -2.123 ; Control_Unit:CU|RAB[1] ; Control_Unit:CU|c_state.state7             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.465     ; 2.190      ;
+; -2.121 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~30   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.475     ; 2.178      ;
+; -2.120 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~9    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.188      ;
+; -2.115 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~28   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.475     ; 2.172      ;
+; -2.104 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~20   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.476     ; 2.160      ;
+; -2.103 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.476     ; 2.159      ;
+; -2.094 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~25   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.521     ; 2.105      ;
+; -2.092 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~21   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.521     ; 2.103      ;
+; -2.092 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~26   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.160      ;
+; -2.090 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~27   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.158      ;
+; -2.089 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~23   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.157      ;
+; -2.081 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~6    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.105      ;
+; -2.069 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~12   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.137      ;
+; -2.069 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~1    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.093      ;
+; -2.068 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~0    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.136      ;
+; -2.068 ; Control_Unit:CU|RAA[0] ; Data_Path:DP|RegisterFile:Reg|regfile~13   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.508     ; 2.092      ;
+; -2.066 ; Control_Unit:CU|RAB[1] ; Data_Path:DP|RegisterFile:Reg|regfile~16   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.464     ; 2.134      ;
+; -2.058 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.463     ; 2.127      ;
+; -2.058 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~8    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.463     ; 2.127      ;
+; -2.053 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~18   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.474     ; 2.111      ;
+; -2.050 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~22   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.476     ; 2.106      ;
+; -2.046 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~31   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.474     ; 2.104      ;
+; -2.044 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~3    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.463     ; 2.113      ;
+; -2.044 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~15   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.463     ; 2.113      ;
+; -2.044 ; Control_Unit:CU|RAB[0] ; Data_Path:DP|RegisterFile:Reg|regfile~14   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.500        ; -0.463     ; 2.113      ;
++--------+------------------------+--------------------------------------------+--------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Control_Unit:CU|c_state.state0'                                                                                                            ;
++--------+--------------------------------+----------------------------+--------------+--------------------------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                    ; Launch Clock ; Latch Clock                    ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+----------------------------+--------------+--------------------------------+--------------+------------+------------+
+; -0.440 ; Control_Unit:CU|c_state.state3 ; Control_Unit:CU|S_ALU1[1]  ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.594      ; 0.553      ;
+; -0.329 ; Control_Unit:CU|c_state.state6 ; Control_Unit:CU|RAA[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.509      ; 0.925      ;
+; -0.268 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|RAA[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.509      ; 0.864      ;
+; -0.213 ; Control_Unit:CU|c_state.state7 ; Control_Unit:CU|RAA[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.509      ; 0.809      ;
+; -0.137 ; Control_Unit:CU|c_state.state3 ; Control_Unit:CU|WA[0]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.421      ; 0.703      ;
+; -0.137 ; Control_Unit:CU|c_state.state5 ; Control_Unit:CU|RAB[1]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.465      ; 0.825      ;
+; -0.098 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|RAB[1]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.465      ; 0.786      ;
+; -0.073 ; Control_Unit:CU|c_state.state7 ; Control_Unit:CU|RAA[1]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.509      ; 0.687      ;
+; -0.066 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|WA[0]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.421      ; 0.632      ;
+; -0.062 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|S_ALU1[2]  ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.476      ; 0.674      ;
+; -0.058 ; Control_Unit:CU|c_state.state2 ; Control_Unit:CU|WA[1]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.479      ; 0.635      ;
+; -0.009 ; Control_Unit:CU|c_state.state7 ; Control_Unit:CU|WA[0]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.421      ; 0.575      ;
+; 0.004  ; Control_Unit:CU|c_state.state5 ; Control_Unit:CU|RAB[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.464      ; 0.591      ;
+; 0.004  ; Control_Unit:CU|c_state.state5 ; Control_Unit:CU|WA[1]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.479      ; 0.573      ;
+; 0.028  ; Control_Unit:CU|c_state.state6 ; Control_Unit:CU|S_shift[1] ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.464      ; 0.560      ;
+; 0.058  ; Control_Unit:CU|c_state.state3 ; Control_Unit:CU|WA[1]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.479      ; 0.519      ;
+; 0.118  ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|WA[2]      ; CLK          ; Control_Unit:CU|c_state.state0 ; 0.500        ; 0.473      ; 0.574      ;
++--------+--------------------------------+----------------------------+--------------+--------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                                                                                                 ;
++--------+------------------------------------------+--------------------------------------------+--------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                ; To Node                                    ; Launch Clock                   ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------+--------------------------------------------+--------------------------------+-------------+--------------+------------+------------+
+; -1.652 ; Control_Unit:CU|c_state.state0           ; Control_Unit:CU|c_state.state1             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 2.046      ; 0.687      ;
+; -1.565 ; Control_Unit:CU|c_state.state0           ; Control_Unit:CU|c_state.state0             ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.639      ; 0.367      ;
+; -1.152 ; Control_Unit:CU|c_state.state0           ; Control_Unit:CU|c_state.state1             ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 2.046      ; 0.687      ;
+; -1.065 ; Control_Unit:CU|c_state.state0           ; Control_Unit:CU|c_state.state0             ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.639      ; 0.367      ;
+; -0.840 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~27   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.093      ;
+; -0.840 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~26   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.093      ;
+; -0.831 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~23   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.102      ;
+; -0.750 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~7    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.183      ;
+; -0.750 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~6    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.183      ;
+; -0.750 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~5    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.183      ;
+; -0.750 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.183      ;
+; -0.633 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~22   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.627      ; 1.287      ;
+; -0.633 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~21   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.627      ; 1.287      ;
+; -0.633 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~20   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.627      ; 1.287      ;
+; -0.630 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~25   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.627      ; 1.290      ;
+; -0.630 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.627      ; 1.290      ;
+; -0.596 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~11   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.337      ;
+; -0.596 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~10   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.337      ;
+; -0.596 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~9    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.337      ;
+; -0.596 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~8    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.337      ;
+; -0.556 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~3    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.377      ;
+; -0.556 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~2    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.377      ;
+; -0.556 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~1    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.377      ;
+; -0.556 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~0    ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.377      ;
+; -0.551 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~15   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.382      ;
+; -0.551 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~14   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.382      ;
+; -0.551 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~13   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.382      ;
+; -0.551 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~12   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.382      ;
+; -0.529 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~31   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.629      ; 1.393      ;
+; -0.529 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~30   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.629      ; 1.393      ;
+; -0.529 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~29   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.629      ; 1.393      ;
+; -0.529 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~28   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.629      ; 1.393      ;
+; -0.452 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~16   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.640      ; 1.481      ;
+; -0.340 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~27   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.093      ;
+; -0.340 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~26   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.093      ;
+; -0.331 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~19   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.629      ; 1.591      ;
+; -0.331 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~18   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.629      ; 1.591      ;
+; -0.331 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~17   ; Control_Unit:CU|c_state.state0 ; CLK         ; 0.000        ; 1.629      ; 1.591      ;
+; -0.331 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~23   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.102      ;
+; -0.250 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~7    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.183      ;
+; -0.250 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~6    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.183      ;
+; -0.250 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~5    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.183      ;
+; -0.250 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.183      ;
+; -0.133 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~22   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.627      ; 1.287      ;
+; -0.133 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~21   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.627      ; 1.287      ;
+; -0.133 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~20   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.627      ; 1.287      ;
+; -0.130 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~25   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.627      ; 1.290      ;
+; -0.130 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~24   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.627      ; 1.290      ;
+; -0.096 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~11   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.337      ;
+; -0.096 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~10   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.337      ;
+; -0.096 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~9    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.337      ;
+; -0.096 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~8    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.337      ;
+; -0.056 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~3    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.377      ;
+; -0.056 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~2    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.377      ;
+; -0.056 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~1    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.377      ;
+; -0.056 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~0    ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.377      ;
+; -0.051 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~15   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.382      ;
+; -0.051 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~14   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.382      ;
+; -0.051 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~13   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.382      ;
+; -0.051 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~12   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.382      ;
+; -0.029 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~31   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.629      ; 1.393      ;
+; -0.029 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~30   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.629      ; 1.393      ;
+; -0.029 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~29   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.629      ; 1.393      ;
+; -0.029 ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~28   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.629      ; 1.393      ;
+; 0.048  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~16   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.640      ; 1.481      ;
+; 0.169  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~19   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.629      ; 1.591      ;
+; 0.169  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~18   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.629      ; 1.591      ;
+; 0.169  ; Control_Unit:CU|c_state.state0           ; Data_Path:DP|RegisterFile:Reg|regfile~17   ; Control_Unit:CU|c_state.state0 ; CLK         ; -0.500       ; 1.629      ; 1.591      ;
+; 0.246  ; Control_Unit:CU|c_state.state2           ; Control_Unit:CU|c_state.state3             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 0.398      ;
+; 0.342  ; Control_Unit:CU|c_state.state5           ; Control_Unit:CU|c_state.state6             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 0.494      ;
+; 0.553  ; Control_Unit:CU|c_state.state4           ; Control_Unit:CU|c_state.state5             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 0.705      ;
+; 0.568  ; Control_Unit:CU|c_state.state7           ; Control_Unit:CU|c_state.state0             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.658  ; Control_Unit:CU|c_state.state3           ; Control_Unit:CU|c_state.state4             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 0.810      ;
+; 0.706  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 0.859      ;
+; 0.706  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 0.859      ;
+; 0.706  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|Register4Bit:Reg1|data_out[3] ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 0.859      ;
+; 0.708  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|Register4Bit:Reg1|data_out[1] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 0.860      ;
+; 0.840  ; Control_Unit:CU|c_state.state6           ; Control_Unit:CU|c_state.state4             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 0.992      ;
+; 0.846  ; Control_Unit:CU|c_state.state6           ; Control_Unit:CU|c_state.state7             ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 0.998      ;
+; 0.905  ; Control_Unit:CU|c_state.state1           ; Control_Unit:CU|c_state.state2             ; CLK                            ; CLK         ; 0.000        ; -0.407     ; 0.650      ;
+; 0.998  ; Data_Path:DP|RegisterFile:Reg|regfile~9  ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.150      ;
+; 1.004  ; Data_Path:DP|RegisterFile:Reg|regfile~20 ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.013      ; 1.169      ;
+; 1.011  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~27   ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 1.164      ;
+; 1.011  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~26   ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 1.164      ;
+; 1.047  ; Data_Path:DP|RegisterFile:Reg|regfile~12 ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.199      ;
+; 1.070  ; Data_Path:DP|RegisterFile:Reg|regfile~13 ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.222      ;
+; 1.071  ; Data_Path:DP|RegisterFile:Reg|regfile~4  ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.223      ;
+; 1.086  ; Data_Path:DP|RegisterFile:Reg|regfile~9  ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.238      ;
+; 1.100  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~23   ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 1.253      ;
+; 1.110  ; Data_Path:DP|RegisterFile:Reg|regfile~6  ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.262      ;
+; 1.123  ; Data_Path:DP|RegisterFile:Reg|regfile~29 ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.011      ; 1.286      ;
+; 1.157  ; Data_Path:DP|RegisterFile:Reg|regfile~22 ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ; CLK                            ; CLK         ; 0.000        ; 0.013      ; 1.322      ;
+; 1.170  ; Data_Path:DP|RegisterFile:Reg|regfile~20 ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ; CLK                            ; CLK         ; 0.000        ; 0.013      ; 1.335      ;
+; 1.180  ; Data_Path:DP|RegisterFile:Reg|regfile~24 ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.013      ; 1.345      ;
+; 1.181  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~7    ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 1.334      ;
+; 1.181  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~6    ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 1.334      ;
+; 1.181  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~5    ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 1.334      ;
+; 1.181  ; Control_Unit:CU|c_state.state7           ; Data_Path:DP|RegisterFile:Reg|regfile~4    ; CLK                            ; CLK         ; 0.000        ; 0.001      ; 1.334      ;
+; 1.212  ; Data_Path:DP|RegisterFile:Reg|regfile~0  ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.364      ;
+; 1.213  ; Data_Path:DP|RegisterFile:Reg|regfile~12 ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ; CLK                            ; CLK         ; 0.000        ; 0.000      ; 1.365      ;
++--------+------------------------------------------+--------------------------------------------+--------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Control_Unit:CU|c_state.state0'                                                                                                            ;
++-------+--------------------------------+----------------------------+--------------+--------------------------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                    ; Launch Clock ; Latch Clock                    ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+----------------------------+--------------+--------------------------------+--------------+------------+------------+
+; 0.459 ; Control_Unit:CU|c_state.state3 ; Control_Unit:CU|S_ALU1[1]  ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.594      ; 0.553      ;
+; 0.540 ; Control_Unit:CU|c_state.state3 ; Control_Unit:CU|WA[1]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.479      ; 0.519      ;
+; 0.594 ; Control_Unit:CU|c_state.state5 ; Control_Unit:CU|WA[1]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.479      ; 0.573      ;
+; 0.596 ; Control_Unit:CU|c_state.state6 ; Control_Unit:CU|S_shift[1] ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.464      ; 0.560      ;
+; 0.601 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|WA[2]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.473      ; 0.574      ;
+; 0.627 ; Control_Unit:CU|c_state.state5 ; Control_Unit:CU|RAB[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.464      ; 0.591      ;
+; 0.654 ; Control_Unit:CU|c_state.state7 ; Control_Unit:CU|WA[0]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.421      ; 0.575      ;
+; 0.656 ; Control_Unit:CU|c_state.state2 ; Control_Unit:CU|WA[1]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.479      ; 0.635      ;
+; 0.678 ; Control_Unit:CU|c_state.state7 ; Control_Unit:CU|RAA[1]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.509      ; 0.687      ;
+; 0.698 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|S_ALU1[2]  ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.476      ; 0.674      ;
+; 0.711 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|WA[0]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.421      ; 0.632      ;
+; 0.782 ; Control_Unit:CU|c_state.state3 ; Control_Unit:CU|WA[0]      ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.421      ; 0.703      ;
+; 0.800 ; Control_Unit:CU|c_state.state7 ; Control_Unit:CU|RAA[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.509      ; 0.809      ;
+; 0.821 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|RAB[1]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.465      ; 0.786      ;
+; 0.855 ; Control_Unit:CU|c_state.state4 ; Control_Unit:CU|RAA[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.509      ; 0.864      ;
+; 0.860 ; Control_Unit:CU|c_state.state5 ; Control_Unit:CU|RAB[1]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.465      ; 0.825      ;
+; 0.916 ; Control_Unit:CU|c_state.state6 ; Control_Unit:CU|RAA[0]     ; CLK          ; Control_Unit:CU|c_state.state0 ; -0.500       ; 0.509      ; 0.925      ;
++-------+--------------------------------+----------------------------+--------------+--------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                     ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state0             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state0             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state1             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state1             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state2             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state2             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state3             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state3             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state4             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state4             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state5             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state5             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state6             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state6             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Control_Unit:CU|c_state.state7             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Control_Unit:CU|c_state.state7             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|Register4Bit:Reg1|data_out[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~0    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~0    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~1    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~1    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~10   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~10   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~11   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~11   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~12   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~12   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~13   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~13   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~14   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~14   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~15   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~15   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~16   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~16   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~17   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~17   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~18   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~18   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~19   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~19   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~2    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~2    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~20   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~20   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~21   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~21   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~22   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~22   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~23   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~23   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~24   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~24   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~25   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~25   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~26   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~26   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~27   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~27   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~28   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~28   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~29   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~29   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~3    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~3    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~30   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~30   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~31   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~31   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~4    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~4    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~5    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~5    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~6    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~6    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~7    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~7    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~8    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~8    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~9    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Data_Path:DP|RegisterFile:Reg|regfile~9    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|outclk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|outclk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CU|c_state.state0|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CU|c_state.state0|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CU|c_state.state1|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CU|c_state.state1|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CU|c_state.state2|clk                      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Control_Unit:CU|c_state.state0'                                                                            ;
++-------+--------------+----------------+------------------+--------------------------------+------------+------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                          ; Clock Edge ; Target                             ;
++-------+--------------+----------------+------------------+--------------------------------+------------+------------------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA[0]|datac                    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA[0]|datac                    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA[1]|datac                    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA[1]|datac                    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA~0clkctrl|inclk[0]           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA~0clkctrl|inclk[0]           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA~0clkctrl|outclk             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA~0clkctrl|outclk             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA~0|combout                   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAA~0|combout                   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|RAA~0|datac                     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|RAA~0|datac                     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAB[0]|datad                    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAB[0]|datad                    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAB[1]|datad                    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|RAB[1]|datad                    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|S_ALU1[1]|datab                 ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|S_ALU1[1]|datab                 ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|S_ALU1[2]|datad                 ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|S_ALU1[2]|datad                 ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|S_shift[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; CU|S_shift[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|WA[0]|datad                     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|WA[0]|datad                     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|WA[1]|datac                     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|WA[1]|datac                     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|WA[2]|datac                     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|WA[2]|datac                     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|c_state.state0|regout           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|c_state.state0|regout           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|c_state.state0~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|c_state.state0~clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|c_state.state0~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Rise       ; CU|c_state.state0~clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAA[0]             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAA[0]             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAA[1]             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAA[1]             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAB[0]             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAB[0]             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAB[1]             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|RAB[1]             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|S_ALU1[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|S_ALU1[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|S_ALU1[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|S_ALU1[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|S_shift[1]         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|S_shift[1]         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|WA[0]              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|WA[0]              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|WA[1]              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|WA[1]              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|WA[2]              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Control_Unit:CU|c_state.state0 ; Fall       ; Control_Unit:CU|WA[2]              ;
++-------+--------------+----------------+------------------+--------------------------------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; DataIn[*]  ; CLK        ; 2.967 ; 2.967 ; Rise       ; CLK             ;
+;  DataIn[0] ; CLK        ; 0.349 ; 0.349 ; Rise       ; CLK             ;
+;  DataIn[1] ; CLK        ; 2.967 ; 2.967 ; Rise       ; CLK             ;
+;  DataIn[2] ; CLK        ; 0.852 ; 0.852 ; Rise       ; CLK             ;
+;  DataIn[3] ; CLK        ; 2.487 ; 2.487 ; Rise       ; CLK             ;
+; Start      ; CLK        ; 1.879 ; 1.879 ; Rise       ; CLK             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; DataIn[*]  ; CLK        ; -0.063 ; -0.063 ; Rise       ; CLK             ;
+;  DataIn[0] ; CLK        ; -0.063 ; -0.063 ; Rise       ; CLK             ;
+;  DataIn[1] ; CLK        ; -2.628 ; -2.628 ; Rise       ; CLK             ;
+;  DataIn[2] ; CLK        ; -0.257 ; -0.257 ; Rise       ; CLK             ;
+;  DataIn[3] ; CLK        ; -1.898 ; -1.898 ; Rise       ; CLK             ;
+; Start      ; CLK        ; -1.218 ; -1.218 ; Rise       ; CLK             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Done      ; CLK        ; 4.025 ; 4.025 ; Rise       ; CLK             ;
+; Out[*]    ; CLK        ; 3.889 ; 3.889 ; Rise       ; CLK             ;
+;  Out[0]   ; CLK        ; 3.790 ; 3.790 ; Rise       ; CLK             ;
+;  Out[1]   ; CLK        ; 3.767 ; 3.767 ; Rise       ; CLK             ;
+;  Out[2]   ; CLK        ; 3.889 ; 3.889 ; Rise       ; CLK             ;
+;  Out[3]   ; CLK        ; 3.786 ; 3.786 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Done      ; CLK        ; 4.025 ; 4.025 ; Rise       ; CLK             ;
+; Out[*]    ; CLK        ; 3.767 ; 3.767 ; Rise       ; CLK             ;
+;  Out[0]   ; CLK        ; 3.790 ; 3.790 ; Rise       ; CLK             ;
+;  Out[1]   ; CLK        ; 3.767 ; 3.767 ; Rise       ; CLK             ;
+;  Out[2]   ; CLK        ; 3.889 ; 3.889 ; Rise       ; CLK             ;
+;  Out[3]   ; CLK        ; 3.786 ; 3.786 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                             ;
++---------------------------------+----------+---------+----------+---------+---------------------+
+; Clock                           ; Setup    ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------+----------+---------+----------+---------+---------------------+
+; Worst-case Slack                ; -6.696   ; -2.857  ; N/A      ; N/A     ; -1.380              ;
+;  CLK                            ; -6.696   ; -2.857  ; N/A      ; N/A     ; -1.380              ;
+;  Control_Unit:CU|c_state.state0 ; -1.172   ; -0.053  ; N/A      ; N/A     ; 0.500               ;
+; Design-wide TNS                 ; -249.536 ; -22.26  ; 0.0      ; 0.0     ; -45.38              ;
+;  CLK                            ; -244.165 ; -22.260 ; N/A      ; N/A     ; -45.380             ;
+;  Control_Unit:CU|c_state.state0 ; -5.371   ; -0.053  ; N/A      ; N/A     ; 0.000               ;
++---------------------------------+----------+---------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; DataIn[*]  ; CLK        ; 5.920 ; 5.920 ; Rise       ; CLK             ;
+;  DataIn[0] ; CLK        ; 1.347 ; 1.347 ; Rise       ; CLK             ;
+;  DataIn[1] ; CLK        ; 5.920 ; 5.920 ; Rise       ; CLK             ;
+;  DataIn[2] ; CLK        ; 2.479 ; 2.479 ; Rise       ; CLK             ;
+;  DataIn[3] ; CLK        ; 4.797 ; 4.797 ; Rise       ; CLK             ;
+; Start      ; CLK        ; 3.491 ; 3.491 ; Rise       ; CLK             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; DataIn[*]  ; CLK        ; -0.063 ; -0.063 ; Rise       ; CLK             ;
+;  DataIn[0] ; CLK        ; -0.063 ; -0.063 ; Rise       ; CLK             ;
+;  DataIn[1] ; CLK        ; -2.628 ; -2.628 ; Rise       ; CLK             ;
+;  DataIn[2] ; CLK        ; -0.257 ; -0.257 ; Rise       ; CLK             ;
+;  DataIn[3] ; CLK        ; -1.898 ; -1.898 ; Rise       ; CLK             ;
+; Start      ; CLK        ; -1.218 ; -1.218 ; Rise       ; CLK             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Done      ; CLK        ; 7.199 ; 7.199 ; Rise       ; CLK             ;
+; Out[*]    ; CLK        ; 6.896 ; 6.896 ; Rise       ; CLK             ;
+;  Out[0]   ; CLK        ; 6.684 ; 6.684 ; Rise       ; CLK             ;
+;  Out[1]   ; CLK        ; 6.657 ; 6.657 ; Rise       ; CLK             ;
+;  Out[2]   ; CLK        ; 6.896 ; 6.896 ; Rise       ; CLK             ;
+;  Out[3]   ; CLK        ; 6.679 ; 6.679 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Done      ; CLK        ; 4.025 ; 4.025 ; Rise       ; CLK             ;
+; Out[*]    ; CLK        ; 3.767 ; 3.767 ; Rise       ; CLK             ;
+;  Out[0]   ; CLK        ; 3.790 ; 3.790 ; Rise       ; CLK             ;
+;  Out[1]   ; CLK        ; 3.767 ; 3.767 ; Rise       ; CLK             ;
+;  Out[2]   ; CLK        ; 3.889 ; 3.889 ; Rise       ; CLK             ;
+;  Out[3]   ; CLK        ; 3.786 ; 3.786 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                             ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; CLK                            ; CLK                            ; 4972     ; 0        ; 0        ; 0        ;
+; Control_Unit:CU|c_state.state0 ; CLK                            ; 34       ; 4518     ; 0        ; 0        ;
+; CLK                            ; Control_Unit:CU|c_state.state0 ; 0        ; 0        ; 17       ; 0        ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                              ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; CLK                            ; CLK                            ; 4972     ; 0        ; 0        ; 0        ;
+; Control_Unit:CU|c_state.state0 ; CLK                            ; 34       ; 4518     ; 0        ; 0        ;
+; CLK                            ; Control_Unit:CU|c_state.state0 ; 0        ; 0        ; 17       ; 0        ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 34    ; 34   ;
+; Unconstrained Output Ports      ; 5     ; 5    ;
+; Unconstrained Output Port Paths ; 5     ; 5    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Dec 07 10:11:12 2024
+Info: Command: quartus_sta datapath -c datapath
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 10 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'datapath.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+    Info (332105): create_clock -period 1.000 -name Control_Unit:CU|c_state.state0 Control_Unit:CU|c_state.state0
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -6.696
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -6.696      -244.165 CLK 
+    Info (332119):    -1.172        -5.371 Control_Unit:CU|c_state.state0 
+Info (332146): Worst-case hold slack is -2.857
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.857       -19.473 CLK 
+    Info (332119):    -0.053        -0.053 Control_Unit:CU|c_state.state0 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -45.380 CLK 
+    Info (332119):     0.500         0.000 Control_Unit:CU|c_state.state0 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.481
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.481       -87.208 CLK 
+    Info (332119):    -0.440        -1.236 Control_Unit:CU|c_state.state0 
+Info (332146): Worst-case hold slack is -1.652
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.652       -22.260 CLK 
+    Info (332119):     0.459         0.000 Control_Unit:CU|c_state.state0 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -45.380 CLK 
+    Info (332119):     0.500         0.000 Control_Unit:CU|c_state.state0 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4554 megabytes
+    Info: Processing ended: Sat Dec 07 10:11:13 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

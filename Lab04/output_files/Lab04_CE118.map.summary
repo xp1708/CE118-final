@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Nov 16 00:19:39 2024
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : Lab04_CE118
+Top-level Entity Name : lab04
+Family : Cyclone II
+Total logic elements : 89
+    Total combinational functions : 89
+    Dedicated logic registers : 16
+Total registers : 16
+Total pins : 53
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

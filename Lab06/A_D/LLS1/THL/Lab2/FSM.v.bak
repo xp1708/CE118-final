@@ -1,0 +1,3 @@
+module FSM(input wire clk, input wire X, output wire Z, output reg [1:0] n_state, output reg [1:0] c_state);
+	
+	detector detec

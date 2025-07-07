@@ -1,0 +1,115 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Lab4_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab3 {C:/Users/Admin/Desktop/LLS/THL/Lab3/mux16_1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux16_1
+# 
+# Top level modules:
+# 	mux16_1
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab3 {C:/Users/Admin/Desktop/LLS/THL/Lab3/mux4_1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux4_1
+# 
+# Top level modules:
+# 	mux4_1
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab3 {C:/Users/Admin/Desktop/LLS/THL/Lab3/Multiplier.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Multiplier
+# 
+# Top level modules:
+# 	Multiplier
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab3 {C:/Users/Admin/Desktop/LLS/THL/Lab3/FullSubtracter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FullSubtracter
+# 
+# Top level modules:
+# 	FullSubtracter
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab3 {C:/Users/Admin/Desktop/LLS/THL/Lab3/FullAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FullAdder
+# 
+# Top level modules:
+# 	FullAdder
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab3 {C:/Users/Admin/Desktop/LLS/THL/Lab3/comp.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module comp
+# 
+# Top level modules:
+# 	comp
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab3 {C:/Users/Admin/Desktop/LLS/THL/Lab3/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab4 {C:/Users/Admin/Desktop/LLS/THL/Lab4/RegisterFile.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab3 {C:/Users/Admin/Desktop/LLS/THL/Lab3/Mux2_1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Mux2_1
+# 
+# Top level modules:
+# 	Mux2_1
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab4 {C:/Users/Admin/Desktop/LLS/THL/Lab4/Data_Path.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Data_Path
+# 
+# Top level modules:
+# 	Data_Path
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab4 {C:/Users/Admin/Desktop/LLS/THL/Lab4/Control_Unit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Control_Unit
+# 
+# Top level modules:
+# 	Control_Unit
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab4 {C:/Users/Admin/Desktop/LLS/THL/Lab4/Shift_Register.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Shift_Register
+# 
+# Top level modules:
+# 	Shift_Register
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab4 {C:/Users/Admin/Desktop/LLS/THL/Lab4/Register4Bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Register4Bit
+# 
+# Top level modules:
+# 	Register4Bit
+# vlog -vlog01compat -work work +incdir+C:/Users/Admin/Desktop/LLS/THL/Lab4 {C:/Users/Admin/Desktop/LLS/THL/Lab4/One_Counter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module One_Counter
+# 
+# Top level modules:
+# 	One_Counter
+# 
+vlog -reportprogress 300 -work work C:/Users/Admin/Desktop/LLS/THL/Lab4/One_Counter_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module One_Counter_tb
+# 
+# Top level modules:
+# 	One_Counter_tb
+vlog -reportprogress 300 -work work C:/Users/Admin/Desktop/LLS/THL/Lab4/One_Counter_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module One_Counter_tb
+# 
+# Top level modules:
+# 	One_Counter_tb
+vlog -reportprogress 300 -work work C:/Users/Admin/Desktop/LLS/THL/Lab4/One_Counter.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module One_Counter
+# 
+# Top level modules:
+# 	One_Counter

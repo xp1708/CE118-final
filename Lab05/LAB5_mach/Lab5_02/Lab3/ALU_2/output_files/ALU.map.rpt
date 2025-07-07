@@ -1,0 +1,400 @@
+Analysis & Synthesis report for ALU
+Wed Nov 06 11:34:05 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 06 11:34:05 2024           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; ALU                                             ;
+; Top-level Entity Name              ; Lab3                                            ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 107                                             ;
+;     Total combinational functions  ; 107                                             ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 22                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; Lab3               ; ALU                ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------+---------+
+; LU.bdf                           ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/LU.bdf                    ;         ;
+; mux41.bdf                        ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/mux41.bdf                 ;         ;
+; HA.bdf                           ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/HA.bdf                    ;         ;
+; AU.bdf                           ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/AU.bdf                    ;         ;
+; ALU.bdf                          ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/ALU.bdf                   ;         ;
+; ALU4_bit.bdf                     ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/ALU4_bit.bdf              ;         ;
+; comparision1bit.bdf              ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/comparision1bit.bdf       ;         ;
+; comparision4bit.bdf              ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/comparision4bit.bdf       ;         ;
+; multiplier.bdf                   ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/multiplier.bdf            ;         ;
+; FA.bdf                           ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/FA.bdf                    ;         ;
+; division.bdf                     ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/division.bdf              ;         ;
+; ALUMoreFunc.bdf                  ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/ALUMoreFunc.bdf           ;         ;
+; ALU_complete.bdf                 ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/ALU_complete.bdf          ;         ;
+; Lab3.bdf                         ; yes             ; User Block Diagram/Schematic File  ; D:/CE118_ThietKeLuanLySo/Lab3/ALU_2/Lab3.bdf                  ;         ;
+; 21mux.bdf                        ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/others/maxplus2/21mux.bdf ;         ;
+; xor3.bdf                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/others/maxplus2/xor3.bdf  ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 107   ;
+;                                             ;       ;
+; Total combinational functions               ; 107   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 71    ;
+;     -- 3 input functions                    ; 27    ;
+;     -- <=2 input functions                  ; 9     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 107   ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 22    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; B[3]  ;
+; Maximum fan-out                             ; 23    ;
+; Total fan-out                               ; 393   ;
+; Average fan-out                             ; 3.05  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                      ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Library Name ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
+; |Lab3                               ; 107 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |Lab3                                                                                   ; work         ;
+;    |ALU_complete:inst|              ; 107 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst                                                                 ; work         ;
+;       |21mux:inst40|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|21mux:inst40                                                    ; work         ;
+;       |21mux:inst41|                ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|21mux:inst41                                                    ; work         ;
+;       |21mux:inst42|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|21mux:inst42                                                    ; work         ;
+;       |21mux:inst43|                ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|21mux:inst43                                                    ; work         ;
+;       |ALU4_bit:inst|               ; 14 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst                                                   ; work         ;
+;          |ALU:inst1|                ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst1                                         ; work         ;
+;             |AU:inst|               ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst1|AU:inst                                 ; work         ;
+;                |HA:inst|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst1|AU:inst|HA:inst                         ; work         ;
+;                   |xor3:inst|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst1|AU:inst|HA:inst|xor3:inst               ; work         ;
+;                |mux41:inst8|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst1|AU:inst|mux41:inst8                     ; work         ;
+;                   |21mux:inst3|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst1|AU:inst|mux41:inst8|21mux:inst3         ; work         ;
+;          |ALU:inst2|                ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst2                                         ; work         ;
+;             |AU:inst|               ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst2|AU:inst                                 ; work         ;
+;                |mux41:inst8|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst2|AU:inst|mux41:inst8                     ; work         ;
+;                   |21mux:inst3|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst2|AU:inst|mux41:inst8|21mux:inst3         ; work         ;
+;             |LU:inst1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst2|LU:inst1                                ; work         ;
+;          |ALU:inst3|                ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst3                                         ; work         ;
+;             |LU:inst1|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst3|LU:inst1                                ; work         ;
+;                |mux41:inst4|        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst3|LU:inst1|mux41:inst4                    ; work         ;
+;                   |21mux:inst3|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst3|LU:inst1|mux41:inst4|21mux:inst3        ; work         ;
+;          |ALU:inst|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst                                          ; work         ;
+;             |21mux:inst5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst|21mux:inst5                              ; work         ;
+;             |AU:inst|               ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst|AU:inst                                  ; work         ;
+;                |mux41:inst8|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst|AU:inst|mux41:inst8                      ; work         ;
+;                   |21mux:inst3|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst|AU:inst|mux41:inst8|21mux:inst3          ; work         ;
+;       |ALUMoreFunc:inst1|           ; 57 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1                                               ; work         ;
+;          |comparision4bit:inst3|    ; 9 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|comparision4bit:inst3                         ; work         ;
+;             |comparision1bit:inst3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|comparision4bit:inst3|comparision1bit:inst3   ; work         ;
+;             |comparision1bit:inst|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|comparision4bit:inst3|comparision1bit:inst    ; work         ;
+;          |division:inst2|           ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2                                ; work         ;
+;             |21mux:inst14|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|21mux:inst14                   ; work         ;
+;             |21mux:inst20|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|21mux:inst20                   ; work         ;
+;             |21mux:inst21|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|21mux:inst21                   ; work         ;
+;             |21mux:inst22|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|21mux:inst22                   ; work         ;
+;             |21mux:inst35|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|21mux:inst35                   ; work         ;
+;             |HA:inst13|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|HA:inst13                      ; work         ;
+;             |HA:inst16|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|HA:inst16                      ; work         ;
+;             |HA:inst19|             ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|HA:inst19                      ; work         ;
+;             |HA:inst25|             ; 4 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|HA:inst25                      ; work         ;
+;                |xor3:inst|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|HA:inst25|xor3:inst            ; work         ;
+;             |HA:inst26|             ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|HA:inst26                      ; work         ;
+;                |xor3:inst|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|HA:inst26|xor3:inst            ; work         ;
+;             |HA:inst27|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|division:inst2|HA:inst27                      ; work         ;
+;          |multiplier:inst1|         ; 24 (4)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1                              ; work         ;
+;             |FA:inst15|             ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst15                    ; work         ;
+;                |HA:inst1|           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst15|HA:inst1           ; work         ;
+;                   |xor3:inst|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst15|HA:inst1|xor3:inst ; work         ;
+;                |HA:inst2|           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst15|HA:inst2           ; work         ;
+;                   |xor3:inst|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst15|HA:inst2|xor3:inst ; work         ;
+;                |HA:inst3|           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst15|HA:inst3           ; work         ;
+;                   |xor3:inst|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst15|HA:inst3|xor3:inst ; work         ;
+;                |HA:inst|            ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst15|HA:inst            ; work         ;
+;                   |xor3:inst|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst15|HA:inst|xor3:inst  ; work         ;
+;             |FA:inst17|             ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst17                    ; work         ;
+;                |HA:inst1|           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst17|HA:inst1           ; work         ;
+;                   |xor3:inst|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst17|HA:inst1|xor3:inst ; work         ;
+;                |HA:inst2|           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst17|HA:inst2           ; work         ;
+;                   |xor3:inst|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst17|HA:inst2|xor3:inst ; work         ;
+;                |HA:inst3|           ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst17|HA:inst3           ; work         ;
+;                   |xor3:inst|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst17|HA:inst3|xor3:inst ; work         ;
+;                |HA:inst|            ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst17|HA:inst            ; work         ;
+;                   |xor3:inst|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst17|HA:inst|xor3:inst  ; work         ;
+;             |FA:inst19|             ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst19                    ; work         ;
+;                |HA:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst19|HA:inst1           ; work         ;
+;                |HA:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst19|HA:inst2           ; work         ;
+;                |HA:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst19|HA:inst3           ; work         ;
+;                |HA:inst|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst19|HA:inst            ; work         ;
+;          |mux41:inst4|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|mux41:inst4                                   ; work         ;
+;             |21mux:inst3|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|ALU_complete:inst|ALUMoreFunc:inst1|mux41:inst4|21mux:inst3                       ; work         ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Lab3|ALU_complete:inst|ALU4_bit:inst|ALU:inst1|AU:inst|mux41:inst8|21mux:inst3|5 ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Lab3|ALU_complete:inst|21mux:inst42|5                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 06 11:34:04 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file lu.bdf
+    Info (12023): Found entity 1: LU
+Warning (12090): Entity "mux41" obtained from "mux41.bdf" instead of from Quartus II megafunction library
+Info (12021): Found 1 design units, including 1 entities, in source file mux41.bdf
+    Info (12023): Found entity 1: mux41
+Info (12021): Found 1 design units, including 1 entities, in source file ha.bdf
+    Info (12023): Found entity 1: HA
+Info (12021): Found 1 design units, including 1 entities, in source file au.bdf
+    Info (12023): Found entity 1: AU
+Info (12021): Found 1 design units, including 1 entities, in source file alu.bdf
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file alu4_bit.bdf
+    Info (12023): Found entity 1: ALU4_bit
+Info (12021): Found 1 design units, including 1 entities, in source file comparision1bit.bdf
+    Info (12023): Found entity 1: comparision1bit
+Info (12021): Found 1 design units, including 1 entities, in source file comparision4bit.bdf
+    Info (12023): Found entity 1: comparision4bit
+Info (12021): Found 1 design units, including 1 entities, in source file multiplier.bdf
+    Info (12023): Found entity 1: multiplier
+Info (12021): Found 1 design units, including 1 entities, in source file fa.bdf
+    Info (12023): Found entity 1: FA
+Info (12021): Found 1 design units, including 1 entities, in source file shiftright.bdf
+    Info (12023): Found entity 1: shiftright
+Info (12021): Found 1 design units, including 1 entities, in source file division.bdf
+    Info (12023): Found entity 1: division
+Info (12021): Found 1 design units, including 1 entities, in source file alumorefunc.bdf
+    Info (12023): Found entity 1: ALUMoreFunc
+Info (12021): Found 1 design units, including 1 entities, in source file shiftleft.bdf
+    Info (12023): Found entity 1: shiftleft
+Info (12021): Found 1 design units, including 1 entities, in source file alu_complete.bdf
+    Info (12023): Found entity 1: ALU_complete
+Info (12021): Found 1 design units, including 1 entities, in source file lab3.bdf
+    Info (12023): Found entity 1: Lab3
+Info (12127): Elaborating entity "Lab3" for the top level hierarchy
+Info (12128): Elaborating entity "ALU_complete" for hierarchy "ALU_complete:inst"
+Warning (275011): Block or symbol "BAND4" of instance "inst9" overlaps another block or symbol
+Info (12128): Elaborating entity "ALU4_bit" for hierarchy "ALU_complete:inst|ALU4_bit:inst"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU_complete:inst|ALU4_bit:inst|ALU:inst2"
+Info (12128): Elaborating entity "21mux" for hierarchy "ALU_complete:inst|ALU4_bit:inst|ALU:inst2|21mux:inst5"
+Info (12130): Elaborated megafunction instantiation "ALU_complete:inst|ALU4_bit:inst|ALU:inst2|21mux:inst5"
+Info (12128): Elaborating entity "LU" for hierarchy "ALU_complete:inst|ALU4_bit:inst|ALU:inst2|LU:inst1"
+Info (12128): Elaborating entity "mux41" for hierarchy "ALU_complete:inst|ALU4_bit:inst|ALU:inst2|LU:inst1|mux41:inst4"
+Info (12128): Elaborating entity "AU" for hierarchy "ALU_complete:inst|ALU4_bit:inst|ALU:inst2|AU:inst"
+Info (12128): Elaborating entity "HA" for hierarchy "ALU_complete:inst|ALU4_bit:inst|ALU:inst2|AU:inst|HA:inst"
+Info (12128): Elaborating entity "XOR3" for hierarchy "ALU_complete:inst|ALU4_bit:inst|ALU:inst2|AU:inst|HA:inst|XOR3:inst"
+Info (12130): Elaborated megafunction instantiation "ALU_complete:inst|ALU4_bit:inst|ALU:inst2|AU:inst|HA:inst|XOR3:inst"
+Info (12128): Elaborating entity "ALUMoreFunc" for hierarchy "ALU_complete:inst|ALUMoreFunc:inst1"
+Info (12128): Elaborating entity "multiplier" for hierarchy "ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1"
+Info (12128): Elaborating entity "FA" for hierarchy "ALU_complete:inst|ALUMoreFunc:inst1|multiplier:inst1|FA:inst15"
+Info (12128): Elaborating entity "division" for hierarchy "ALU_complete:inst|ALUMoreFunc:inst1|division:inst2"
+Warning (275011): Block or symbol "VCC" of instance "inst7" overlaps another block or symbol
+Info (12128): Elaborating entity "comparision4bit" for hierarchy "ALU_complete:inst|ALUMoreFunc:inst1|comparision4bit:inst3"
+Info (12128): Elaborating entity "comparision1bit" for hierarchy "ALU_complete:inst|ALUMoreFunc:inst1|comparision4bit:inst3|comparision1bit:inst"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 129 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 107 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4605 megabytes
+    Info: Processing ended: Wed Nov 06 11:34:05 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

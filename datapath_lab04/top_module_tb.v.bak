@@ -1,0 +1,57 @@
+module tb_Top_Module;
+    reg CLK;
+    reg Start;
+    reg [3:0] DataIn;
+    wire Done;
+    wire [3:0] Out;
+
+    // Instantiate the Top Module
+    Top_Module uut (
+        .CLK(CLK),
+        .Start(Start),
+        .DataIn(DataIn),
+        .Done(Done),
+        .Out(Out)
+    );
+
+    // Clock generation
+    initial begin
+        CLK = 0;
+        forever #5 CLK = ~CLK; // 10ns clock period
+    end
+
+    // Test sequence
+    initial begin
+        // Initialize inputs
+        Start = 0;
+        DataIn = 4'b0000;
+
+        // Wait for global reset
+        #10;
+
+        // Apply test vectors
+        Start = 1;
+        DataIn = 4'b1010;
+        #10 Start = 0;
+
+        // Wait for some time and check outputs
+        #100;
+
+        // Apply another set of test vectors
+        Start = 1;
+        DataIn = 4'b0101;
+        #10 Start = 0;
+
+        // Wait for some time and check outputs
+        #100;
+
+        // Finish simulation
+        $finish;
+    end
+
+    // Monitor signals
+    initial begin
+        $monitor("Time: %0d, CLK: %b, Start: %b, DataIn: %b, Done: %b, Out: %b", 
+                 $time, CLK, Start, DataIn, Done, Out);
+    end
+endmodule

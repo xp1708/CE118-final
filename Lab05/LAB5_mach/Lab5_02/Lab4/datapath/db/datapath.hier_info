@@ -1,0 +1,1566 @@
+|datapath
+RESULT[0] <= Tri4bit:inst7.OUTPUT[0]
+RESULT[1] <= Tri4bit:inst7.OUTPUT[1]
+RESULT[2] <= Tri4bit:inst7.OUTPUT[2]
+RESULT[3] <= Tri4bit:inst7.OUTPUT[3]
+OE => Tri4bit:inst7.OE
+PASS => shifter:inst3.PASS
+REA => RF:inst.REA
+WE => RF:inst.WE
+CLK => RF:inst.CLK
+REB => RF:inst.REB
+IE => mux21_4bit:inst2.S
+DATA[0] => mux21_4bit:inst2.B[0]
+DATA[1] => mux21_4bit:inst2.B[1]
+DATA[2] => mux21_4bit:inst2.B[2]
+DATA[3] => mux21_4bit:inst2.B[3]
+RAA[0] => RF:inst.RAA[0]
+RAA[1] => RF:inst.RAA[1]
+RBB[0] => RF:inst.RBB[0]
+RBB[1] => RF:inst.RBB[1]
+WA[0] => RF:inst.WA[0]
+WA[1] => RF:inst.WA[1]
+ALU_ope[0] => ALU_4bits:inst1.S[0]
+ALU_ope[1] => ALU_4bits:inst1.S[1]
+ALU_ope[2] => ALU_4bits:inst1.S[2]
+
+
+|datapath|Tri4bit:inst7
+OUTPUT[0] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+INPUT[0] => inst6.DATAIN
+INPUT[1] => inst5.DATAIN
+INPUT[2] => inst4.DATAIN
+INPUT[3] => inst3.DATAIN
+OE => inst3.OE
+OE => inst4.OE
+OE => inst5.OE
+OE => inst6.OE
+
+
+|datapath|shifter:inst3
+Q[0] <= 21mux:inst4.Y
+Q[1] <= 21mux:inst3.Y
+Q[2] <= 21mux:inst2.Y
+Q[3] <= 21mux:inst1.Y
+PASS => 21mux:inst1.S
+PASS => 21mux:inst2.S
+PASS => 21mux:inst3.S
+PASS => 21mux:inst4.S
+I[0] => 21mux:inst4.A
+I[1] => 21mux:inst3.A
+I[1] => 21mux:inst4.B
+I[2] => 21mux:inst2.A
+I[2] => 21mux:inst3.B
+I[3] => 21mux:inst1.A
+I[3] => 21mux:inst2.B
+
+
+|datapath|shifter:inst3|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|shifter:inst3|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|shifter:inst3|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|shifter:inst3|21mux:inst4
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1
+overflow <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => ALU:inst.A
+A[1] => ALU:inst1.A
+A[2] => ALU:inst2.A
+A[3] => ALU:inst3.A
+B[0] => ALU:inst.B
+B[1] => ALU:inst1.B
+B[2] => ALU:inst2.B
+B[3] => ALU:inst3.B
+S[0] => ALU:inst.S[0]
+S[0] => ALU:inst1.S[0]
+S[0] => ALU:inst2.S[0]
+S[0] => ALU:inst3.S[0]
+S[1] => ALU:inst.S[1]
+S[1] => ALU:inst1.S[1]
+S[1] => ALU:inst2.S[1]
+S[1] => ALU:inst3.S[1]
+S[2] => ALU:inst.M
+S[2] => ALU:inst1.M
+S[2] => ALU:inst2.M
+S[2] => ALU:inst3.M
+R[0] <= ALU:inst.R
+R[1] <= ALU:inst1.R
+R[2] <= ALU:inst2.R
+R[3] <= ALU:inst3.R
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2
+R <= 21mux:inst5.Y
+M => 21mux:inst5.S
+M => 21mux:inst7.S
+A => LU:inst1.A
+A => AU:inst.A
+B => LU:inst1.B
+B => AU:inst.B
+S[0] => LU:inst1.S[0]
+S[0] => AU:inst.S[0]
+S[1] => LU:inst1.S[1]
+S[1] => AU:inst.S[1]
+CIN => AU:inst.CIN
+CIN_INC => AU:inst.CIN_INC
+COUT <= 21mux:inst7.Y
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|21mux:inst5
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|LU:inst1
+R <= mux41:inst4.R
+A => inst.IN0
+A => inst1.IN0
+A => inst2.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN0
+S[0] => mux41:inst4.S[0]
+S[1] => mux41:inst4.S[1]
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|LU:inst1|mux41:inst4
+R <= 21mux:inst3.Y
+S[0] => 21mux:inst.S
+S[0] => 21mux:inst2.S
+S[1] => 21mux:inst3.S
+D0 => 21mux:inst.B
+D1 => 21mux:inst.A
+D2 => 21mux:inst2.B
+D3 => 21mux:inst2.A
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|LU:inst1|mux41:inst4|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|LU:inst1|mux41:inst4|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|LU:inst1|mux41:inst4|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst
+R <= mux41:inst7.R
+A => HA:inst.A
+A => HA:inst1.A
+A => HA:inst2.A
+A => HA:inst3.A
+CIN => HA:inst.CIN
+CIN => HA:inst1.CIN
+B => HA:inst1.B
+B => inst6.IN0
+CIN_INC => HA:inst2.CIN
+CIN_INC => HA:inst3.CIN
+S[0] => mux41:inst7.S[0]
+S[0] => mux41:inst8.S[0]
+S[1] => mux41:inst7.S[1]
+S[1] => mux41:inst8.S[1]
+COUT <= mux41:inst8.R
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|mux41:inst7
+R <= 21mux:inst3.Y
+S[0] => 21mux:inst.S
+S[0] => 21mux:inst2.S
+S[1] => 21mux:inst3.S
+D0 => 21mux:inst.B
+D1 => 21mux:inst.A
+D2 => 21mux:inst2.B
+D3 => 21mux:inst2.A
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|mux41:inst7|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|mux41:inst7|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|mux41:inst7|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|HA:inst
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|HA:inst|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|HA:inst1
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|HA:inst1|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|HA:inst2
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|HA:inst2|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|HA:inst3
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|HA:inst3|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|mux41:inst8
+R <= 21mux:inst3.Y
+S[0] => 21mux:inst.S
+S[0] => 21mux:inst2.S
+S[1] => 21mux:inst3.S
+D0 => 21mux:inst.B
+D1 => 21mux:inst.A
+D2 => 21mux:inst2.B
+D3 => 21mux:inst2.A
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|mux41:inst8|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|mux41:inst8|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|AU:inst|mux41:inst8|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst2|21mux:inst7
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1
+R <= 21mux:inst5.Y
+M => 21mux:inst5.S
+M => 21mux:inst7.S
+A => LU:inst1.A
+A => AU:inst.A
+B => LU:inst1.B
+B => AU:inst.B
+S[0] => LU:inst1.S[0]
+S[0] => AU:inst.S[0]
+S[1] => LU:inst1.S[1]
+S[1] => AU:inst.S[1]
+CIN => AU:inst.CIN
+CIN_INC => AU:inst.CIN_INC
+COUT <= 21mux:inst7.Y
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|21mux:inst5
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|LU:inst1
+R <= mux41:inst4.R
+A => inst.IN0
+A => inst1.IN0
+A => inst2.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN0
+S[0] => mux41:inst4.S[0]
+S[1] => mux41:inst4.S[1]
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|LU:inst1|mux41:inst4
+R <= 21mux:inst3.Y
+S[0] => 21mux:inst.S
+S[0] => 21mux:inst2.S
+S[1] => 21mux:inst3.S
+D0 => 21mux:inst.B
+D1 => 21mux:inst.A
+D2 => 21mux:inst2.B
+D3 => 21mux:inst2.A
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|LU:inst1|mux41:inst4|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|LU:inst1|mux41:inst4|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|LU:inst1|mux41:inst4|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst
+R <= mux41:inst7.R
+A => HA:inst.A
+A => HA:inst1.A
+A => HA:inst2.A
+A => HA:inst3.A
+CIN => HA:inst.CIN
+CIN => HA:inst1.CIN
+B => HA:inst1.B
+B => inst6.IN0
+CIN_INC => HA:inst2.CIN
+CIN_INC => HA:inst3.CIN
+S[0] => mux41:inst7.S[0]
+S[0] => mux41:inst8.S[0]
+S[1] => mux41:inst7.S[1]
+S[1] => mux41:inst8.S[1]
+COUT <= mux41:inst8.R
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|mux41:inst7
+R <= 21mux:inst3.Y
+S[0] => 21mux:inst.S
+S[0] => 21mux:inst2.S
+S[1] => 21mux:inst3.S
+D0 => 21mux:inst.B
+D1 => 21mux:inst.A
+D2 => 21mux:inst2.B
+D3 => 21mux:inst2.A
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|mux41:inst7|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|mux41:inst7|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|mux41:inst7|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|HA:inst
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|HA:inst|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|HA:inst1
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|HA:inst1|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|HA:inst2
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|HA:inst2|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|HA:inst3
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|HA:inst3|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|mux41:inst8
+R <= 21mux:inst3.Y
+S[0] => 21mux:inst.S
+S[0] => 21mux:inst2.S
+S[1] => 21mux:inst3.S
+D0 => 21mux:inst.B
+D1 => 21mux:inst.A
+D2 => 21mux:inst2.B
+D3 => 21mux:inst2.A
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|mux41:inst8|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|mux41:inst8|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|AU:inst|mux41:inst8|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst1|21mux:inst7
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst
+R <= 21mux:inst5.Y
+M => 21mux:inst5.S
+M => 21mux:inst7.S
+A => LU:inst1.A
+A => AU:inst.A
+B => LU:inst1.B
+B => AU:inst.B
+S[0] => LU:inst1.S[0]
+S[0] => AU:inst.S[0]
+S[1] => LU:inst1.S[1]
+S[1] => AU:inst.S[1]
+CIN => AU:inst.CIN
+CIN_INC => AU:inst.CIN_INC
+COUT <= 21mux:inst7.Y
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|21mux:inst5
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|LU:inst1
+R <= mux41:inst4.R
+A => inst.IN0
+A => inst1.IN0
+A => inst2.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN0
+S[0] => mux41:inst4.S[0]
+S[1] => mux41:inst4.S[1]
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|LU:inst1|mux41:inst4
+R <= 21mux:inst3.Y
+S[0] => 21mux:inst.S
+S[0] => 21mux:inst2.S
+S[1] => 21mux:inst3.S
+D0 => 21mux:inst.B
+D1 => 21mux:inst.A
+D2 => 21mux:inst2.B
+D3 => 21mux:inst2.A
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|LU:inst1|mux41:inst4|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|LU:inst1|mux41:inst4|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|LU:inst1|mux41:inst4|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst
+R <= mux41:inst7.R
+A => HA:inst.A
+A => HA:inst1.A
+A => HA:inst2.A
+A => HA:inst3.A
+CIN => HA:inst.CIN
+CIN => HA:inst1.CIN
+B => HA:inst1.B
+B => inst6.IN0
+CIN_INC => HA:inst2.CIN
+CIN_INC => HA:inst3.CIN
+S[0] => mux41:inst7.S[0]
+S[0] => mux41:inst8.S[0]
+S[1] => mux41:inst7.S[1]
+S[1] => mux41:inst8.S[1]
+COUT <= mux41:inst8.R
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|mux41:inst7
+R <= 21mux:inst3.Y
+S[0] => 21mux:inst.S
+S[0] => 21mux:inst2.S
+S[1] => 21mux:inst3.S
+D0 => 21mux:inst.B
+D1 => 21mux:inst.A
+D2 => 21mux:inst2.B
+D3 => 21mux:inst2.A
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|mux41:inst7|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|mux41:inst7|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|mux41:inst7|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|HA:inst
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|HA:inst|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|HA:inst1
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|HA:inst1|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|HA:inst2
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|HA:inst2|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|HA:inst3
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|HA:inst3|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|mux41:inst8
+R <= 21mux:inst3.Y
+S[0] => 21mux:inst.S
+S[0] => 21mux:inst2.S
+S[1] => 21mux:inst3.S
+D0 => 21mux:inst.B
+D1 => 21mux:inst.A
+D2 => 21mux:inst2.B
+D3 => 21mux:inst2.A
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|mux41:inst8|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|mux41:inst8|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|AU:inst|mux41:inst8|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst|21mux:inst7
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3
+R <= 21mux:inst5.Y
+M => 21mux:inst5.S
+M => 21mux:inst7.S
+A => LU:inst1.A
+A => AU:inst.A
+B => LU:inst1.B
+B => AU:inst.B
+S[0] => LU:inst1.S[0]
+S[0] => AU:inst.S[0]
+S[1] => LU:inst1.S[1]
+S[1] => AU:inst.S[1]
+CIN => AU:inst.CIN
+CIN_INC => AU:inst.CIN_INC
+COUT <= 21mux:inst7.Y
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|21mux:inst5
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|LU:inst1
+R <= mux41:inst4.R
+A => inst.IN0
+A => inst1.IN0
+A => inst2.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst2.IN1
+B => inst3.IN0
+S[0] => mux41:inst4.S[0]
+S[1] => mux41:inst4.S[1]
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|LU:inst1|mux41:inst4
+R <= 21mux:inst3.Y
+S[0] => 21mux:inst.S
+S[0] => 21mux:inst2.S
+S[1] => 21mux:inst3.S
+D0 => 21mux:inst.B
+D1 => 21mux:inst.A
+D2 => 21mux:inst2.B
+D3 => 21mux:inst2.A
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|LU:inst1|mux41:inst4|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|LU:inst1|mux41:inst4|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|LU:inst1|mux41:inst4|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst
+R <= mux41:inst7.R
+A => HA:inst.A
+A => HA:inst1.A
+A => HA:inst2.A
+A => HA:inst3.A
+CIN => HA:inst.CIN
+CIN => HA:inst1.CIN
+B => HA:inst1.B
+B => inst6.IN0
+CIN_INC => HA:inst2.CIN
+CIN_INC => HA:inst3.CIN
+S[0] => mux41:inst7.S[0]
+S[0] => mux41:inst8.S[0]
+S[1] => mux41:inst7.S[1]
+S[1] => mux41:inst8.S[1]
+COUT <= mux41:inst8.R
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|mux41:inst7
+R <= 21mux:inst3.Y
+S[0] => 21mux:inst.S
+S[0] => 21mux:inst2.S
+S[1] => 21mux:inst3.S
+D0 => 21mux:inst.B
+D1 => 21mux:inst.A
+D2 => 21mux:inst2.B
+D3 => 21mux:inst2.A
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|mux41:inst7|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|mux41:inst7|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|mux41:inst7|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|HA:inst
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|HA:inst|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|HA:inst1
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|HA:inst1|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|HA:inst2
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|HA:inst2|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|HA:inst3
+S <= XOR3:inst.OUT
+CIN => XOR3:inst.IN3
+CIN => inst2.IN1
+CIN => inst3.IN1
+A => XOR3:inst.IN1
+A => inst2.IN0
+A => inst4.IN0
+B => XOR3:inst.IN2
+B => inst3.IN0
+B => inst4.IN1
+COUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|HA:inst3|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|mux41:inst8
+R <= 21mux:inst3.Y
+S[0] => 21mux:inst.S
+S[0] => 21mux:inst2.S
+S[1] => 21mux:inst3.S
+D0 => 21mux:inst.B
+D1 => 21mux:inst.A
+D2 => 21mux:inst2.B
+D3 => 21mux:inst2.A
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|mux41:inst8|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|mux41:inst8|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|AU:inst|mux41:inst8|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|ALU_4bits:inst1|ALU:inst3|21mux:inst7
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst
+A[0] <= A~3.DB_MAX_OUTPUT_PORT_TYPE
+A[1] <= A~2.DB_MAX_OUTPUT_PORT_TYPE
+A[2] <= A~1.DB_MAX_OUTPUT_PORT_TYPE
+A[3] <= A~0.DB_MAX_OUTPUT_PORT_TYPE
+I[0] => RFC:inst5.INPUT
+I[0] => RFC:inst15.INPUT
+I[0] => RFC:inst7.INPUT
+I[0] => RFC:inst13.INPUT
+I[1] => RFC:inst4.INPUT
+I[1] => RFC:inst6.INPUT
+I[1] => RFC:inst12.INPUT
+I[1] => RFC:inst14.INPUT
+I[2] => RFC:inst1.INPUT
+I[2] => RFC:inst11.INPUT
+I[2] => RFC:inst3.INPUT
+I[2] => RFC:inst9.INPUT
+I[3] => RFC:inst.INPUT
+I[3] => RFC:inst10.INPUT
+I[3] => RFC:inst2.INPUT
+I[3] => RFC:inst8.INPUT
+WE => DECODER:inst17.EN
+WA[0] => DECODER:inst17.A
+WA[1] => DECODER:inst17.B
+CLK => RFC:inst.CLK
+CLK => RFC:inst10.CLK
+CLK => RFC:inst2.CLK
+CLK => RFC:inst8.CLK
+CLK => RFC:inst1.CLK
+CLK => RFC:inst11.CLK
+CLK => RFC:inst3.CLK
+CLK => RFC:inst9.CLK
+CLK => RFC:inst4.CLK
+CLK => RFC:inst6.CLK
+CLK => RFC:inst12.CLK
+CLK => RFC:inst14.CLK
+CLK => RFC:inst5.CLK
+CLK => RFC:inst15.CLK
+CLK => RFC:inst7.CLK
+CLK => RFC:inst13.CLK
+REA => DECODER:inst19.EN
+RAA[0] => DECODER:inst19.A
+RAA[1] => DECODER:inst19.B
+REB => DECODER:inst18.EN
+RBB[0] => DECODER:inst18.A
+RBB[1] => DECODER:inst18.B
+B[0] <= B~3.DB_MAX_OUTPUT_PORT_TYPE
+B[1] <= B~2.DB_MAX_OUTPUT_PORT_TYPE
+B[2] <= B~1.DB_MAX_OUTPUT_PORT_TYPE
+B[3] <= B~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|RF:inst|RFC:inst
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|DECODER:inst17
+Y0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => 8.IN0
+B => 11.IN0
+EN => inst.IN2
+EN => inst1.IN0
+EN => inst2.IN0
+EN => inst3.IN0
+Y1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Y2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Y3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|RF:inst|DECODER:inst19
+Y0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => 8.IN0
+B => 11.IN0
+EN => inst.IN2
+EN => inst1.IN0
+EN => inst2.IN0
+EN => inst3.IN0
+Y1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Y2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Y3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|RF:inst|DECODER:inst18
+Y0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => 8.IN0
+B => 11.IN0
+EN => inst.IN2
+EN => inst1.IN0
+EN => inst2.IN0
+EN => inst3.IN0
+Y1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Y2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Y3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datapath|RF:inst|RFC:inst10
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst10|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst2
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst2|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst8
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst8|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst1
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst1|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst11
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst11|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst3
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst3|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst9
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst9|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst4
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst4|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst6
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst6|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst12
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst12|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst14
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst14|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst5
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst5|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst15
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst15|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst7
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst7|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|RF:inst|RFC:inst13
+OUT_A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+WS => 21mux:inst1.S
+INPUT => 21mux:inst1.A
+READ_A => inst5.OE
+OUT_B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+READ_B => inst6.OE
+
+
+|datapath|RF:inst|RFC:inst13|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|mux21_4bit:inst2
+R[0] <= 21mux:inst3.Y
+R[1] <= 21mux:inst1.Y
+R[2] <= 21mux:inst.Y
+R[3] <= 21mux:inst2.Y
+S => 21mux:inst2.S
+S => 21mux:inst.S
+S => 21mux:inst1.S
+S => 21mux:inst3.S
+A[0] => 21mux:inst3.B
+A[1] => 21mux:inst1.B
+A[2] => 21mux:inst.B
+A[3] => 21mux:inst2.B
+B[0] => 21mux:inst3.A
+B[1] => 21mux:inst1.A
+B[2] => 21mux:inst.A
+B[3] => 21mux:inst2.A
+
+
+|datapath|mux21_4bit:inst2|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|mux21_4bit:inst2|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|mux21_4bit:inst2|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|datapath|mux21_4bit:inst2|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
